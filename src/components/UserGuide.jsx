@@ -64,12 +64,12 @@ const UserGuide = () => {
       <Collapse in={isExpanded}>
         <Box sx={{ px: 2, pb: 2 }}>
           <Alert severity="info" sx={{ mb: 2 }}>
-            💡 Cette application sauvegarde automatiquement vos préférences dans
-            votre navigateur
+            💡 Cette application sauvegarde automatiquement votre dernière
+            recherche
           </Alert>
 
           <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 600 }}>
-            Comment utiliser l'application :
+            Comment utiliser Busly :
           </Typography>
 
           <List dense>
@@ -78,28 +78,8 @@ const UserGuide = () => {
                 <TouchApp color="primary" />
               </ListItemIcon>
               <ListItemText
-                primary="Sélectionner un arrêt"
-                secondary="Cliquez sur une ligne de bus, puis sur un arrêt pour voir les horaires"
-              />
-            </ListItem>
-
-            <ListItem>
-              <ListItemIcon>
-                <Star color="warning" />
-              </ListItemIcon>
-              <ListItemText
-                primary="Ajouter aux favoris"
-                secondary="Cliquez sur l'étoile ⭐ à côté d'un arrêt pour l'ajouter aux favoris"
-              />
-            </ListItem>
-
-            <ListItem>
-              <ListItemIcon>
-                <History color="action" />
-              </ListItemIcon>
-              <ListItemText
-                primary="Accès rapide"
-                secondary="Vos arrêts favoris et trajets récents apparaissent en haut pour un accès rapide"
+                primary="Planifier un voyage"
+                secondary="Sélectionnez votre point de départ et d'arrivée, puis cliquez sur 'Planifier le voyage'"
               />
             </ListItem>
 
@@ -108,15 +88,35 @@ const UserGuide = () => {
                 <SwapHoriz color="secondary" />
               </ListItemIcon>
               <ListItemText
-                primary="Trajet retour"
-                secondary="Utilisez les boutons de trajet retour pour l'aller-retour domicile ↔ école"
+                primary="Inverser le trajet"
+                secondary="Utilisez le bouton 🔄 pour inverser départ et arrivée rapidement"
+              />
+            </ListItem>
+
+            <ListItem>
+              <ListItemIcon>
+                <History color="action" />
+              </ListItemIcon>
+              <ListItemText
+                primary="Recherche sauvegardée"
+                secondary="Votre dernière recherche est automatiquement sauvegardée et restaurée à chaque visite"
+              />
+            </ListItem>
+
+            <ListItem>
+              <ListItemIcon>
+                <Star color="warning" />
+              </ListItemIcon>
+              <ListItemText
+                primary="Couleurs des résultats"
+                secondary="🟢 Aujourd'hui | 🟡 Demain | ⚪ Heure passée ou pas de circulation"
               />
             </ListItem>
           </List>
 
           <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-            💾 Toutes vos préférences sont sauvegardées localement dans votre
-            navigateur. Elles ne sont pas partagées et restent privées.
+            💾 Vos recherches sont sauvegardées localement dans votre
+            navigateur. Elles restent privées et ne sont pas partagées.
           </Typography>
         </Box>
       </Collapse>

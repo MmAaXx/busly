@@ -75,13 +75,7 @@ function App() {
                 display: "none", // Caché par défaut, affiché si logo fail
               }}
             />
-            <Typography
-              variant="h5"
-              component="h1"
-              sx={{ flexGrow: 1, fontWeight: 600 }}
-            >
-              Horaires de Bus
-            </Typography>
+            <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ textAlign: "right" }}>
               <Typography
                 variant="h6"
@@ -110,7 +104,7 @@ function App() {
           </Toolbar>
         </AppBar>
 
-        <Container maxWidth="lg" sx={{ flex: 1, py: 3 }}>
+        <Container maxWidth="lg" sx={{ flex: 1, py: 2, px: 1 }}>
           <BusRoutesView />
         </Container>
 

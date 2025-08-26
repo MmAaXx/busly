@@ -37,6 +37,9 @@ const JourneyPlanner = ({
   saveFrequentJourney,
   setDefaultDepartureStop,
   setDefaultArrivalStop,
+  lastSearch,
+  saveLastSearch,
+  clearLastSearch,
 }) => {
   const [departure, setDeparture] = useState(null);
   const [arrival, setArrival] = useState(null);
@@ -75,6 +78,31 @@ const JourneyPlanner = ({
 
     setAllStops(groupedStops);
   }, [busData]);
+
+  // Charger automatiquement la dernière recherche
+  useEffect(() => {
+    if (lastSearch && allStops.length > 0) {
+      // Retrouver les objets départ et arrivée dans allStops
+      const departureStop = allStops.find(
+        (stop) => stop.name === lastSearch.departure?.name
+      );
+      const arrivalStop = allStops.find(
+        (stop) => stop.name === lastSearch.arrival?.name
+      );
+
+      if (departureStop && arrivalStop) {
+        setDeparture(departureStop);
+        setArrival(arrivalStop);
+
+        // Restaurer les résultats si ils sont encore valides (moins de 30 minutes)
+        const searchAge = Date.now() - new Date(lastSearch.timestamp).getTime();
+        if (searchAge < 30 * 60 * 1000) {
+          // 30 minutes
+          setJourneyResults(lastSearch.results);
+        }
+      }
+    }
+  }, [lastSearch, allStops]);
 
   // Charger les valeurs par défaut
   useEffect(() => {
@@ -200,12 +228,23 @@ const JourneyPlanner = ({
       arrival.name
     );
 
-    setJourneyResults({
+    const results = {
       departure: departure,
       arrival: arrival,
       directRoutes: directRoutes,
       alternativeRoutes: alternativeRoutes,
-    });
+    };
+
+    setJourneyResults(results);
+
+    // Sauvegarder la recherche automatiquement
+    if (saveLastSearch) {
+      saveLastSearch({
+        departure: departure,
+        arrival: arrival,
+        results: results,
+      });
+    }
 
     // Sauvegarder comme voyage fréquent et arrêts par défaut
     if (saveFrequentJourney) {
@@ -244,6 +283,60 @@ const JourneyPlanner = ({
       0: "sunday",
     };
     return route.days.includes(dayMap[today]);
+  };
+
+  const getTripDay = (route, departureTime) => {
+    const now = new Date();
+    const currentHour = now.getHours();
+    const currentMinute = now.getMinutes();
+    const currentTimeInMinutes = currentHour * 60 + currentMinute;
+
+    const [depHours, depMinutes] = departureTime.split(":").map(Number);
+    const departureTimeInMinutes = depHours * 60 + depMinutes;
+
+    const today = new Date().getDay();
+    const tomorrow = (today + 1) % 7;
+
+    const dayMap = {
+      1: "monday",
+      2: "tuesday",
+      3: "wednesday",
+      4: "thursday",
+      5: "friday",
+      6: "saturday",
+      0: "sunday",
+    };
+
+    const todayString = dayMap[today];
+    const tomorrowString = dayMap[tomorrow];
+
+    // Si l'heure est passée et que le bus circule demain
+    if (
+      departureTimeInMinutes <= currentTimeInMinutes &&
+      route.days.includes(tomorrowString)
+    ) {
+      return { day: "tomorrow", label: "🟡 Demain", circulates: true };
+    }
+
+    // Si le bus circule aujourd'hui et l'heure n'est pas passée
+    if (
+      route.days.includes(todayString) &&
+      departureTimeInMinutes > currentTimeInMinutes
+    ) {
+      return { day: "today", label: "🟢 Aujourd'hui", circulates: true };
+    }
+
+    // Si le bus circule aujourd'hui mais l'heure est passée
+    if (route.days.includes(todayString)) {
+      return {
+        day: "today-passed",
+        label: "⚪ Aujourd'hui (passé)",
+        circulates: false,
+      };
+    }
+
+    // Si le bus ne circule ni aujourd'hui ni demain
+    return { day: "other", label: "⚪ Pas de circulation", circulates: false };
   };
 
   return (
@@ -386,12 +479,28 @@ const JourneyPlanner = ({
                     <Card
                       variant="outlined"
                       sx={{
-                        borderColor: isActiveToday(result.route)
-                          ? "primary.main"
-                          : "divider",
-                        backgroundColor: isActiveToday(result.route)
-                          ? "primary.light"
-                          : "background.paper",
+                        borderColor: (() => {
+                          const tripDay = getTripDay(
+                            result.route,
+                            result.departureStop.time
+                          );
+                          return tripDay.day === "today"
+                            ? "success.main"
+                            : tripDay.day === "tomorrow"
+                            ? "warning.main"
+                            : "grey.300";
+                        })(),
+                        backgroundColor: (() => {
+                          const tripDay = getTripDay(
+                            result.route,
+                            result.departureStop.time
+                          );
+                          return tripDay.day === "today"
+                            ? "success.50"
+                            : tripDay.day === "tomorrow"
+                            ? "warning.50"
+                            : "grey.50";
+                        })(),
                       }}
                     >
                       <CardContent>
@@ -402,14 +511,21 @@ const JourneyPlanner = ({
                           mb={1}
                         >
                           <Chip
-                            label={`Course ${result.route.number}`}
+                            label={`Ligne ${result.route.number}`}
                             color="primary"
                             size="small"
+                            sx={{
+                              mr: 1,
+                            }}
                           />
                           <Typography variant="body2" color="text.secondary">
-                            {isActiveToday(result.route)
-                              ? "🟢 Aujourd'hui"
-                              : "⚪ Pas aujourd'hui"}
+                            {(() => {
+                              const tripDay = getTripDay(
+                                result.route,
+                                result.departureStop.time
+                              );
+                              return tripDay.label;
+                            })()}
                           </Typography>
                         </Box>
 
@@ -492,7 +608,7 @@ const JourneyPlanner = ({
                         <Card variant="outlined">
                           <CardContent>
                             <Chip
-                              label={`Course ${result.route.number}`}
+                              label={`Ligne ${result.route.number}`}
                               color="secondary"
                               size="small"
                               sx={{ mb: 1 }}

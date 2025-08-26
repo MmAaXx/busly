@@ -373,8 +373,12 @@
           "direction": "Douai → Orchies",
           "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
-          "description": "Matin - Établissements scolaires (trajet court)",
+          "description": "Matin - Établissements scolaires (depuis Coutiches)",
           "stops": [
+            { "name": "Coutiches - Les 5 Chemins", "time": "07:35" },
+            { "name": "Coutiches - Le Bru", "time": "07:37" },
+            { "name": "Bouvignies - Calvaire", "time": "07:39" },
+            { "name": "Bouvignies - Le Pigeonnier", "time": "07:45" },
             { "name": "Orchies - Collège du Pévèle", "time": "08:00" },
             { "name": "Orchies - Gare SNCF", "time": "08:07" }
           ]

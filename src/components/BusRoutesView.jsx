@@ -44,6 +44,7 @@ const BusRoutesView = () => {
     favoriteStops,
     recentTrips,
     lastTrip,
+    lastSearch,
     frequentJourneys,
     defaultDeparture,
     defaultArrival,
@@ -56,6 +57,8 @@ const BusRoutesView = () => {
     removeFrequentJourney,
     setDefaultDepartureStop,
     setDefaultArrivalStop,
+    saveLastSearch,
+    clearLastSearch,
   } = useUserPreferences();
 
   useEffect(() => {
@@ -152,11 +155,11 @@ const BusRoutesView = () => {
   const line = busData.lines[0];
 
   return (
-    <Box sx={{ maxWidth: 1200, margin: "0 auto", padding: 2 }}>
-      <Paper elevation={3} sx={{ padding: 3, marginBottom: 3 }}>
+    <Box sx={{ maxWidth: 1200, margin: "0 auto", padding: 1 }}>
+      <Paper elevation={3} sx={{ px: 2, py: 1, marginBottom: 3 }}>
         <Tabs value={selectedTab} onChange={handleTabChange} sx={{ mb: 3 }}>
           <Tab label="🗺️ Planifier mon voyage" />
-          <Tab label="🚌 Voir toutes les courses" />
+          <Tab label="🚌 Voir toutes les lignes de bus" />
         </Tabs>
 
         {/* Onglet Planificateur de voyage */}
@@ -171,6 +174,9 @@ const BusRoutesView = () => {
                 saveFrequentJourney={saveFrequentJourney}
                 setDefaultDepartureStop={setDefaultDepartureStop}
                 setDefaultArrivalStop={setDefaultArrivalStop}
+                lastSearch={lastSearch}
+                saveLastSearch={saveLastSearch}
+                clearLastSearch={clearLastSearch}
               />
 
               <QuickAccess

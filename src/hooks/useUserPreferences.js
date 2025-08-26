@@ -5,12 +5,14 @@ const STORAGE_KEYS = {
   FAVORITE_STOPS: "bus-hours-favorite-stops",
   RECENT_TRIPS: "bus-hours-recent-trips",
   LAST_TRIP: "bus-hours-last-trip",
+  LAST_SEARCH: "bus-hours-last-search",
 };
 
 const useUserPreferences = () => {
   const [favoriteStops, setFavoriteStops] = useState([]);
   const [recentTrips, setRecentTrips] = useState([]);
   const [lastTrip, setLastTrip] = useState(null);
+  const [lastSearch, setLastSearch] = useState(null);
 
   // Charger les données depuis localStorage au démarrage
   useEffect(() => {
@@ -18,6 +20,7 @@ const useUserPreferences = () => {
       const savedStops = localStorage.getItem(STORAGE_KEYS.FAVORITE_STOPS);
       const savedTrips = localStorage.getItem(STORAGE_KEYS.RECENT_TRIPS);
       const savedLastTrip = localStorage.getItem(STORAGE_KEYS.LAST_TRIP);
+      const savedLastSearch = localStorage.getItem(STORAGE_KEYS.LAST_SEARCH);
 
       if (savedStops) {
         setFavoriteStops(JSON.parse(savedStops));
@@ -27,6 +30,9 @@ const useUserPreferences = () => {
       }
       if (savedLastTrip) {
         setLastTrip(JSON.parse(savedLastTrip));
+      }
+      if (savedLastSearch) {
+        setLastSearch(JSON.parse(savedLastSearch));
       }
     } catch (error) {
       console.error("Erreur lors du chargement des préférences:", error);
@@ -172,11 +178,31 @@ const useUserPreferences = () => {
     };
   };
 
+  // Sauvegarder la dernière recherche
+  const saveLastSearch = (searchData) => {
+    const searchToSave = {
+      departure: searchData.departure,
+      arrival: searchData.arrival,
+      results: searchData.results,
+      timestamp: new Date().toISOString(),
+    };
+
+    setLastSearch(searchToSave);
+    saveToStorage(STORAGE_KEYS.LAST_SEARCH, searchToSave);
+  };
+
+  // Effacer la dernière recherche
+  const clearLastSearch = () => {
+    setLastSearch(null);
+    localStorage.removeItem(STORAGE_KEYS.LAST_SEARCH);
+  };
+
   // Effacer toutes les données
   const clearAllData = () => {
     setFavoriteStops([]);
     setRecentTrips([]);
     setLastTrip(null);
+    setLastSearch(null);
 
     Object.values(STORAGE_KEYS).forEach((key) => {
       localStorage.removeItem(key);
@@ -212,6 +238,7 @@ const useUserPreferences = () => {
     favoriteStops,
     recentTrips,
     lastTrip,
+    lastSearch,
 
     // Actions pour les arrêts favoris
     addFavoriteStop,
@@ -223,6 +250,10 @@ const useUserPreferences = () => {
     removeRecentTrip,
     reverseTrip,
     createQuickTrip,
+
+    // Actions pour les recherches
+    saveLastSearch,
+    clearLastSearch,
 
     // Utilitaires
     getMostUsedStops,

@@ -130,7 +130,7 @@ const BusRoute = ({ route, onStopClick }) => {
           <Box display="flex" alignItems="center" gap={1}>
             {getTypeIcon(route.type)}
             <Typography variant="h6" component="div">
-              Course {route.number}
+              Ligne {route.number}
             </Typography>
             <Chip
               label={route.type === "college" ? "Collège" : "École"}

@@ -72,12 +72,12 @@ function checkManifest() {
     if (manifest.icons && manifest.icons.length > 0) {
       log.success(`${manifest.icons.length} icônes définies`);
 
-      manifest.icons.forEach((icon) => {
-        const iconPath = icon.src.replace("/busly/", "");
-        if (!checkFileExists(iconPath, `Icône ${icon.sizes}`)) {
-          valid = false;
-        }
-      });
+             manifest.icons.forEach((icon) => {
+         const iconPath = icon.src.replace("https://mmaaxx.github.io/busly/", "").replace("/busly/", "");
+         if (!checkFileExists(iconPath, `Icône ${icon.sizes}`)) {
+           valid = false;
+         }
+       });
     } else {
       log.error("Aucune icône définie");
       valid = false;

@@ -7,6 +7,7 @@ Cette section contient toute la documentation détaillée pour utiliser et confi
 ### 👥 Pour les utilisateurs
 
 - 📱 **[Installation PWA](installation-pwa.md)** - Guide complet pour installer Busly comme une app native sur votre téléphone, tablette ou ordinateur
+- 🍎 **[Troubleshooting iOS](ios-pwa-troubleshooting.md)** - Solutions pour les problèmes d'icônes et splash screens sur iPhone/iPad
 
 ### 🔧 Pour les développeurs
 
@@ -25,6 +26,7 @@ Cette section contient toute la documentation détaillée pour utiliser et confi
 | Besoin                            | Lien                                                     |
 | --------------------------------- | -------------------------------------------------------- |
 | Installer l'app sur mon téléphone | [Installation PWA](installation-pwa.md)                  |
+| Problèmes iOS (pas d'icône)       | [Troubleshooting iOS](ios-pwa-troubleshooting.md)        |
 | Configurer les icônes PWA         | [Configuration PWA](pwa-setup.md)                        |
 | Signaler un bug                   | Via le formulaire dans l'app                             |
 | Contribuer au projet              | [README principal](../README.md#contribution)            |

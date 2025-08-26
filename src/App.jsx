@@ -10,7 +10,7 @@ import {
   Paper,
 } from "@mui/material";
 import { DirectionsBus, Schedule } from "@mui/icons-material";
-import BusLines from "./components/BusLines";
+import BusRoutesView from "./components/BusRoutesView";
 import theme from "./theme";
 
 function App() {
@@ -111,7 +111,7 @@ function App() {
         </AppBar>
 
         <Container maxWidth="lg" sx={{ flex: 1, py: 3 }}>
-          <BusLines />
+          <BusRoutesView />
         </Container>
 
         <Paper

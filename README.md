@@ -105,6 +105,12 @@ L'application est entièrement responsive et s'adapte parfaitement aux :
 - 📱 Tablettes
 - 💻 Ordinateurs de bureau
 
+## Comment importer les horaires
+
+Pour importer les horaires on part des fichiers PDF disponible sur le site Arc-en-ciel.
+
+On transforme le PDF en CSV pour que l'IA puisse facilement le transformer dans le fichier JSON attendu pour servir les données de l'app.
+
 ## 🤝 Contribution
 
 Les contributions sont les bienvenues ! N'hésitez pas à :

@@ -371,13 +371,14 @@ const JourneyPlanner = ({
         </Box>
 
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} md={5}>
+          <Grid item size={{ xs: 12, md: 5 }}>
             <Autocomplete
               value={departure}
               onChange={(event, newValue) => setDeparture(newValue)}
               options={allStops}
               getOptionLabel={(option) => option.name}
               groupBy={(option) => option.city}
+              fullWidth
               renderInput={(params) => (
                 <TextField
                   {...params}
@@ -406,7 +407,7 @@ const JourneyPlanner = ({
             />
           </Grid>
 
-          <Grid item xs={12} md={2} sx={{ textAlign: "center" }}>
+          <Grid item size={{ xs: 12, md: 2 }} sx={{ textAlign: "center" }}>
             <IconButton
               onClick={handleSwapStops}
               sx={{
@@ -419,13 +420,14 @@ const JourneyPlanner = ({
             </IconButton>
           </Grid>
 
-          <Grid item xs={12} md={5}>
+          <Grid item size={{ xs: 12, md: 5 }}>
             <Autocomplete
               value={arrival}
               onChange={(event, newValue) => setArrival(newValue)}
               options={allStops}
               getOptionLabel={(option) => option.name}
               groupBy={(option) => option.city}
+              fullWidth
               renderInput={(params) => (
                 <TextField
                   {...params}

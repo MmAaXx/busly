@@ -1,0 +1,469 @@
+import { useState, useEffect } from "react";
+import {
+  Paper,
+  Typography,
+  Box,
+  Autocomplete,
+  TextField,
+  Button,
+  Chip,
+  Card,
+  CardContent,
+  Grid,
+  Divider,
+  Alert,
+  Collapse,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
+import {
+  SwapVert,
+  LocationOn,
+  Flag,
+  Schedule,
+  DirectionsBus,
+  ExpandMore,
+  ExpandLess,
+  AccessTime,
+} from "@mui/icons-material";
+
+const JourneyPlannerNew = ({
+  busData,
+  onJourneyPlan,
+  defaultDeparture,
+  defaultArrival,
+  saveFrequentJourney,
+  setDefaultDepartureStop,
+  setDefaultArrivalStop,
+}) => {
+  const [departure, setDeparture] = useState(null);
+  const [arrival, setArrival] = useState(null);
+  const [allStops, setAllStops] = useState([]);
+  const [showAlternatives, setShowAlternatives] = useState(false);
+  const [journeyResults, setJourneyResults] = useState(null);
+
+  // Initialiser toutes les stations disponibles
+  useEffect(() => {
+    const stopsSet = new Set();
+
+    busData.lines.forEach((line) => {
+      line.routes.forEach((route) => {
+        route.stops.forEach((stop) => {
+          stopsSet.add(stop.name);
+        });
+      });
+    });
+
+    const stops = Array.from(stopsSet).map((stopName) => {
+      // Extraire la ville du nom de l'arrêt
+      const city = stopName.split(" - ")[0];
+      return {
+        name: stopName,
+        city: city,
+      };
+    });
+
+    // Grouper par ville pour l'affichage
+    const groupedStops = stops.sort((a, b) => {
+      if (a.city !== b.city) {
+        return a.city.localeCompare(b.city);
+      }
+      return a.name.localeCompare(b.name);
+    });
+
+    setAllStops(groupedStops);
+  }, [busData]);
+
+  // Charger les valeurs par défaut
+  useEffect(() => {
+    if (defaultDeparture) {
+      const departureStop = allStops.find(
+        (stop) => stop.name === defaultDeparture
+      );
+      if (departureStop) setDeparture(departureStop);
+    }
+    if (defaultArrival) {
+      const arrivalStop = allStops.find((stop) => stop.name === defaultArrival);
+      if (arrivalStop) setArrival(arrivalStop);
+    }
+  }, [defaultDeparture, defaultArrival, allStops]);
+
+  const handleSwapStops = () => {
+    const temp = departure;
+    setDeparture(arrival);
+    setArrival(temp);
+  };
+
+  const findDirectRoutes = (departureStop, arrivalStop) => {
+    const results = [];
+
+    busData.lines.forEach((line) => {
+      line.routes.forEach((route) => {
+        const departureIndex = route.stops.findIndex(
+          (stop) => stop.name === departureStop
+        );
+        const arrivalIndex = route.stops.findIndex(
+          (stop) => stop.name === arrivalStop
+        );
+
+        // Vérifier si les deux arrêts sont sur cette route et dans le bon ordre
+        if (
+          departureIndex !== -1 &&
+          arrivalIndex !== -1 &&
+          departureIndex < arrivalIndex
+        ) {
+          const departureTime = route.stops[departureIndex].time;
+          const arrivalTime = route.stops[arrivalIndex].time;
+
+          // Calculer la durée
+          const [depHours, depMinutes] = departureTime.split(":").map(Number);
+          const [arrHours, arrMinutes] = arrivalTime.split(":").map(Number);
+          const duration =
+            arrHours * 60 + arrMinutes - (depHours * 60 + depMinutes);
+
+          results.push({
+            line: line,
+            route: route,
+            departureStop: route.stops[departureIndex],
+            arrivalStop: route.stops[arrivalIndex],
+            duration: duration,
+            stops: route.stops.slice(departureIndex, arrivalIndex + 1),
+          });
+        }
+      });
+    });
+
+    return results.sort((a, b) => {
+      // Trier par heure de départ
+      const [aHours, aMinutes] = a.departureStop.time.split(":").map(Number);
+      const [bHours, bMinutes] = b.departureStop.time.split(":").map(Number);
+      return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
+    });
+  };
+
+  const findAlternativeRoutes = (departureStop, arrivalStop) => {
+    // Pour les alternatives, on cherche des routes qui passent près des arrêts demandés
+    const alternatives = [];
+    const departureCity = departureStop.split(" - ")[0];
+    const arrivalCity = arrivalStop.split(" - ")[0];
+
+    busData.lines.forEach((line) => {
+      line.routes.forEach((route) => {
+        const nearDeparture = route.stops.filter(
+          (stop) =>
+            stop.name.startsWith(departureCity) && stop.name !== departureStop
+        );
+        const nearArrival = route.stops.filter(
+          (stop) =>
+            stop.name.startsWith(arrivalCity) && stop.name !== arrivalStop
+        );
+
+        if (nearDeparture.length > 0 && nearArrival.length > 0) {
+          nearDeparture.forEach((depStop) => {
+            nearArrival.forEach((arrStop) => {
+              const depIndex = route.stops.findIndex(
+                (s) => s.name === depStop.name
+              );
+              const arrIndex = route.stops.findIndex(
+                (s) => s.name === arrStop.name
+              );
+
+              if (depIndex !== -1 && arrIndex !== -1 && depIndex < arrIndex) {
+                alternatives.push({
+                  line: line,
+                  route: route,
+                  departureStop: depStop,
+                  arrivalStop: arrStop,
+                  isAlternative: true,
+                  stops: route.stops.slice(depIndex, arrIndex + 1),
+                });
+              }
+            });
+          });
+        }
+      });
+    });
+
+    return alternatives;
+  };
+
+  const handlePlanJourney = () => {
+    if (!departure || !arrival) {
+      return;
+    }
+
+    const directRoutes = findDirectRoutes(departure.name, arrival.name);
+    const alternativeRoutes = findAlternativeRoutes(
+      departure.name,
+      arrival.name
+    );
+
+    setJourneyResults({
+      departure: departure,
+      arrival: arrival,
+      directRoutes: directRoutes,
+      alternativeRoutes: alternativeRoutes,
+    });
+
+    // Sauvegarder comme voyage fréquent et arrêts par défaut
+    if (saveFrequentJourney) {
+      saveFrequentJourney(departure.name, arrival.name);
+    }
+    if (setDefaultDepartureStop) {
+      setDefaultDepartureStop(departure.name);
+    }
+    if (setDefaultArrivalStop) {
+      setDefaultArrivalStop(arrival.name);
+    }
+
+    if (onJourneyPlan) {
+      onJourneyPlan(departure.name, arrival.name);
+    }
+  };
+
+  const formatDuration = (minutes) => {
+    if (minutes < 60) {
+      return `${minutes} min`;
+    }
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    return `${hours}h${mins.toString().padStart(2, "0")}`;
+  };
+
+  const isActiveToday = (route) => {
+    const today = new Date().getDay();
+    const dayMap = {
+      1: "monday",
+      2: "tuesday",
+      3: "wednesday",
+      4: "thursday",
+      5: "friday",
+      6: "saturday",
+      0: "sunday",
+    };
+    return route.days.includes(dayMap[today]);
+  };
+
+  return (
+    <Box>
+      <Paper elevation={2} sx={{ p: 3, mb: 3 }}>
+        <Typography variant="h6" gutterBottom>
+          🗺️ Planificateur de Voyage
+        </Typography>
+
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs={12} md={5}>
+            <Autocomplete
+              value={departure}
+              onChange={(event, newValue) => setDeparture(newValue)}
+              options={allStops}
+              groupBy={(option) => option.city}
+              getOptionLabel={(option) => option.name}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Départ"
+                  InputProps={{
+                    ...params.InputProps,
+                    startAdornment: <LocationOn color="success" />,
+                  }}
+                />
+              )}
+            />
+          </Grid>
+
+          <Grid item xs={12} md={2} textAlign="center">
+            <IconButton
+              onClick={handleSwapStops}
+              color="primary"
+              sx={{ backgroundColor: "action.hover" }}
+            >
+              <SwapVert />
+            </IconButton>
+          </Grid>
+
+          <Grid item xs={12} md={5}>
+            <Autocomplete
+              value={arrival}
+              onChange={(event, newValue) => setArrival(newValue)}
+              options={allStops}
+              groupBy={(option) => option.city}
+              getOptionLabel={(option) => option.name}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Arrivée"
+                  InputProps={{
+                    ...params.InputProps,
+                    startAdornment: <Flag color="error" />,
+                  }}
+                />
+              )}
+            />
+          </Grid>
+
+          <Grid item xs={12}>
+            <Button
+              variant="contained"
+              onClick={handlePlanJourney}
+              disabled={!departure || !arrival}
+              startIcon={<Schedule />}
+              fullWidth
+              size="large"
+            >
+              Planifier le voyage
+            </Button>
+          </Grid>
+        </Grid>
+      </Paper>
+
+      {journeyResults && (
+        <Box>
+          {/* Routes directes */}
+          {journeyResults.directRoutes.length > 0 ? (
+            <Paper elevation={2} sx={{ p: 3, mb: 2 }}>
+              <Typography variant="h6" gutterBottom color="primary">
+                🎯 Trajets directs trouvés
+              </Typography>
+              <Grid container spacing={2}>
+                {journeyResults.directRoutes.map((result, index) => (
+                  <Grid item xs={12} md={6} key={index}>
+                    <Card
+                      variant="outlined"
+                      sx={{
+                        borderColor: isActiveToday(result.route)
+                          ? "primary.main"
+                          : "divider",
+                        backgroundColor: isActiveToday(result.route)
+                          ? "primary.light"
+                          : "background.paper",
+                      }}
+                    >
+                      <CardContent>
+                        <Box
+                          display="flex"
+                          justifyContent="between"
+                          alignItems="center"
+                          mb={1}
+                        >
+                          <Chip
+                            label={`Course ${result.route.number}`}
+                            color="primary"
+                            size="small"
+                          />
+                          <Typography variant="body2" color="text.secondary">
+                            {isActiveToday(result.route)
+                              ? "🟢 Aujourd'hui"
+                              : "⚪ Pas aujourd'hui"}
+                          </Typography>
+                        </Box>
+
+                        <Typography variant="body2" gutterBottom>
+                          {result.route.description}
+                        </Typography>
+
+                        <Box
+                          display="flex"
+                          justifyContent="space-between"
+                          alignItems="center"
+                          mb={2}
+                        >
+                          <Box>
+                            <Typography variant="h6">
+                              {result.departureStop.time}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                              Départ
+                            </Typography>
+                          </Box>
+                          <Box textAlign="center">
+                            <DirectionsBus color="primary" />
+                            <Typography variant="body2">
+                              {formatDuration(result.duration)}
+                            </Typography>
+                          </Box>
+                          <Box textAlign="right">
+                            <Typography variant="h6">
+                              {result.arrivalStop.time}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                              Arrivée
+                            </Typography>
+                          </Box>
+                        </Box>
+
+                        <Divider sx={{ my: 1 }} />
+                        <Typography variant="body2" color="text.secondary">
+                          {result.stops.length} arrêts • Direction:{" "}
+                          {result.route.direction}
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
+            </Paper>
+          ) : (
+            <Alert severity="info" sx={{ mb: 2 }}>
+              Aucun trajet direct trouvé entre ces deux arrêts.
+            </Alert>
+          )}
+
+          {/* Routes alternatives */}
+          {journeyResults.alternativeRoutes.length > 0 && (
+            <Paper elevation={2} sx={{ p: 3 }}>
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Typography variant="h6" color="secondary">
+                  🔄 Trajets alternatifs dans les mêmes villes
+                </Typography>
+                <IconButton
+                  onClick={() => setShowAlternatives(!showAlternatives)}
+                  aria-expanded={showAlternatives}
+                >
+                  {showAlternatives ? <ExpandLess /> : <ExpandMore />}
+                </IconButton>
+              </Box>
+
+              <Collapse in={showAlternatives}>
+                <Grid container spacing={2} sx={{ mt: 1 }}>
+                  {journeyResults.alternativeRoutes
+                    .slice(0, 4)
+                    .map((result, index) => (
+                      <Grid item xs={12} md={6} key={index}>
+                        <Card variant="outlined">
+                          <CardContent>
+                            <Chip
+                              label={`Course ${result.route.number}`}
+                              color="secondary"
+                              size="small"
+                              sx={{ mb: 1 }}
+                            />
+                            <Typography variant="body2" gutterBottom>
+                              {result.departureStop.name} →{" "}
+                              {result.arrivalStop.name}
+                            </Typography>
+                            <Typography variant="h6">
+                              {result.departureStop.time} →{" "}
+                              {result.arrivalStop.time}
+                            </Typography>
+                          </CardContent>
+                        </Card>
+                      </Grid>
+                    ))}
+                </Grid>
+              </Collapse>
+            </Paper>
+          )}
+        </Box>
+      )}
+    </Box>
+  );
+};
+
+export default JourneyPlannerNew;

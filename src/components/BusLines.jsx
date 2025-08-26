@@ -19,6 +19,7 @@ import {
 import BusLine from "./BusLine";
 import QuickAccess from "./QuickAccess";
 import UserGuide from "./UserGuide";
+import JourneyPlanner from "./JourneyPlanner";
 import useUserPreferences from "../hooks/useUserPreferences";
 import busData from "../data/bus-lines.json";
 
@@ -32,11 +33,16 @@ const BusLines = () => {
     favoriteStops,
     recentTrips,
     lastTrip,
+    defaultDeparture,
+    defaultArrival,
     addFavoriteStop,
     removeFavoriteStop,
     isFavoriteStop,
     saveTrip,
     removeRecentTrip,
+    saveFrequentJourney,
+    setDefaultDepartureStop,
+    setDefaultArrivalStop,
   } = useUserPreferences();
 
   useEffect(() => {
@@ -77,6 +83,13 @@ const BusLines = () => {
     if (line) {
       handleLineSelect(line, trip.fromStop.direction);
     }
+  };
+
+  // Gérer la planification de trajet
+  const handleJourneyPlan = (departure, arrival, results) => {
+    // Ici on pourrait implémenter une logique pour sauvegarder le trajet planifié
+    // ou naviguer vers les résultats
+    console.log("Trajet planifié:", { departure, arrival, results });
   };
 
   const getDayInfo = () => {
@@ -123,6 +136,17 @@ const BusLines = () => {
       <Box>
         {/* Guide d'utilisation */}
         <UserGuide />
+
+        {/* Planificateur de trajet */}
+        <JourneyPlanner
+          onJourneyPlan={handleJourneyPlan}
+          currentDay={currentDay}
+          defaultDeparture={defaultDeparture}
+          defaultArrival={defaultArrival}
+          saveFrequentJourney={saveFrequentJourney}
+          setDefaultDepartureStop={setDefaultDepartureStop}
+          setDefaultArrivalStop={setDefaultArrivalStop}
+        />
 
         {/* Composant d'accès rapide */}
         <QuickAccess

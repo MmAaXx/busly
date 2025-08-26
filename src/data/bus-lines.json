@@ -13,7 +13,16 @@
           {
             "name": "Orchies - Gare SNCF",
             "schedule": {
-              "weekdays": ["06:35", "06:40", "16:40", "16:50"],
+              "weekdays": [
+                "06:35",
+                "06:40",
+                "16:40",
+                "16:50",
+                "17:05",
+                "17:10",
+                "17:50"
+              ],
+              "wednesday": ["12:40"],
               "saturday": [],
               "sunday": []
             }
@@ -21,7 +30,16 @@
           {
             "name": "Orchies - Centre (Place De Lattre)",
             "schedule": {
-              "weekdays": ["06:37", "06:42", "16:47", "16:52"],
+              "weekdays": [
+                "06:37",
+                "06:42",
+                "16:47",
+                "16:52",
+                "16:20",
+                "17:15",
+                "17:17"
+              ],
+              "wednesday": ["12:30"],
               "saturday": [],
               "sunday": []
             }
@@ -238,6 +256,149 @@
             "name": "Douai - Lycée E. Lamonnier",
             "schedule": {
               "weekdays": ["07:40"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Orchies - Collège du Pévèle",
+            "schedule": {
+              "weekdays": ["16:20", "17:15", "17:17"],
+              "wednesday": ["12:30"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Rue de Flines",
+            "schedule": {
+              "weekdays": ["16:10", "17:26", "18:00"],
+              "wednesday": ["12:50"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Crapez",
+            "schedule": {
+              "weekdays": ["16:11", "17:31", "18:03"],
+              "wednesday": ["12:53"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Picterie",
+            "schedule": {
+              "weekdays": ["16:13", "17:33", "18:05"],
+              "wednesday": ["12:55"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Faumont - Mairie",
+            "schedule": {
+              "weekdays": ["16:19", "17:38", "18:11"],
+              "wednesday": ["13:01"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Faumont - Boujon",
+            "schedule": {
+              "weekdays": ["16:19", "17:38", "18:11"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Faumont - Rue Dupire",
+            "schedule": {
+              "weekdays": ["16:20", "17:39", "18:12"],
+              "wednesday": ["12:57"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Faumont - Rue du Bois",
+            "schedule": {
+              "weekdays": ["16:23", "17:41", "18:15"],
+              "wednesday": ["12:58"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Rue des Sarts",
+            "schedule": {
+              "weekdays": ["16:26", "17:44", "18:18"],
+              "wednesday": ["13:01"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - L'Epinchaux",
+            "schedule": {
+              "weekdays": ["16:28", "17:46", "18:20"],
+              "wednesday": ["13:03"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Le Baterloo",
+            "schedule": {
+              "weekdays": ["16:30", "17:48", "18:22"],
+              "wednesday": ["13:05"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - La Jonquière",
+            "schedule": {
+              "weekdays": ["16:32", "17:50", "18:24"],
+              "wednesday": ["13:07"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Annieres - Route de Flines",
+            "schedule": {
+              "weekdays": ["17:40"],
+              "wednesday": ["13:03"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Annieres - Église",
+            "schedule": {
+              "weekdays": ["17:41"],
+              "wednesday": ["13:04"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Annieres - Rue des Écoles",
+            "schedule": {
+              "weekdays": ["17:42"],
+              "wednesday": ["13:05"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Annieres - Le Petit Annieres",
+            "schedule": {
+              "weekdays": ["17:44"],
+              "wednesday": ["13:07"],
               "saturday": [],
               "sunday": []
             }

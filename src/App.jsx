@@ -56,13 +56,11 @@ function App() {
           <Toolbar>
             <Box
               component="img"
-              src="/busly-logo.png"
+              src="/busly/busly-logo.png"
               alt="Busly Logo"
               sx={{
-                width: 40,
                 height: 40,
                 mr: 2,
-                borderRadius: "50%",
               }}
               onError={(e) => {
                 // Fallback vers l'icône si le logo n'est pas trouvé
@@ -82,7 +80,7 @@ function App() {
               component="h1"
               sx={{ flexGrow: 1, fontWeight: 600 }}
             >
-              Busly
+              Horaires de Bus
             </Typography>
             <Box sx={{ textAlign: "right" }}>
               <Typography

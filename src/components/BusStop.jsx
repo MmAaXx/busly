@@ -42,7 +42,7 @@ const BusStop = ({
       const now = new Date();
       const currentTime = now.getHours() * 60 + now.getMinutes();
 
-      const schedule = stop.schedule[currentDay] || [];
+      const schedule = getAllTimes();
 
       const upcoming = schedule
         .map((time) => {
@@ -72,7 +72,32 @@ const BusStop = ({
     return `dans ${hours}h${remainingMinutes.toString().padStart(2, "0")}`;
   };
 
-  const allTimes = stop.schedule[currentDay] || [];
+  // Gestion spéciale du mercredi
+  const getAllTimes = () => {
+    const today = new Date();
+    const dayOfWeek = today.getDay(); // 0 = dimanche, 1 = lundi, ..., 3 = mercredi
+
+    let times = stop.schedule[currentDay] || [];
+
+    // Si c'est mercredi (jour 3) et qu'il y a des horaires spéciaux mercredi
+    if (dayOfWeek === 3 && stop.schedule.wednesday) {
+      times = [...times, ...stop.schedule.wednesday];
+    }
+
+    // Trier les horaires par ordre chronologique
+    return times.sort((a, b) => {
+      const timeA = a.split(":").map(Number);
+      const timeB = b.split(":").map(Number);
+      return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
+    });
+  };
+
+  const allTimes = getAllTimes();
+
+  // Fonction pour savoir si un horaire est spécifique au mercredi
+  const isWednesdayTime = (time) => {
+    return stop.schedule.wednesday && stop.schedule.wednesday.includes(time);
+  };
 
   // Gestion des favoris
   const isFavorite = isFavoriteStop && isFavoriteStop(lineId, stop.name);
@@ -246,17 +271,19 @@ const BusStop = ({
               return (
                 <Grid item xs="auto" key={index}>
                   <Chip
-                    label={time}
+                    label={isWednesdayTime(time) ? `${time} 🅜` : time}
                     size="small"
                     variant={isPassed ? "outlined" : "filled"}
                     sx={{
                       backgroundColor: isPassed
                         ? "transparent"
+                        : isWednesdayTime(time)
+                        ? `${lineColor}25`
                         : `${lineColor}15`,
                       color: isPassed ? "text.disabled" : lineColor,
                       borderColor: isPassed ? "text.disabled" : lineColor,
                       textDecoration: isPassed ? "line-through" : "none",
-                      fontWeight: 500,
+                      fontWeight: isWednesdayTime(time) ? 700 : 500,
                       minWidth: 50,
                       "& .MuiChip-label": {
                         fontFamily: "Courier New, monospace",
@@ -267,6 +294,18 @@ const BusStop = ({
               );
             })}
           </Grid>
+
+          {stop.schedule.wednesday && stop.schedule.wednesday.length > 0 && (
+            <Box sx={{ mt: 2, pt: 1, borderTop: "1px solid #e0e0e0" }}>
+              <Typography
+                variant="caption"
+                color="text.secondary"
+                sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
+              >
+                🅜 = Horaires spécifiques au mercredi uniquement
+              </Typography>
+            </Box>
+          )}
         </CardContent>
       </Collapse>
     </Card>

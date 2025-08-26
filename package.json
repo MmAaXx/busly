@@ -1,9 +1,9 @@
 {
-  "name": "bus-hours",
+  "name": "busly",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://donjgo.github.io/bus-hours",
+  "homepage": "https://donjgo.github.io/busly",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

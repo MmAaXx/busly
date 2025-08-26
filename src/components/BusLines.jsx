@@ -146,7 +146,7 @@ const BusLines = () => {
               textShadow: "0 2px 4px rgba(0,0,0,0.3)",
             }}
           >
-            Choisissez votre ligne de bus
+            Bienvenue sur Busly
           </Typography>
 
           <Paper

@@ -54,13 +54,35 @@ function App() {
       >
         <AppBar position="sticky" elevation={0}>
           <Toolbar>
-            <DirectionsBus sx={{ mr: 2, fontSize: 28 }} />
+            <Box
+              component="img"
+              src="/busly-logo.png"
+              alt="Busly Logo"
+              sx={{
+                width: 40,
+                height: 40,
+                mr: 2,
+                borderRadius: "50%",
+              }}
+              onError={(e) => {
+                // Fallback vers l'icône si le logo n'est pas trouvé
+                e.target.style.display = "none";
+                e.target.nextSibling.style.display = "inline-flex";
+              }}
+            />
+            <DirectionsBus
+              sx={{
+                mr: 2,
+                fontSize: 28,
+                display: "none", // Caché par défaut, affiché si logo fail
+              }}
+            />
             <Typography
               variant="h5"
               component="h1"
               sx={{ flexGrow: 1, fontWeight: 600 }}
             >
-              Horaires de Bus
+              Busly
             </Typography>
             <Box sx={{ textAlign: "right" }}>
               <Typography
@@ -107,7 +129,7 @@ function App() {
           }}
         >
           <Typography variant="body2" color="text.secondary">
-            Application créée pour faciliter l'accès aux horaires de bus 📱
+            Busly - Votre compagnon pour les horaires de bus 📱
           </Typography>
         </Paper>
       </Box>

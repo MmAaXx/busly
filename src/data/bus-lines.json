@@ -173,12 +173,12 @@
         ]
       },
       "direction2": {
-        "name": "Douai → Orchies (soir - retour des écoles)",
+        "name": "Douai → Orchies (retour des écoles)",
         "stops": [
           {
             "name": "Douai - Place De Gaulle",
             "schedule": {
-              "weekdays": ["17:30", "17:40"],
+              "weekdays": ["12:20", "12:50", "17:30", "18:00"],
               "saturday": [],
               "sunday": []
             }
@@ -186,7 +186,23 @@
           {
             "name": "Douai - Place Carnot",
             "schedule": {
-              "weekdays": ["17:30", "17:40"],
+              "weekdays": ["12:22", "12:52", "17:32", "18:02"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Arsenal",
+            "schedule": {
+              "weekdays": ["12:26", "17:59", "18:35"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Saint Michel",
+            "schedule": {
+              "weekdays": ["12:28", "12:42", "18:02", "18:43"],
               "saturday": [],
               "sunday": []
             }
@@ -194,7 +210,7 @@
           {
             "name": "Douai - Gayant Expo",
             "schedule": {
-              "weekdays": ["17:27", "17:37"],
+              "weekdays": ["12:30", "12:53", "18:03", "18:45"],
               "saturday": [],
               "sunday": []
             }
@@ -202,7 +218,7 @@
           {
             "name": "Waziers - Langerois",
             "schedule": {
-              "weekdays": ["17:25", "17:35"],
+              "weekdays": ["12:32", "12:55", "18:05", "18:47"],
               "saturday": [],
               "sunday": []
             }
@@ -210,7 +226,7 @@
           {
             "name": "Douai - Lespagnol",
             "schedule": {
-              "weekdays": ["17:23", "17:33"],
+              "weekdays": ["12:34"],
               "saturday": [],
               "sunday": []
             }
@@ -218,7 +234,7 @@
           {
             "name": "Douai - Transformateur",
             "schedule": {
-              "weekdays": ["17:21", "17:31"],
+              "weekdays": ["12:35"],
               "saturday": [],
               "sunday": []
             }
@@ -226,7 +242,7 @@
           {
             "name": "Douai - Frais Marais Église",
             "schedule": {
-              "weekdays": ["17:20", "17:30"],
+              "weekdays": ["12:37"],
               "saturday": [],
               "sunday": []
             }
@@ -234,7 +250,7 @@
           {
             "name": "Douai - Arleux",
             "schedule": {
-              "weekdays": ["17:19", "17:29"],
+              "weekdays": ["12:38"],
               "saturday": [],
               "sunday": []
             }
@@ -242,7 +258,7 @@
           {
             "name": "Raches - La Fosse",
             "schedule": {
-              "weekdays": ["17:18", "17:28"],
+              "weekdays": ["12:39"],
               "saturday": [],
               "sunday": []
             }
@@ -250,7 +266,7 @@
           {
             "name": "Raches - Mairie",
             "schedule": {
-              "weekdays": ["17:17", "17:27"],
+              "weekdays": ["12:40"],
               "saturday": [],
               "sunday": []
             }
@@ -258,7 +274,7 @@
           {
             "name": "Raches - Placette",
             "schedule": {
-              "weekdays": ["17:15", "17:25"],
+              "weekdays": ["12:42"],
               "saturday": [],
               "sunday": []
             }
@@ -266,7 +282,7 @@
           {
             "name": "Raches - Cul Brûlé",
             "schedule": {
-              "weekdays": ["17:14", "17:24"],
+              "weekdays": ["12:43"],
               "saturday": [],
               "sunday": []
             }
@@ -274,7 +290,7 @@
           {
             "name": "Raches - Bois Vert",
             "schedule": {
-              "weekdays": ["17:13", "17:23"],
+              "weekdays": ["12:44"],
               "saturday": [],
               "sunday": []
             }
@@ -282,7 +298,7 @@
           {
             "name": "Flines-lez-Raches - Saltière",
             "schedule": {
-              "weekdays": ["17:11", "17:21"],
+              "weekdays": ["12:46"],
               "saturday": [],
               "sunday": []
             }
@@ -290,7 +306,7 @@
           {
             "name": "Flines-lez-Raches - Auberge",
             "schedule": {
-              "weekdays": ["17:10", "17:20"],
+              "weekdays": ["12:47", "18:20"],
               "saturday": [],
               "sunday": []
             }
@@ -298,7 +314,7 @@
           {
             "name": "Flines-lez-Raches - Place",
             "schedule": {
-              "weekdays": ["17:09", "17:19"],
+              "weekdays": ["12:48", "18:21"],
               "saturday": [],
               "sunday": []
             }
@@ -306,7 +322,7 @@
           {
             "name": "Flines-lez-Raches - Mairie",
             "schedule": {
-              "weekdays": ["17:08", "17:18"],
+              "weekdays": ["12:49", "18:22"],
               "saturday": [],
               "sunday": []
             }
@@ -314,7 +330,55 @@
           {
             "name": "Flines-lez-Raches - Madeleine",
             "schedule": {
-              "weekdays": ["17:06", "17:16"],
+              "weekdays": ["12:51"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Les 5 Chemins",
+            "schedule": {
+              "weekdays": ["12:35", "18:27"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - La Bru",
+            "schedule": {
+              "weekdays": ["12:37", "18:28"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Bouvignies - Calvaire",
+            "schedule": {
+              "weekdays": ["12:39", "18:31"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Bouvignies - La Paponnerie",
+            "schedule": {
+              "weekdays": ["12:42", "12:46", "18:33"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Beuvry-la-Forêt - Grand Marais",
+            "schedule": {
+              "weekdays": ["12:50", "18:37"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Beuvry-la-Forêt - Les Acacias",
+            "schedule": {
+              "weekdays": ["18:38"],
               "saturday": [],
               "sunday": []
             }
@@ -322,7 +386,7 @@
           {
             "name": "Coutches - Périsseile",
             "schedule": {
-              "weekdays": ["17:04", "17:14"],
+              "weekdays": ["12:52", "13:13", "19:05"],
               "saturday": [],
               "sunday": []
             }
@@ -330,7 +394,7 @@
           {
             "name": "Coutches - Calvaire",
             "schedule": {
-              "weekdays": ["17:03", "17:13"],
+              "weekdays": ["12:53", "13:14", "19:06"],
               "saturday": [],
               "sunday": []
             }
@@ -338,15 +402,15 @@
           {
             "name": "Coutches - Place",
             "schedule": {
-              "weekdays": ["17:00", "17:10"],
+              "weekdays": ["12:55", "13:15", "19:09"],
               "saturday": [],
               "sunday": []
             }
           },
           {
-            "name": "Bouvignies - Place",
+            "name": "Coutches - Houzarde",
             "schedule": {
-              "weekdays": ["17:04", "17:04"],
+              "weekdays": ["12:56", "13:17", "19:00"],
               "saturday": [],
               "sunday": []
             }
@@ -354,7 +418,7 @@
           {
             "name": "Orchies - Zone de l'Europe",
             "schedule": {
-              "weekdays": ["16:49", "16:59"],
+              "weekdays": ["13:21", "19:13"],
               "saturday": [],
               "sunday": []
             }
@@ -362,7 +426,15 @@
           {
             "name": "Orchies - Centre (Place De Lattre)",
             "schedule": {
-              "weekdays": ["16:51", "16:52"],
+              "weekdays": ["13:22", "19:15"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Orchies - Collège du Pévèle",
+            "schedule": {
+              "weekdays": ["08:10", "08:20", "08:00"],
               "saturday": [],
               "sunday": []
             }
@@ -370,7 +442,14 @@
           {
             "name": "Orchies - Gare SNCF",
             "schedule": {
-              "weekdays": ["16:49", "16:50"],
+              "weekdays": [
+                "08:17",
+                "08:07",
+                "08:07",
+                "13:26",
+                "18:43",
+                "19:17"
+              ],
               "saturday": [],
               "sunday": []
             }

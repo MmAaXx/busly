@@ -1,4 +1,4 @@
-# 🚌 Bus Hours - Horaires de Bus
+# 🚌 Busly - Horaires de Bus
 
 Une application React simple et moderne pour consulter rapidement les horaires de bus. Parfaite pour aider votre enfant à consulter les horaires pour aller au collège !
 
@@ -19,7 +19,7 @@ L'application est automatiquement déployée sur GitHub Pages à chaque push sur
 Une fois déployée, l'application sera accessible à l'adresse :
 
 ```
-https://donjgo.github.io/bus-hours
+https://donjgo.github.io/busly
 ```
 
 ## 🛠️ Développement local

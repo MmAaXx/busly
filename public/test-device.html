@@ -92,11 +92,17 @@
 
       // Test des différentes tailles d'iPhone
       if (
+        screenWidth === 390 &&
+        screenHeight === 844 &&
+        devicePixelRatio === 3
+      ) {
+        expectedQuery = "iPhone 12 Pro EXACT (390×844, ratio 3)";
+      } else if (
         screenWidth === 393 &&
         screenHeight === 852 &&
         devicePixelRatio === 3
       ) {
-        expectedQuery = "iPhone 12 Pro / 13 / 14 / 15 (393×852, ratio 3)";
+        expectedQuery = "iPhone 13 / 14 / 15 (393×852, ratio 3)";
       } else if (
         screenWidth === 375 &&
         screenHeight === 812 &&
@@ -126,13 +132,18 @@
         const tests = [
           {
             query:
+              "(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)",
+            name: "iPhone 12 Pro EXACT (390×844)",
+          },
+          {
+            query:
               "(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3)",
-            name: "iPhone 12 Pro query",
+            name: "iPhone 13/14/15 (393×852)",
           },
           {
             query:
               "(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)",
-            name: "iPhone X query",
+            name: "iPhone X/XS/11 Pro (375×812)",
           },
           {
             query:

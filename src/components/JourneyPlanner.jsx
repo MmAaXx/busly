@@ -470,12 +470,17 @@ const JourneyPlanner = ({
           {/* Routes directes */}
           {journeyResults.directRoutes.length > 0 ? (
             <Paper elevation={2} sx={{ p: 3, mb: 2 }}>
-              <Typography variant="h6" gutterBottom color="primary">
+              <Typography
+                variant="h6"
+                gutterBottom
+                color="primary"
+                sx={{ mb: 1 }}
+              >
                 🎯 Trajets directs trouvés
               </Typography>
               <Grid container spacing={2}>
                 {journeyResults.directRoutes.map((result, index) => (
-                  <Grid item xs={12} md={6} key={index}>
+                  <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                     <Card
                       variant="outlined"
                       sx={{
@@ -504,34 +509,40 @@ const JourneyPlanner = ({
                       }}
                     >
                       <CardContent>
-                        <Box
-                          display="flex"
-                          justifyContent="between"
-                          alignItems="center"
-                          mb={1}
-                        >
-                          <Chip
-                            label={`Ligne ${result.route.number}`}
-                            color="primary"
-                            size="small"
-                            sx={{
-                              mr: 1,
-                            }}
-                          />
-                          <Typography variant="body2" color="text.secondary">
-                            {(() => {
-                              const tripDay = getTripDay(
-                                result.route,
-                                result.departureStop.time
-                              );
-                              return tripDay.label;
-                            })()}
-                          </Typography>
+                        <Box mb={1}>
+                          <Grid
+                            container
+                            spacing={1}
+                            alignItems="center"
+                            justifyContent="center"
+                          >
+                            <Grid item size={12} textAlign="center">
+                              <Chip
+                                label={`Ligne ${result.route.number}`}
+                                color="primary"
+                                size="large"
+                                sx={{
+                                  mr: 1,
+                                  fontSize: "1.2rem",
+                                }}
+                              />
+                            </Grid>
+                            <Grid item size={12} textAlign="center">
+                              <Typography
+                                variant="body2"
+                                color="text.secondary"
+                              >
+                                {(() => {
+                                  const tripDay = getTripDay(
+                                    result.route,
+                                    result.departureStop.time
+                                  );
+                                  return tripDay.label;
+                                })()}
+                              </Typography>
+                            </Grid>
+                          </Grid>
                         </Box>
-
-                        <Typography variant="body2" gutterBottom>
-                          {result.route.description}
-                        </Typography>
 
                         <Box
                           display="flex"
@@ -587,6 +598,8 @@ const JourneyPlanner = ({
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
+                onClick={() => setShowAlternatives(!showAlternatives)}
+                sx={{ cursor: "pointer" }}
               >
                 <Typography variant="h6" color="secondary">
                   🔄 Trajets alternatifs dans les mêmes villes
@@ -604,7 +617,7 @@ const JourneyPlanner = ({
                   {journeyResults.alternativeRoutes
                     .slice(0, 4)
                     .map((result, index) => (
-                      <Grid item xs={12} md={6} key={index}>
+                      <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                         <Card variant="outlined">
                           <CardContent>
                             <Chip

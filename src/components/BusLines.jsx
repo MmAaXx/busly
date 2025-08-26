@@ -174,7 +174,7 @@ const BusLines = () => {
 
         <Grid container spacing={3}>
           {busData.lines.map((line) => (
-            <Grid item xs={12} sm={6} md={4} key={line.id}>
+            <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={line.id}>
               <Card
                 elevation={6}
                 sx={{

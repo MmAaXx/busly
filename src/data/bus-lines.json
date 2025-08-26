@@ -15,7 +15,10 @@
           "type": "school",
           "description": "Matin - Établissements scolaires",
           "stops": [
-            { "name": "Orchies - Gare SNCF", "time": "06:35" },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "06:35"
+            },
             { "name": "Orchies - Centre (Place De Lattre)", "time": "06:37" },
             { "name": "Orchies - Zone de l'Europe", "time": "06:39" },
             { "name": "Coutiches - Houssoye", "time": "06:44" },
@@ -38,7 +41,10 @@
           "type": "school",
           "description": "Matin - Établissements scolaires",
           "stops": [
-            { "name": "Orchies - Gare SNCF", "time": "06:40" },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "06:40"
+            },
             { "name": "Orchies - Centre (Place De Lattre)", "time": "06:42" },
             { "name": "Orchies - Zone de l'Europe", "time": "06:44" },
             { "name": "Coutiches - Houssoye", "time": "06:49" },
@@ -72,7 +78,10 @@
           "type": "school",
           "description": "Mercredi après-midi - Établissements scolaires",
           "stops": [
-            { "name": "Orchies - Gare SNCF", "time": "16:45" },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "16:45"
+            },
             { "name": "Orchies - Centre (Place De Lattre)", "time": "16:47" },
             { "name": "Orchies - Zone de l'Europe", "time": "16:49" },
             { "name": "Coutiches - Houssoye", "time": "16:58" },
@@ -107,7 +116,10 @@
           "type": "school",
           "description": "Après-midi - Établissements scolaires",
           "stops": [
-            { "name": "Orchies - Gare SNCF", "time": "16:55" },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "16:55"
+            },
             { "name": "Orchies - Centre (Place De Lattre)", "time": "16:57" },
             { "name": "Orchies - Zone de l'Europe", "time": "16:59" },
             { "name": "Coutiches - Houssoye", "time": "17:08" },
@@ -154,7 +166,10 @@
             { "name": "Coutiches - Rue de Fâches", "time": "07:53" },
             { "name": "Coutiches - Houssoye", "time": "07:55" },
             { "name": "Orchies - Collège du Pévèle", "time": "08:10" },
-            { "name": "Orchies - Gare SNCF", "time": "08:18" }
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:18"
+            }
           ]
         },
         {
@@ -166,7 +181,10 @@
           "description": "Mercredi midi - Collèges",
           "stops": [
             { "name": "Orchies - Collège du Pévèle", "time": "12:30" },
-            { "name": "Orchies - Gare SNCF", "time": "12:40" },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "12:40"
+            },
             { "name": "Coutiches - Houssoye", "time": "12:47" },
             { "name": "Coutiches - Rue de Fâches", "time": "12:50" },
             { "name": "Coutiches - Crupez", "time": "12:53" },
@@ -192,7 +210,10 @@
           "description": "Mercredi midi - Collèges (trajet Flines/Anhiers)",
           "stops": [
             { "name": "Orchies - Collège du Pévèle", "time": "12:30" },
-            { "name": "Orchies - Gare SNCF", "time": "12:40" },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "12:40"
+            },
             { "name": "Coutiches - Houssoye", "time": "12:47" },
             { "name": "Coutiches - Place", "time": "12:48" },
             { "name": "Coutiches - Calvaire", "time": "12:49" },
@@ -241,7 +262,10 @@
           "type": "college",
           "description": "Après-midi - Collèges (route complète)",
           "stops": [
-            { "name": "Orchies - Gare SNCF", "time": "17:05" },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:05"
+            },
             { "name": "Orchies - Collège du Pévèle", "time": "17:15" },
             { "name": "Coutiches - Houssoye", "time": "17:24" },
             { "name": "Coutiches - Place", "time": "17:26" },
@@ -281,7 +305,10 @@
           "type": "college",
           "description": "Après-midi - Collèges (trajet court)",
           "stops": [
-            { "name": "Orchies - Gare SNCF", "time": "17:05" },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:05"
+            },
             { "name": "Orchies - Collège du Pévèle", "time": "17:15" }
           ]
         },
@@ -293,7 +320,10 @@
           "type": "college",
           "description": "Après-midi - Collèges (Orchies-Beuvry-Douai)",
           "stops": [
-            { "name": "Orchies - Gare SNCF", "time": "17:10" },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:10"
+            },
             { "name": "Orchies - Collège du Pévèle", "time": "17:17" },
             { "name": "Beuvry-la-Forêt - Les Arcins", "time": "17:26" },
             { "name": "Beuvry-la-Forêt - Grand Mariage", "time": "17:28" },
@@ -310,7 +340,10 @@
           "type": "college",
           "description": "Soirée - Collèges (route complète)",
           "stops": [
-            { "name": "Orchies - Gare SNCF", "time": "17:50" },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:50"
+            },
             { "name": "Coutiches - Houssoye", "time": "17:24" },
             { "name": "Coutiches - Place", "time": "17:26" },
             { "name": "Coutiches - Rue de Fâches", "time": "18:00" },
@@ -364,7 +397,10 @@
             { "name": "Coutiches - Place", "time": "07:55" },
             { "name": "Coutiches - Houssoye", "time": "07:58" },
             { "name": "Orchies - Collège du Pévèle", "time": "08:10" },
-            { "name": "Orchies - Gare SNCF", "time": "08:17" }
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:17"
+            }
           ]
         },
         {
@@ -380,7 +416,10 @@
             { "name": "Bouvignies - Calvaire", "time": "07:39" },
             { "name": "Bouvignies - Le Pigeonnier", "time": "07:45" },
             { "name": "Orchies - Collège du Pévèle", "time": "08:00" },
-            { "name": "Orchies - Gare SNCF", "time": "08:07" }
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:07"
+            }
           ]
         },
         {
@@ -394,7 +433,10 @@
             { "name": "Bouvignies - Le Pigeonnier", "time": "07:45" },
             { "name": "Beuvry-la-Forêt - Grand Mariage", "time": "07:49" },
             { "name": "Orchies - Collège du Pévèle", "time": "08:00" },
-            { "name": "Orchies - Gare SNCF", "time": "08:07" }
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:07"
+            }
           ]
         },
         {
@@ -417,7 +459,10 @@
             { "name": "Coutiches - Houssoye", "time": "13:16" },
             { "name": "Orchies - Zone de l'Europe", "time": "13:21" },
             { "name": "Orchies - Centre (Place De Lattre)", "time": "13:23" },
-            { "name": "Orchies - Gare SNCF", "time": "13:25" }
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "13:25"
+            }
           ]
         },
         {
@@ -443,7 +488,10 @@
             { "name": "Bouvignies - Le Pigeonnier", "time": "18:33" },
             { "name": "Beuvry-la-Forêt - Grand Mariage", "time": "18:37" },
             { "name": "Beuvry-la-Forêt - Les Arcins", "time": "18:38" },
-            { "name": "Orchies - Gare SNCF", "time": "18:43" }
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "18:43"
+            }
           ]
         },
         {
@@ -466,7 +514,10 @@
             { "name": "Coutiches - Houssoye", "time": "19:08" },
             { "name": "Orchies - Zone de l'Europe", "time": "19:13" },
             { "name": "Orchies - Centre (Place De Lattre)", "time": "19:15" },
-            { "name": "Orchies - Gare SNCF", "time": "19:17" }
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "19:17"
+            }
           ]
         }
       ]

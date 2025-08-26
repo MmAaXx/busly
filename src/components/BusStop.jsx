@@ -244,7 +244,7 @@ const BusStop = ({
               const isPassed = timeInMinutes <= currentTime;
 
               return (
-                <Grid item xs="auto" key={index}>
+                <Grid item size={{ xs: "auto" }} key={index}>
                   <Chip
                     label={time}
                     size="small"

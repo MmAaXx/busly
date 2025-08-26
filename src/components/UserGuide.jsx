@@ -9,6 +9,9 @@ import {
   Collapse,
   IconButton,
   Alert,
+  Divider,
+  Link,
+  Button,
 } from "@mui/material";
 import {
   Star,
@@ -18,6 +21,9 @@ import {
   ExpandMore,
   ExpandLess,
   Info,
+  Feedback,
+  PhoneAndroid,
+  OpenInNew,
 } from "@mui/icons-material";
 import { useState } from "react";
 
@@ -66,6 +72,10 @@ const UserGuide = () => {
           <Alert severity="info" sx={{ mb: 2 }}>
             💡 Cette application sauvegarde automatiquement votre dernière
             recherche
+            <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
+              💾 Vos recherches sont sauvegardées localement dans votre
+              navigateur. Elles restent privées et ne sont pas partagées.
+            </Typography>
           </Alert>
 
           <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 600 }}>
@@ -114,10 +124,41 @@ const UserGuide = () => {
             </ListItem>
           </List>
 
-          <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-            💾 Vos recherches sont sauvegardées localement dans votre
-            navigateur. Elles restent privées et ne sont pas partagées.
+          <Divider sx={{ my: 2 }} />
+
+          <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 600 }}>
+            Liens utiles :
           </Typography>
+
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+            <Button
+              component={Link}
+              href="#" // TODO: Remplacer par l'URL du formulaire Google
+              target="_blank"
+              rel="noopener noreferrer"
+              startIcon={<Feedback />}
+              endIcon={<OpenInNew />}
+              variant="outlined"
+              size="small"
+              sx={{ justifyContent: "flex-start" }}
+            >
+              📝 Donner son avis et signaler des bugs
+            </Button>
+
+            <Button
+              component={Link}
+              href="https://github.com/MmAaXx/bus-hours/blob/main/docs/installation-pwa.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              startIcon={<PhoneAndroid />}
+              endIcon={<OpenInNew />}
+              variant="outlined"
+              size="small"
+              sx={{ justifyContent: "flex-start" }}
+            >
+              📱 Installer l'app sur votre téléphone
+            </Button>
+          </Box>
         </Box>
       </Collapse>
     </Paper>

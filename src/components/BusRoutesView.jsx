@@ -207,7 +207,7 @@ const BusRoutesView = () => {
 
                 {/* Filtres */}
                 <Grid container spacing={2} sx={{ mb: 2 }}>
-                  <Grid item xs={12} md={4}>
+                  <Grid item size={{ xs: 12, md: 4 }}>
                     <TextField
                       fullWidth
                       label="Rechercher"
@@ -223,7 +223,7 @@ const BusRoutesView = () => {
                       placeholder="Numéro de course, arrêt..."
                     />
                   </Grid>
-                  <Grid item xs={12} md={4}>
+                  <Grid item size={{ xs: 12, md: 4 }}>
                     <FormControl fullWidth>
                       <InputLabel>Type</InputLabel>
                       <Select
@@ -239,7 +239,7 @@ const BusRoutesView = () => {
                       </Select>
                     </FormControl>
                   </Grid>
-                  <Grid item xs={12} md={4}>
+                  <Grid item size={{ xs: 12, md: 4 }}>
                     <FormControl fullWidth>
                       <InputLabel>Direction</InputLabel>
                       <Select
@@ -278,7 +278,11 @@ const BusRoutesView = () => {
                       </Typography>
                       <Grid container spacing={2}>
                         {routes.map((route) => (
-                          <Grid item xs={12} md={6} lg={4} key={route.id}>
+                          <Grid
+                            item
+                            size={{ xs: 12, sm: 6, md: 4 }}
+                            key={route.id}
+                          >
                             <BusRoute
                               route={route}
                               onStopClick={handleStopClick}

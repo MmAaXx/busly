@@ -10,7 +10,11 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "generate:icons": "python3 scripts/generate-pwa-icons.py",
+    "generate:splash": "python3 scripts/generate-splash-screens.py",
+    "generate:pwa": "npm run generate:icons && npm run generate:splash",
+    "check:pwa": "node scripts/check-pwa.js"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

@@ -19,7 +19,7 @@ L'application est automatiquement déployée sur GitHub Pages à chaque push sur
 Une fois déployée, l'application sera accessible à l'adresse :
 
 ```
-https://donjgo.github.io/busly
+https://mmaaxx.github.io/bus-hours/
 ```
 
 ## 🛠️ Développement local
@@ -33,7 +33,7 @@ https://donjgo.github.io/busly
 
 ```bash
 # Cloner le repository
-git clone https://github.com/donjgo/bus-hours.git
+git clone https://github.com/MmAaXx/bus-hours.git
 cd bus-hours
 
 # Installer les dépendances
@@ -89,11 +89,15 @@ Les horaires sont stockés dans `src/data/bus-lines.json`. Vous pouvez facilemen
 - `npm run preview` - Prévisualiser la version de production
 - `npm run deploy` - Déployer manuellement sur GitHub Pages
 
+## 📁 Documentation
+
+- 📱 [Installation PWA](docs/installation-pwa.md) - Guide pour installer l'app sur téléphone/ordinateur
+
 ## 🔧 Technologies utilisées
 
 - React 19
 - Vite
-- CSS moderne avec Grid et Flexbox
+- Material-UI (MUI)
 - GitHub Actions pour le déploiement automatique
 - GitHub Pages pour l'hébergement
 
@@ -104,6 +108,12 @@ L'application est entièrement responsive et s'adapte parfaitement aux :
 - 📱 Smartphones
 - 📱 Tablettes
 - 💻 Ordinateurs de bureau
+
+## 📱 Installation PWA
+
+Busly peut être installée comme une application native sur votre smartphone pour un accès encore plus rapide !
+
+📄 **[Guide d'installation détaillé](docs/installation-pwa.md)** - Instructions complètes pour Android, iPhone et ordinateur
 
 ## Comment importer les horaires
 

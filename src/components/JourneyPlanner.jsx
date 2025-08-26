@@ -14,6 +14,9 @@ import {
   Alert,
   Collapse,
   IconButton,
+  List,
+  ListItem,
+  ListItemText,
 } from "@mui/material";
 import {
   SwapVert,
@@ -25,11 +28,10 @@ import {
   ExpandLess,
   AccessTime,
 } from "@mui/icons-material";
-import busData from "../data/bus-lines.json";
 
 const JourneyPlanner = ({
+  busData,
   onJourneyPlan,
-  currentDay,
   defaultDeparture,
   defaultArrival,
   saveFrequentJourney,
@@ -44,88 +46,47 @@ const JourneyPlanner = ({
 
   // Initialiser toutes les stations disponibles
   useEffect(() => {
-    const stops = [];
+    const stopsSet = new Set();
 
     busData.lines.forEach((line) => {
-      // Direction 1
-      line.direction1.stops.forEach((stop) => {
-        const existingStop = stops.find((s) => s.name === stop.name);
-        if (!existingStop) {
-          stops.push({
-            name: stop.name,
-            city: stop.name.split(" - ")[0],
-            fullName: stop.name,
-            lines: [
-              {
-                lineId: line.id,
-                lineName: line.name,
-                direction: "direction1",
-                directionName: line.direction1.name,
-                schedule: stop.schedule,
-              },
-            ],
-          });
-        } else {
-          existingStop.lines.push({
-            lineId: line.id,
-            lineName: line.name,
-            direction: "direction1",
-            directionName: line.direction1.name,
-            schedule: stop.schedule,
-          });
-        }
-      });
-
-      // Direction 2
-      line.direction2.stops.forEach((stop) => {
-        const existingStop = stops.find((s) => s.name === stop.name);
-        if (!existingStop) {
-          stops.push({
-            name: stop.name,
-            city: stop.name.split(" - ")[0],
-            fullName: stop.name,
-            lines: [
-              {
-                lineId: line.id,
-                lineName: line.name,
-                direction: "direction2",
-                directionName: line.direction2.name,
-                schedule: stop.schedule,
-              },
-            ],
-          });
-        } else {
-          existingStop.lines.push({
-            lineId: line.id,
-            lineName: line.name,
-            direction: "direction2",
-            directionName: line.direction2.name,
-            schedule: stop.schedule,
-          });
-        }
+      line.routes.forEach((route) => {
+        route.stops.forEach((stop) => {
+          stopsSet.add(stop.name);
+        });
       });
     });
 
-    setAllStops(stops.sort((a, b) => a.name.localeCompare(b.name)));
-  }, []);
+    const stops = Array.from(stopsSet).map((stopName) => {
+      // Extraire la ville du nom de l'arrêt
+      const city = stopName.split(" - ")[0];
+      return {
+        name: stopName,
+        city: city,
+      };
+    });
+
+    // Grouper par ville pour l'affichage
+    const groupedStops = stops.sort((a, b) => {
+      if (a.city !== b.city) {
+        return a.city.localeCompare(b.city);
+      }
+      return a.name.localeCompare(b.name);
+    });
+
+    setAllStops(groupedStops);
+  }, [busData]);
 
   // Charger les valeurs par défaut
   useEffect(() => {
-    if (defaultDeparture && allStops.length > 0) {
-      const defaultDep = allStops.find(
-        (stop) => stop.name === defaultDeparture.name
+    if (defaultDeparture) {
+      const departureStop = allStops.find(
+        (stop) => stop.name === defaultDeparture
       );
-      if (defaultDep) {
-        setDeparture(defaultDep);
-      }
+      if (departureStop) setDeparture(departureStop);
     }
-    if (defaultArrival && allStops.length > 0) {
-      const defaultArr = allStops.find(
-        (stop) => stop.name === defaultArrival.name
-      );
-      if (defaultArr) {
-        setArrival(defaultArr);
-      }
+    if (defaultArrival) {
+      const arrivalStop = allStops.find((stop) => stop.name === defaultArrival);
+      if (arrivalStop) setArrival(arrivalStop);
     }
   }, [defaultDeparture, defaultArrival, allStops]);
 
@@ -135,677 +96,425 @@ const JourneyPlanner = ({
     setArrival(temp);
   };
 
-  // Fonction helper pour obtenir tous les horaires (incluant mercredi si applicable)
-  const getAllScheduleTimes = (schedule, currentDay) => {
-    const today = new Date();
-    const dayOfWeek = today.getDay(); // 0 = dimanche, 1 = lundi, ..., 3 = mercredi
+  const findDirectRoutes = (departureStop, arrivalStop) => {
+    const results = [];
 
-    let times = schedule[currentDay] || [];
+    busData.lines.forEach((line) => {
+      line.routes.forEach((route) => {
+        const departureIndex = route.stops.findIndex(
+          (stop) => stop.name === departureStop
+        );
+        const arrivalIndex = route.stops.findIndex(
+          (stop) => stop.name === arrivalStop
+        );
 
-    // Si c'est mercredi (jour 3) et qu'il y a des horaires spéciaux mercredi
-    if (dayOfWeek === 3 && schedule.wednesday) {
-      times = [...times, ...schedule.wednesday];
-    }
-
-    // Trier les horaires par ordre chronologique et supprimer les doublons
-    return [...new Set(times)].sort((a, b) => {
-      const timeA = a.split(":").map(Number);
-      const timeB = b.split(":").map(Number);
-      return timeA[0] * 60 + timeA[1] - (timeB[0] * 60 + timeB[1]);
-    });
-  };
-
-  const findDirectJourney = () => {
-    if (!departure || !arrival) return null;
-
-    const results = {
-      direct: [],
-      alternatives: [],
-    };
-
-    // Recherche de trajets directs
-    departure.lines.forEach((depLine) => {
-      arrival.lines.forEach((arrLine) => {
+        // Vérifier si les deux arrêts sont sur cette route et dans le bon ordre
         if (
-          depLine.lineId === arrLine.lineId &&
-          depLine.direction === arrLine.direction
+          departureIndex !== -1 &&
+          arrivalIndex !== -1 &&
+          departureIndex < arrivalIndex
         ) {
-          // Même ligne et même direction = trajet direct possible
-          const line = busData.lines.find((l) => l.id === depLine.lineId);
-          const direction = line[depLine.direction];
+          const departureTime = route.stops[departureIndex].time;
+          const arrivalTime = route.stops[arrivalIndex].time;
 
-          const depStopIndex = direction.stops.findIndex(
-            (s) => s.name === departure.name
-          );
-          const arrStopIndex = direction.stops.findIndex(
-            (s) => s.name === arrival.name
-          );
+          // Calculer la durée
+          const [depHours, depMinutes] = departureTime.split(":").map(Number);
+          const [arrHours, arrMinutes] = arrivalTime.split(":").map(Number);
+          const duration =
+            arrHours * 60 + arrMinutes - (depHours * 60 + depMinutes);
 
-          if (
-            depStopIndex !== -1 &&
-            arrStopIndex !== -1 &&
-            depStopIndex < arrStopIndex
-          ) {
-            // Le trajet est valide (départ avant arrivée)
-            results.direct.push({
-              line: line,
-              direction: depLine.direction,
-              directionName: depLine.directionName,
-              departureStop: direction.stops[depStopIndex],
-              arrivalStop: direction.stops[arrStopIndex],
-              departureSchedule: getAllScheduleTimes(
-                depLine.schedule,
-                currentDay
-              ),
-              arrivalSchedule: getAllScheduleTimes(
-                arrLine.schedule,
-                currentDay
-              ),
-            });
-          }
-        }
-      });
-    });
-
-    // Recherche d'alternatives proches
-    const departureCities = getNearbyCities(departure.city);
-    const arrivalCities = getNearbyCities(arrival.city);
-
-    allStops.forEach((depStop) => {
-      if (
-        departureCities.includes(depStop.city) &&
-        depStop.name !== departure.name
-      ) {
-        allStops.forEach((arrStop) => {
-          if (
-            arrivalCities.includes(arrStop.city) &&
-            arrStop.name !== arrival.name
-          ) {
-            depStop.lines.forEach((depLine) => {
-              arrStop.lines.forEach((arrLine) => {
-                if (
-                  depLine.lineId === arrLine.lineId &&
-                  depLine.direction === arrLine.direction
-                ) {
-                  const line = busData.lines.find(
-                    (l) => l.id === depLine.lineId
-                  );
-                  const direction = line[depLine.direction];
-
-                  const depStopIndex = direction.stops.findIndex(
-                    (s) => s.name === depStop.name
-                  );
-                  const arrStopIndex = direction.stops.findIndex(
-                    (s) => s.name === arrStop.name
-                  );
-
-                  if (
-                    depStopIndex !== -1 &&
-                    arrStopIndex !== -1 &&
-                    depStopIndex < arrStopIndex
-                  ) {
-                    results.alternatives.push({
-                      line: line,
-                      direction: depLine.direction,
-                      directionName: depLine.directionName,
-                      departureStop: direction.stops[depStopIndex],
-                      arrivalStop: direction.stops[arrStopIndex],
-                      departureSchedule: getAllScheduleTimes(
-                        depLine.schedule,
-                        currentDay
-                      ),
-                      arrivalSchedule: getAllScheduleTimes(
-                        arrLine.schedule,
-                        currentDay
-                      ),
-                    });
-                  }
-                }
-              });
-            });
-          }
-        });
-      }
-    });
-
-    // Supprimer les doublons des alternatives
-    results.alternatives = results.alternatives.filter(
-      (alt, index, self) =>
-        index ===
-        self.findIndex(
-          (t) =>
-            t.departureStop.name === alt.departureStop.name &&
-            t.arrivalStop.name === alt.arrivalStop.name &&
-            t.direction === alt.direction
-        )
-    );
-
-    return results;
-  };
-
-  const getNearbyCities = (city) => {
-    // Retourne les villes proches - à adapter selon votre géographie
-    const cityGroups = {
-      Orchies: ["Orchies"],
-      Bouvignies: ["Bouvignies"],
-      Coutches: ["Coutches"],
-      Douai: ["Douai", "Waziers"],
-      Raches: ["Raches"],
-      "Flines-lez-Raches": ["Flines-lez-Raches"],
-      "Beuvry-la-Forêt": ["Beuvry-la-Forêt"],
-      Waziers: ["Douai", "Waziers"],
-    };
-
-    return cityGroups[city] || [city];
-  };
-
-  const handlePlanJourney = () => {
-    const results = findDirectJourney();
-    setJourneyResults(results);
-
-    // Sauvegarder ce trajet comme fréquent
-    if (saveFrequentJourney && departure && arrival) {
-      saveFrequentJourney(departure, arrival);
-    }
-
-    // Optionnellement définir comme valeurs par défaut
-    if (setDefaultDepartureStop && departure) {
-      setDefaultDepartureStop(departure);
-    }
-    if (setDefaultArrivalStop && arrival) {
-      setDefaultArrivalStop(arrival);
-    }
-
-    if (onJourneyPlan) {
-      onJourneyPlan(departure, arrival, results);
-    }
-  };
-
-  const formatTime = (time) => {
-    return time.replace(":", "h");
-  };
-
-  const calculateJourneyTime = (depTimes, arrTimes) => {
-    if (!depTimes.length || !arrTimes.length) return null;
-
-    // Trouver les correspondances possibles
-    const journeys = [];
-    depTimes.forEach((depTime) => {
-      arrTimes.forEach((arrTime) => {
-        const depMinutes =
-          parseInt(depTime.split(":")[0]) * 60 +
-          parseInt(depTime.split(":")[1]);
-        const arrMinutes =
-          parseInt(arrTime.split(":")[0]) * 60 +
-          parseInt(arrTime.split(":")[1]);
-
-        if (arrMinutes > depMinutes) {
-          journeys.push({
-            departure: depTime,
-            arrival: arrTime,
-            duration: arrMinutes - depMinutes,
+          results.push({
+            line: line,
+            route: route,
+            departureStop: route.stops[departureIndex],
+            arrivalStop: route.stops[arrivalIndex],
+            duration: duration,
+            stops: route.stops.slice(departureIndex, arrivalIndex + 1),
           });
         }
       });
     });
 
-    return journeys.sort((a, b) => a.duration - b.duration);
+    return results.sort((a, b) => {
+      // Trier par heure de départ
+      const [aHours, aMinutes] = a.departureStop.time.split(":").map(Number);
+      const [bHours, bMinutes] = b.departureStop.time.split(":").map(Number);
+      return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
+    });
+  };
+
+  const findAlternativeRoutes = (departureStop, arrivalStop) => {
+    // Pour les alternatives, on cherche des routes qui passent près des arrêts demandés
+    const alternatives = [];
+    const departureCity = departureStop.split(" - ")[0];
+    const arrivalCity = arrivalStop.split(" - ")[0];
+
+    busData.lines.forEach((line) => {
+      line.routes.forEach((route) => {
+        const nearDeparture = route.stops.filter(
+          (stop) =>
+            stop.name.startsWith(departureCity) && stop.name !== departureStop
+        );
+        const nearArrival = route.stops.filter(
+          (stop) =>
+            stop.name.startsWith(arrivalCity) && stop.name !== arrivalStop
+        );
+
+        if (nearDeparture.length > 0 && nearArrival.length > 0) {
+          nearDeparture.forEach((depStop) => {
+            nearArrival.forEach((arrStop) => {
+              const depIndex = route.stops.findIndex(
+                (s) => s.name === depStop.name
+              );
+              const arrIndex = route.stops.findIndex(
+                (s) => s.name === arrStop.name
+              );
+
+              if (depIndex !== -1 && arrIndex !== -1 && depIndex < arrIndex) {
+                alternatives.push({
+                  line: line,
+                  route: route,
+                  departureStop: depStop,
+                  arrivalStop: arrStop,
+                  isAlternative: true,
+                  stops: route.stops.slice(depIndex, arrIndex + 1),
+                });
+              }
+            });
+          });
+        }
+      });
+    });
+
+    return alternatives;
+  };
+
+  const handlePlanJourney = () => {
+    if (!departure || !arrival) {
+      return;
+    }
+
+    const directRoutes = findDirectRoutes(departure.name, arrival.name);
+    const alternativeRoutes = findAlternativeRoutes(
+      departure.name,
+      arrival.name
+    );
+
+    setJourneyResults({
+      departure: departure,
+      arrival: arrival,
+      directRoutes: directRoutes,
+      alternativeRoutes: alternativeRoutes,
+    });
+
+    // Sauvegarder comme voyage fréquent et arrêts par défaut
+    if (saveFrequentJourney) {
+      saveFrequentJourney(departure.name, arrival.name);
+    }
+    if (setDefaultDepartureStop) {
+      setDefaultDepartureStop(departure.name);
+    }
+    if (setDefaultArrivalStop) {
+      setDefaultArrivalStop(arrival.name);
+    }
+
+    if (onJourneyPlan) {
+      onJourneyPlan(departure.name, arrival.name);
+    }
+  };
+
+  const formatDuration = (minutes) => {
+    if (minutes < 60) {
+      return `${minutes} min`;
+    }
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    return `${hours}h${mins.toString().padStart(2, "0")}`;
+  };
+
+  const isActiveToday = (route) => {
+    const today = new Date().getDay();
+    const dayMap = {
+      1: "monday",
+      2: "tuesday",
+      3: "wednesday",
+      4: "thursday",
+      5: "friday",
+      6: "saturday",
+      0: "sunday",
+    };
+    return route.days.includes(dayMap[today]);
   };
 
   return (
-    <Box sx={{ mb: 4 }}>
+    <Box>
       <Paper
-        elevation={6}
+        elevation={3}
         sx={{
-          p: 3,
-          background: "rgba(255, 255, 255, 0.95)",
-          backdropFilter: "blur(10px)",
-          borderRadius: 3,
+          p: 4,
+          mb: 4,
         }}
       >
-        <Box sx={{ display: "flex", alignItems: "center", mb: 3, gap: 1 }}>
-          <DirectionsBus sx={{ color: "primary.main", fontSize: 28 }} />
-          <Typography variant="h5" component="h2" sx={{ fontWeight: 600 }}>
-            Planificateur de trajet
-          </Typography>
-        </Box>
+        <Typography
+          variant="h4"
+          gutterBottom
+          fontWeight="bold"
+          textAlign="center"
+        >
+          🗺️ Planifiez votre voyage
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          textAlign="center"
+          sx={{ mb: 3, opacity: 0.9 }}
+        >
+          Trouvez le meilleur itinéraire entre votre point de départ et votre
+          destination
+        </Typography>
 
         <Grid container spacing={2} alignItems="center">
-          <Grid item size={{ xs: 12, md: 5 }}>
+          <Grid item size={{ xs: 12, sm: 5 }}>
             <Autocomplete
               value={departure}
               onChange={(event, newValue) => setDeparture(newValue)}
               options={allStops}
-              getOptionLabel={(option) => option.name}
               groupBy={(option) => option.city}
-              fullWidth
+              getOptionLabel={(option) => option.name}
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label="Point de départ"
-                  placeholder="Ex: Bouvignies - Place"
+                  label="Départ"
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      backgroundColor: "rgba(255, 255, 255, 0.9)",
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 1)",
+                      },
+                    },
+                  }}
                   InputProps={{
                     ...params.InputProps,
-                    startAdornment: (
-                      <LocationOn sx={{ color: "success.main", mr: 1 }} />
-                    ),
+                    startAdornment: <LocationOn color="success" />,
                   }}
                 />
-              )}
-              renderOption={(props, option) => (
-                <Box component="li" {...props}>
-                  <Box>
-                    <Typography variant="body1">{option.name}</Typography>
-                    <Typography variant="caption" color="text.secondary">
-                      {option.lines.length} ligne
-                      {option.lines.length > 1 ? "s" : ""} disponible
-                      {option.lines.length > 1 ? "s" : ""}
-                    </Typography>
-                  </Box>
-                </Box>
               )}
             />
           </Grid>
 
-          <Grid item size={{ xs: 12, md: 2 }} sx={{ textAlign: "center" }}>
+          <Grid item size={{ xs: 12, sm: 2 }} textAlign="center">
             <IconButton
               onClick={handleSwapStops}
               sx={{
-                backgroundColor: "primary.main",
+                background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
                 color: "white",
-                "&:hover": { backgroundColor: "primary.dark" },
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.3)",
+                },
               }}
             >
               <SwapVert />
             </IconButton>
           </Grid>
 
-          <Grid item size={{ xs: 12, md: 5 }}>
+          <Grid item size={{ xs: 12, sm: 5 }}>
             <Autocomplete
               value={arrival}
               onChange={(event, newValue) => setArrival(newValue)}
               options={allStops}
-              getOptionLabel={(option) => option.name}
               groupBy={(option) => option.city}
-              fullWidth
+              getOptionLabel={(option) => option.name}
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label="Point d'arrivée"
-                  placeholder="Ex: Orchies - Collège du Pévèle"
+                  label="Arrivée"
+                  sx={{
+                    "& .MuiOutlinedInput-root": {
+                      backgroundColor: "rgba(255, 255, 255, 0.9)",
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 1)",
+                      },
+                    },
+                  }}
                   InputProps={{
                     ...params.InputProps,
-                    startAdornment: (
-                      <Flag sx={{ color: "error.main", mr: 1 }} />
-                    ),
+                    startAdornment: <Flag color="error" />,
                   }}
                 />
               )}
-              renderOption={(props, option) => (
-                <Box component="li" {...props}>
-                  <Box>
-                    <Typography variant="body1">{option.name}</Typography>
-                    <Typography variant="caption" color="text.secondary">
-                      {option.lines.length} ligne
-                      {option.lines.length > 1 ? "s" : ""} disponible
-                      {option.lines.length > 1 ? "s" : ""}
-                    </Typography>
-                  </Box>
-                </Box>
-              )}
             />
           </Grid>
+
+          <Grid item size={{ xs: 12 }}>
+            <Button
+              variant="contained"
+              onClick={handlePlanJourney}
+              disabled={!departure || !arrival}
+              startIcon={<Schedule />}
+              fullWidth
+              size="large"
+              sx={{
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+                color: "white",
+                fontSize: "1.1rem",
+                py: 2,
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.3)",
+                },
+                "&:disabled": {
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  color: "rgba(255, 255, 255, 0.5)",
+                },
+              }}
+            >
+              🚀 Planifier le voyage
+            </Button>
+          </Grid>
         </Grid>
+      </Paper>
 
-        <Box sx={{ mt: 3, textAlign: "center" }}>
-          <Button
-            variant="contained"
-            size="large"
-            onClick={handlePlanJourney}
-            disabled={!departure || !arrival}
-            startIcon={<Schedule />}
-            sx={{
-              px: 4,
-              py: 1.5,
-              borderRadius: 2,
-              textTransform: "none",
-              fontSize: "1.1rem",
-            }}
-          >
-            Rechercher les horaires
-          </Button>
-        </Box>
-
-        {/* Résultats du trajet */}
-        {journeyResults && (
-          <Box sx={{ mt: 4 }}>
-            {journeyResults.direct.length > 0 && (
-              <Box sx={{ mb: 3 }}>
-                <Typography
-                  variant="h6"
-                  sx={{ mb: 2, color: "success.main", fontWeight: 600 }}
-                >
-                  🎯 Trajet direct trouvé
-                </Typography>
-                {journeyResults.direct.map((journey, index) => {
-                  const journeyTimes = calculateJourneyTime(
-                    journey.departureSchedule,
-                    journey.arrivalSchedule
-                  );
-                  return (
+      {journeyResults && (
+        <Box>
+          {/* Routes directes */}
+          {journeyResults.directRoutes.length > 0 ? (
+            <Paper elevation={2} sx={{ p: 3, mb: 2 }}>
+              <Typography variant="h6" gutterBottom color="primary">
+                🎯 Trajets directs trouvés
+              </Typography>
+              <Grid container spacing={2}>
+                {journeyResults.directRoutes.map((result, index) => (
+                  <Grid item xs={12} md={6} key={index}>
                     <Card
-                      key={index}
+                      variant="outlined"
                       sx={{
-                        mb: 2,
-                        border: "2px solid",
-                        borderColor: "success.light",
+                        borderColor: isActiveToday(result.route)
+                          ? "primary.main"
+                          : "divider",
+                        backgroundColor: isActiveToday(result.route)
+                          ? "primary.light"
+                          : "background.paper",
                       }}
                     >
                       <CardContent>
                         <Box
-                          sx={{
-                            display: "flex",
-                            alignItems: "center",
-                            mb: 2,
-                            gap: 1,
-                          }}
+                          display="flex"
+                          justifyContent="between"
+                          alignItems="center"
+                          mb={1}
                         >
                           <Chip
-                            label={journey.line.name}
-                            sx={{
-                              backgroundColor: journey.line.color,
-                              color: "white",
-                              fontWeight: 600,
-                            }}
+                            label={`Course ${result.route.number}`}
+                            color="primary"
+                            size="small"
                           />
                           <Typography variant="body2" color="text.secondary">
-                            {journey.directionName}
+                            {isActiveToday(result.route)
+                              ? "🟢 Aujourd'hui"
+                              : "⚪ Pas aujourd'hui"}
                           </Typography>
                         </Box>
 
-                        <Grid container spacing={2}>
-                          <Grid item xs={6}>
-                            <Box
-                              sx={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: 1,
-                              }}
-                            >
-                              <LocationOn
-                                sx={{ color: "success.main", fontSize: 20 }}
-                              />
-                              <Box>
-                                <Typography
-                                  variant="body1"
-                                  sx={{ fontWeight: 500 }}
-                                >
-                                  {journey.departureStop.name}
-                                </Typography>
-                                <Box
-                                  sx={{
-                                    display: "flex",
-                                    flexWrap: "wrap",
-                                    gap: 0.5,
-                                    mt: 0.5,
-                                  }}
-                                >
-                                  {journey.departureSchedule.map(
-                                    (time, idx) => (
-                                      <Chip
-                                        key={idx}
-                                        label={formatTime(time)}
-                                        size="small"
-                                        variant="outlined"
-                                        sx={{ fontSize: "0.75rem" }}
-                                      />
-                                    )
-                                  )}
-                                </Box>
-                              </Box>
-                            </Box>
-                          </Grid>
+                        <Typography variant="body2" gutterBottom>
+                          {result.route.description}
+                        </Typography>
 
-                          <Grid item xs={6}>
-                            <Box
-                              sx={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: 1,
-                              }}
-                            >
-                              <Flag
-                                sx={{ color: "error.main", fontSize: 20 }}
-                              />
-                              <Box>
-                                <Typography
-                                  variant="body1"
-                                  sx={{ fontWeight: 500 }}
-                                >
-                                  {journey.arrivalStop.name}
-                                </Typography>
-                                <Box
-                                  sx={{
-                                    display: "flex",
-                                    flexWrap: "wrap",
-                                    gap: 0.5,
-                                    mt: 0.5,
-                                  }}
-                                >
-                                  {journey.arrivalSchedule.map((time, idx) => (
-                                    <Chip
-                                      key={idx}
-                                      label={formatTime(time)}
-                                      size="small"
-                                      variant="outlined"
-                                      sx={{ fontSize: "0.75rem" }}
-                                    />
-                                  ))}
-                                </Box>
-                              </Box>
-                            </Box>
-                          </Grid>
-                        </Grid>
-
-                        {journeyTimes && journeyTimes.length > 0 && (
-                          <Box sx={{ mt: 2 }}>
-                            <Typography
-                              variant="body2"
-                              color="text.secondary"
-                              sx={{ mb: 1 }}
-                            >
-                              💡 Correspondances suggérées :
+                        <Box
+                          display="flex"
+                          justifyContent="space-between"
+                          alignItems="center"
+                          mb={2}
+                        >
+                          <Box>
+                            <Typography variant="h6">
+                              {result.departureStop.time}
                             </Typography>
-                            <Box
-                              sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}
-                            >
-                              {journeyTimes.slice(0, 3).map((jt, idx) => (
-                                <Chip
-                                  key={idx}
-                                  icon={<AccessTime />}
-                                  label={`${formatTime(
-                                    jt.departure
-                                  )} → ${formatTime(jt.arrival)} (${
-                                    jt.duration
-                                  }min)`}
-                                  variant="outlined"
-                                  size="small"
-                                  sx={{ backgroundColor: "success.50" }}
-                                />
-                              ))}
-                            </Box>
+                            <Typography variant="body2" color="text.secondary">
+                              Départ
+                            </Typography>
                           </Box>
-                        )}
+                          <Box textAlign="center">
+                            <DirectionsBus color="primary" />
+                            <Typography variant="body2">
+                              {formatDuration(result.duration)}
+                            </Typography>
+                          </Box>
+                          <Box textAlign="right">
+                            <Typography variant="h6">
+                              {result.arrivalStop.time}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                              Arrivée
+                            </Typography>
+                          </Box>
+                        </Box>
+
+                        <Divider sx={{ my: 1 }} />
+                        <Typography variant="body2" color="text.secondary">
+                          {result.stops.length} arrêts • Direction:{" "}
+                          {result.route.direction}
+                        </Typography>
                       </CardContent>
                     </Card>
-                  );
-                })}
+                  </Grid>
+                ))}
+              </Grid>
+            </Paper>
+          ) : (
+            <Alert severity="info" sx={{ mb: 2 }}>
+              Aucun trajet direct trouvé entre ces deux arrêts.
+            </Alert>
+          )}
+
+          {/* Routes alternatives */}
+          {journeyResults.alternativeRoutes.length > 0 && (
+            <Paper elevation={2} sx={{ p: 3, mb: 2 }}>
+              <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Typography variant="h6" color="secondary">
+                  🔄 Trajets alternatifs dans les mêmes villes
+                </Typography>
+                <IconButton
+                  onClick={() => setShowAlternatives(!showAlternatives)}
+                  aria-expanded={showAlternatives}
+                >
+                  {showAlternatives ? <ExpandLess /> : <ExpandMore />}
+                </IconButton>
               </Box>
-            )}
 
-            {journeyResults.alternatives.length > 0 && (
-              <Box>
-                <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                  <Typography
-                    variant="h6"
-                    sx={{ color: "info.main", fontWeight: 600 }}
-                  >
-                    🔄 Options alternatives
-                  </Typography>
-                  <IconButton
-                    onClick={() => setShowAlternatives(!showAlternatives)}
-                    sx={{ ml: 1 }}
-                  >
-                    {showAlternatives ? <ExpandLess /> : <ExpandMore />}
-                  </IconButton>
-                </Box>
-
-                <Collapse in={showAlternatives}>
-                  {journeyResults.alternatives
-                    .slice(0, 3)
-                    .map((journey, index) => {
-                      const journeyTimes = calculateJourneyTime(
-                        journey.departureSchedule,
-                        journey.arrivalSchedule
-                      );
-                      return (
-                        <Card
-                          key={index}
-                          sx={{
-                            mb: 2,
-                            border: "1px solid",
-                            borderColor: "info.light",
-                          }}
-                        >
+              <Collapse in={showAlternatives}>
+                <Grid container spacing={2} sx={{ mt: 1 }}>
+                  {journeyResults.alternativeRoutes
+                    .slice(0, 4)
+                    .map((result, index) => (
+                      <Grid item xs={12} md={6} key={index}>
+                        <Card variant="outlined">
                           <CardContent>
-                            <Box
-                              sx={{
-                                display: "flex",
-                                alignItems: "center",
-                                mb: 2,
-                                gap: 1,
-                              }}
-                            >
-                              <Chip
-                                label={journey.line.name}
-                                sx={{
-                                  backgroundColor: journey.line.color,
-                                  color: "white",
-                                  fontWeight: 600,
-                                }}
-                              />
-                              <Typography
-                                variant="body2"
-                                color="text.secondary"
-                              >
-                                {journey.directionName}
-                              </Typography>
-                            </Box>
-
-                            <Grid container spacing={2}>
-                              <Grid item xs={6}>
-                                <Box
-                                  sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: 1,
-                                  }}
-                                >
-                                  <LocationOn
-                                    sx={{ color: "info.main", fontSize: 20 }}
-                                  />
-                                  <Box>
-                                    <Typography
-                                      variant="body1"
-                                      sx={{ fontWeight: 500 }}
-                                    >
-                                      {journey.departureStop.name}
-                                    </Typography>
-                                    <Box
-                                      sx={{
-                                        display: "flex",
-                                        flexWrap: "wrap",
-                                        gap: 0.5,
-                                        mt: 0.5,
-                                      }}
-                                    >
-                                      {journey.departureSchedule
-                                        .slice(0, 4)
-                                        .map((time, idx) => (
-                                          <Chip
-                                            key={idx}
-                                            label={formatTime(time)}
-                                            size="small"
-                                            variant="outlined"
-                                            sx={{ fontSize: "0.75rem" }}
-                                          />
-                                        ))}
-                                    </Box>
-                                  </Box>
-                                </Box>
-                              </Grid>
-
-                              <Grid item xs={6}>
-                                <Box
-                                  sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    gap: 1,
-                                  }}
-                                >
-                                  <Flag
-                                    sx={{ color: "warning.main", fontSize: 20 }}
-                                  />
-                                  <Box>
-                                    <Typography
-                                      variant="body1"
-                                      sx={{ fontWeight: 500 }}
-                                    >
-                                      {journey.arrivalStop.name}
-                                    </Typography>
-                                    <Box
-                                      sx={{
-                                        display: "flex",
-                                        flexWrap: "wrap",
-                                        gap: 0.5,
-                                        mt: 0.5,
-                                      }}
-                                    >
-                                      {journey.arrivalSchedule
-                                        .slice(0, 4)
-                                        .map((time, idx) => (
-                                          <Chip
-                                            key={idx}
-                                            label={formatTime(time)}
-                                            size="small"
-                                            variant="outlined"
-                                            sx={{ fontSize: "0.75rem" }}
-                                          />
-                                        ))}
-                                    </Box>
-                                  </Box>
-                                </Box>
-                              </Grid>
-                            </Grid>
+                            <Chip
+                              label={`Course ${result.route.number}`}
+                              color="secondary"
+                              size="small"
+                              sx={{ mb: 1 }}
+                            />
+                            <Typography variant="body2" gutterBottom>
+                              {result.departureStop.name} →{" "}
+                              {result.arrivalStop.name}
+                            </Typography>
+                            <Typography variant="h6">
+                              {result.departureStop.time} →{" "}
+                              {result.arrivalStop.time}
+                            </Typography>
                           </CardContent>
                         </Card>
-                      );
-                    })}
-                </Collapse>
-              </Box>
-            )}
-
-            {journeyResults.direct.length === 0 &&
-              journeyResults.alternatives.length === 0 && (
-                <Alert severity="info" sx={{ mt: 2 }}>
-                  Aucun trajet direct trouvé entre ces deux arrêts. Essayez de
-                  sélectionner des arrêts différents ou consultez les lignes
-                  disponibles.
-                </Alert>
-              )}
-          </Box>
-        )}
-      </Paper>
+                      </Grid>
+                    ))}
+                </Grid>
+              </Collapse>
+            </Paper>
+          )}
+        </Box>
+      )}
     </Box>
   );
 };

@@ -54,7 +54,7 @@ const UserGuide = () => {
           }}
         >
           <Info color="primary" />
-          Guide d'utilisation
+          💡 Guide d'utilisation de Busly
         </Typography>
         <IconButton size="small">
           {isExpanded ? <ExpandLess /> : <ExpandMore />}

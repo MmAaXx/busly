@@ -28,7 +28,7 @@ import {
 import BusRoute from "./BusRoute";
 import QuickAccess from "./QuickAccess";
 import UserGuide from "./UserGuide";
-import JourneyPlannerNew from "./JourneyPlannerNew";
+import JourneyPlanner from "./JourneyPlanner";
 import useUserPreferences from "../hooks/useUserPreferences";
 import busData from "../data/bus-lines.json";
 
@@ -154,22 +154,45 @@ const BusRoutesView = () => {
   return (
     <Box sx={{ maxWidth: 1200, margin: "0 auto", padding: 2 }}>
       <Paper elevation={3} sx={{ padding: 3, marginBottom: 3 }}>
-        <Box display="flex" alignItems="center" gap={2} marginBottom={2}>
-          <DirectionsBus color="primary" fontSize="large" />
-          <Typography variant="h4" component="h1" fontWeight="bold">
-            Busly - Horaires de Bus
-          </Typography>
-        </Box>
-
         <Tabs value={selectedTab} onChange={handleTabChange} sx={{ mb: 3 }}>
-          <Tab label="Toutes les courses" />
-          <Tab label="Planificateur de voyage" />
-          <Tab label="Accès rapide" />
+          <Tab label="🗺️ Planifier mon voyage" />
+          <Tab label="🚌 Voir toutes les courses" />
         </Tabs>
 
-        {/* Onglet Toutes les courses */}
+        {/* Onglet Planificateur de voyage */}
         {selectedTab === 0 && (
           <Fade in={selectedTab === 0}>
+            <Box>
+              <JourneyPlanner
+                busData={busData}
+                onJourneyPlan={handleJourneyPlan}
+                defaultDeparture={defaultDeparture}
+                defaultArrival={defaultArrival}
+                saveFrequentJourney={saveFrequentJourney}
+                setDefaultDepartureStop={setDefaultDepartureStop}
+                setDefaultArrivalStop={setDefaultArrivalStop}
+              />
+
+              <QuickAccess
+                favoriteStops={favoriteStops}
+                recentTrips={recentTrips}
+                lastTrip={lastTrip}
+                frequentJourneys={frequentJourneys}
+                onStopSelect={handleStopSelect}
+                onTripSelect={handleTripSelect}
+                removeFavoriteStop={removeFavoriteStop}
+                removeRecentTrip={removeRecentTrip}
+                removeFrequentJourney={removeFrequentJourney}
+              />
+
+              <UserGuide />
+            </Box>
+          </Fade>
+        )}
+
+        {/* Onglet Toutes les courses */}
+        {selectedTab === 1 && (
+          <Fade in={selectedTab === 1}>
             <Box>
               <Paper elevation={1} sx={{ p: 2, mb: 3 }}>
                 <Typography variant="h6" gutterBottom>
@@ -260,43 +283,6 @@ const BusRoutesView = () => {
                     </Paper>
                   )
               )}
-            </Box>
-          </Fade>
-        )}
-
-        {/* Onglet Planificateur de voyage */}
-        {selectedTab === 1 && (
-          <Fade in={selectedTab === 1}>
-            <Box>
-              <JourneyPlannerNew
-                busData={busData}
-                onJourneyPlan={handleJourneyPlan}
-                defaultDeparture={defaultDeparture}
-                defaultArrival={defaultArrival}
-                saveFrequentJourney={saveFrequentJourney}
-                setDefaultDepartureStop={setDefaultDepartureStop}
-                setDefaultArrivalStop={setDefaultArrivalStop}
-              />
-            </Box>
-          </Fade>
-        )}
-
-        {/* Onglet Accès rapide */}
-        {selectedTab === 2 && (
-          <Fade in={selectedTab === 2}>
-            <Box>
-              <QuickAccess
-                favoriteStops={favoriteStops}
-                recentTrips={recentTrips}
-                lastTrip={lastTrip}
-                frequentJourneys={frequentJourneys}
-                onStopSelect={handleStopSelect}
-                onTripSelect={handleTripSelect}
-                removeFavoriteStop={removeFavoriteStop}
-                removeRecentTrip={removeRecentTrip}
-                removeFrequentJourney={removeFrequentJourney}
-              />
-              <UserGuide />
             </Box>
           </Fade>
         )}

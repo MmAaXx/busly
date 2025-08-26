@@ -158,7 +158,7 @@ const BusRoutesView = () => {
     <Box sx={{ maxWidth: 1200, margin: "0 auto", padding: 1 }}>
       <Paper elevation={3} sx={{ px: 2, py: 1, marginBottom: 3 }}>
         <Tabs value={selectedTab} onChange={handleTabChange} sx={{ mb: 3 }}>
-          <Tab label="🗺️ Planifier mon voyage" />
+          <Tab label="🗺️ Rechercher un bus" />
           <Tab label="🚌 Voir toutes les lignes de bus" />
         </Tabs>
 

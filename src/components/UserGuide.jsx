@@ -133,7 +133,7 @@ const UserGuide = () => {
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
             <Button
               component={Link}
-              href="#" // TODO: Remplacer par l'URL du formulaire Google
+              href="https://forms.gle/DmSbedoyiTQ7umEs9"
               target="_blank"
               rel="noopener noreferrer"
               startIcon={<Feedback />}
@@ -147,7 +147,7 @@ const UserGuide = () => {
 
             <Button
               component={Link}
-              href="https://github.com/MmAaXx/bus-hours/blob/main/docs/installation-pwa.md"
+              href="https://github.com/MmAaXx/busly/blob/main/docs/installation-pwa.md"
               target="_blank"
               rel="noopener noreferrer"
               startIcon={<PhoneAndroid />}

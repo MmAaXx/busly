@@ -354,7 +354,7 @@ const JourneyPlanner = ({
           fontWeight="bold"
           textAlign="center"
         >
-          🗺️ Planifiez votre voyage
+          🗺️ Rechercher un bus
         </Typography>
         <Typography
           variant="subtitle1"

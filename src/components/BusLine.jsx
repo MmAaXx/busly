@@ -23,8 +23,19 @@ import {
 } from "@mui/icons-material";
 import BusStop from "./BusStop";
 
-const BusLine = ({ line, currentDay, onBack }) => {
-  const [selectedDirection, setSelectedDirection] = useState("direction1");
+const BusLine = ({
+  line,
+  currentDay,
+  initialDirection,
+  onBack,
+  addFavoriteStop,
+  removeFavoriteStop,
+  isFavoriteStop,
+  saveTrip,
+}) => {
+  const [selectedDirection, setSelectedDirection] = useState(
+    initialDirection || "direction1"
+  );
   const [nextBuses, setNextBuses] = useState([]);
 
   const currentDirection = line[selectedDirection];
@@ -258,6 +269,13 @@ const BusLine = ({ line, currentDay, onBack }) => {
                   stop={stop}
                   currentDay={currentDay}
                   lineColor={line.color}
+                  lineId={line.id}
+                  lineName={line.name}
+                  direction={selectedDirection}
+                  directionName={currentDirection.name}
+                  addFavoriteStop={addFavoriteStop}
+                  removeFavoriteStop={removeFavoriteStop}
+                  isFavoriteStop={isFavoriteStop}
                 />
                 {index < currentDirection.stops.length - 1 && (
                   <Divider sx={{ my: 1, opacity: 0.3 }} />

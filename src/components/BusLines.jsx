@@ -17,11 +17,27 @@ import {
   DateRangeOutlined,
 } from "@mui/icons-material";
 import BusLine from "./BusLine";
+import QuickAccess from "./QuickAccess";
+import UserGuide from "./UserGuide";
+import useUserPreferences from "../hooks/useUserPreferences";
 import busData from "../data/bus-lines.json";
 
 const BusLines = () => {
   const [selectedLine, setSelectedLine] = useState(null);
+  const [selectedDirection, setSelectedDirection] = useState(null);
   const [currentDay, setCurrentDay] = useState("");
+
+  // Hook pour les préférences utilisateur
+  const {
+    favoriteStops,
+    recentTrips,
+    lastTrip,
+    addFavoriteStop,
+    removeFavoriteStop,
+    isFavoriteStop,
+    saveTrip,
+    removeRecentTrip,
+  } = useUserPreferences();
 
   useEffect(() => {
     const today = new Date();
@@ -36,12 +52,31 @@ const BusLines = () => {
     }
   }, []);
 
-  const handleLineSelect = (line) => {
+  const handleLineSelect = (line, direction = null) => {
     setSelectedLine(line);
+    setSelectedDirection(direction);
   };
 
   const handleBack = () => {
     setSelectedLine(null);
+    setSelectedDirection(null);
+  };
+
+  // Gérer la sélection d'un arrêt depuis QuickAccess
+  const handleStopSelect = (stopData) => {
+    const line = busData.lines.find((l) => l.id === stopData.lineId);
+    if (line) {
+      handleLineSelect(line, stopData.direction);
+    }
+  };
+
+  // Gérer la sélection d'un trajet depuis QuickAccess
+  const handleTripSelect = (trip) => {
+    // Pour un trajet, on va vers l'arrêt de départ
+    const line = busData.lines.find((l) => l.id === trip.fromStop.lineId);
+    if (line) {
+      handleLineSelect(line, trip.fromStop.direction);
+    }
   };
 
   const getDayInfo = () => {
@@ -70,7 +105,13 @@ const BusLines = () => {
       <BusLine
         line={selectedLine}
         currentDay={currentDay}
+        initialDirection={selectedDirection}
         onBack={handleBack}
+        // Passer les fonctions de préférences au composant BusLine
+        addFavoriteStop={addFavoriteStop}
+        removeFavoriteStop={removeFavoriteStop}
+        isFavoriteStop={isFavoriteStop}
+        saveTrip={saveTrip}
       />
     );
   }
@@ -80,6 +121,20 @@ const BusLines = () => {
   return (
     <Fade in timeout={500}>
       <Box>
+        {/* Guide d'utilisation */}
+        <UserGuide />
+
+        {/* Composant d'accès rapide */}
+        <QuickAccess
+          favoriteStops={favoriteStops}
+          recentTrips={recentTrips}
+          lastTrip={lastTrip}
+          onStopSelect={handleStopSelect}
+          onTripSelect={handleTripSelect}
+          onRemoveFavoriteStop={removeFavoriteStop}
+          onRemoveRecentTrip={removeRecentTrip}
+        />
+
         <Box sx={{ textAlign: "center", mb: 4 }}>
           <Typography
             variant="h3"

@@ -18,9 +18,22 @@ import {
   AccessTime,
   Schedule,
   HourglassEmpty,
+  Star,
+  StarBorder,
 } from "@mui/icons-material";
 
-const BusStop = ({ stop, currentDay, lineColor }) => {
+const BusStop = ({
+  stop,
+  currentDay,
+  lineColor,
+  lineId,
+  lineName,
+  direction,
+  directionName,
+  addFavoriteStop,
+  removeFavoriteStop,
+  isFavoriteStop,
+}) => {
   const [nextTimes, setNextTimes] = useState([]);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -60,6 +73,29 @@ const BusStop = ({ stop, currentDay, lineColor }) => {
   };
 
   const allTimes = stop.schedule[currentDay] || [];
+
+  // Gestion des favoris
+  const isFavorite = isFavoriteStop && isFavoriteStop(lineId, stop.name);
+
+  const handleFavoriteToggle = (event) => {
+    event.stopPropagation(); // Empêcher l'expansion/collapse
+
+    const stopData = {
+      lineId,
+      lineName,
+      lineColor,
+      stopName: stop.name,
+      direction,
+      directionName,
+    };
+
+    if (isFavorite) {
+      const stopId = `${lineId}-${stop.name}`;
+      removeFavoriteStop && removeFavoriteStop(stopId);
+    } else {
+      addFavoriteStop && addFavoriteStop(stopData);
+    }
+  };
 
   return (
     <Card
@@ -101,6 +137,26 @@ const BusStop = ({ stop, currentDay, lineColor }) => {
             >
               <LocationOn sx={{ color: lineColor, fontSize: 20 }} />
               {stop.name}
+              {addFavoriteStop && removeFavoriteStop && isFavoriteStop && (
+                <IconButton
+                  size="small"
+                  onClick={handleFavoriteToggle}
+                  sx={{
+                    ml: 1,
+                    color: isFavorite ? "warning.main" : "text.secondary",
+                    "&:hover": {
+                      color: "warning.main",
+                      backgroundColor: "warning.light",
+                    },
+                  }}
+                >
+                  {isFavorite ? (
+                    <Star fontSize="small" />
+                  ) : (
+                    <StarBorder fontSize="small" />
+                  )}
+                </IconButton>
+              )}
             </Typography>
 
             {nextTimes.length > 0 ? (

@@ -1,282 +1,378 @@
 {
   "lines": [
     {
-      "id": "ligne-1",
-      "name": "Ligne 1",
-      "color": "#FF6B6B",
+      "id": "ligne-857S",
+      "name": "Ligne 857S",
+      "color": "#2E8B57",
+      "type": "school",
+      "operator": "Arc-en-Ciel",
+      "description": "Établissements scolaires - Orchies / Douai",
       "direction1": {
-        "name": "Collège → Centre-ville",
+        "name": "Orchies → Douai (matin - vers les écoles)",
         "stops": [
           {
-            "name": "Collège Jean Moulin",
+            "name": "Orchies - Gare SNCF",
             "schedule": {
-              "weekdays": [
-                "07:15",
-                "07:45",
-                "08:15",
-                "12:00",
-                "12:30",
-                "13:00",
-                "16:45",
-                "17:15",
-                "17:45"
-              ],
-              "saturday": [
-                "08:00",
-                "09:00",
-                "10:00",
-                "12:00",
-                "14:00",
-                "16:00",
-                "18:00"
-              ],
-              "sunday": ["09:00", "11:00", "14:00", "17:00"]
+              "weekdays": ["06:30", "06:40"],
+              "saturday": [],
+              "sunday": []
             }
           },
           {
-            "name": "Mairie",
+            "name": "Orchies - Centre (Place De Lattre)",
             "schedule": {
-              "weekdays": [
-                "07:20",
-                "07:50",
-                "08:20",
-                "12:05",
-                "12:35",
-                "13:05",
-                "16:50",
-                "17:20",
-                "17:50"
-              ],
-              "saturday": [
-                "08:05",
-                "09:05",
-                "10:05",
-                "12:05",
-                "14:05",
-                "16:05",
-                "18:05"
-              ],
-              "sunday": ["09:05", "11:05", "14:05", "17:05"]
+              "weekdays": ["06:32", "06:42"],
+              "saturday": [],
+              "sunday": []
             }
           },
           {
-            "name": "Gare SNCF",
+            "name": "Orchies - Zone de l'Europe",
             "schedule": {
-              "weekdays": [
-                "07:30",
-                "08:00",
-                "08:30",
-                "12:15",
-                "12:45",
-                "13:15",
-                "17:00",
-                "17:30",
-                "18:00"
-              ],
-              "saturday": [
-                "08:15",
-                "09:15",
-                "10:15",
-                "12:15",
-                "14:15",
-                "16:15",
-                "18:15"
-              ],
-              "sunday": ["09:15", "11:15", "14:15", "17:15"]
+              "weekdays": ["06:39", "06:44"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Bouvignies - Place",
+            "schedule": {
+              "weekdays": ["06:42", "06:50"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Place",
+            "schedule": {
+              "weekdays": ["06:45", "06:51"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Calvaire",
+            "schedule": {
+              "weekdays": ["06:46", "06:53"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Périsseile",
+            "schedule": {
+              "weekdays": ["06:47", "06:55"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Flines-lez-Raches - Madeleine",
+            "schedule": {
+              "weekdays": ["06:57"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Raches - Bois Vert",
+            "schedule": {
+              "weekdays": ["07:00"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Raches - Cul Brûlé",
+            "schedule": {
+              "weekdays": ["07:01"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Raches - Placette",
+            "schedule": {
+              "weekdays": ["07:02"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Raches - Mairie",
+            "schedule": {
+              "weekdays": ["07:04"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Raches - La Fosse",
+            "schedule": {
+              "weekdays": ["07:05"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Waziers - Langerois",
+            "schedule": {
+              "weekdays": ["07:05", "07:13"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Gayant Expo",
+            "schedule": {
+              "weekdays": ["07:07", "07:15"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Saint Michel",
+            "schedule": {
+              "weekdays": ["07:10", "07:18"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Arsenal",
+            "schedule": {
+              "weekdays": ["07:12", "07:20"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Place Carnot",
+            "schedule": {
+              "weekdays": ["07:14", "07:22"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Place De Gaulle",
+            "schedule": {
+              "weekdays": ["07:16", "07:26"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Lycée E. Lamonnier",
+            "schedule": {
+              "weekdays": ["07:40"],
+              "saturday": [],
+              "sunday": []
             }
           }
         ]
       },
       "direction2": {
-        "name": "Centre-ville → Collège",
+        "name": "Douai → Orchies (soir - retour des écoles)",
         "stops": [
           {
-            "name": "Gare SNCF",
+            "name": "Douai - Place De Gaulle",
             "schedule": {
-              "weekdays": [
-                "06:45",
-                "07:15",
-                "07:45",
-                "11:30",
-                "12:00",
-                "12:30",
-                "16:15",
-                "16:45",
-                "17:15"
-              ],
-              "saturday": [
-                "07:30",
-                "08:30",
-                "09:30",
-                "11:30",
-                "13:30",
-                "15:30",
-                "17:30"
-              ],
-              "sunday": ["08:30", "10:30", "13:30", "16:30"]
+              "weekdays": ["17:30", "17:40"],
+              "saturday": [],
+              "sunday": []
             }
           },
           {
-            "name": "Mairie",
+            "name": "Douai - Place Carnot",
             "schedule": {
-              "weekdays": [
-                "06:55",
-                "07:25",
-                "07:55",
-                "11:40",
-                "12:10",
-                "12:40",
-                "16:25",
-                "16:55",
-                "17:25"
-              ],
-              "saturday": [
-                "07:40",
-                "08:40",
-                "09:40",
-                "11:40",
-                "13:40",
-                "15:40",
-                "17:40"
-              ],
-              "sunday": ["08:40", "10:40", "13:40", "16:40"]
+              "weekdays": ["17:30", "17:40"],
+              "saturday": [],
+              "sunday": []
             }
           },
           {
-            "name": "Collège Jean Moulin",
+            "name": "Douai - Gayant Expo",
             "schedule": {
-              "weekdays": [
-                "07:00",
-                "07:30",
-                "08:00",
-                "11:45",
-                "12:15",
-                "12:45",
-                "16:30",
-                "17:00",
-                "17:30"
-              ],
-              "saturday": [
-                "07:45",
-                "08:45",
-                "09:45",
-                "11:45",
-                "13:45",
-                "15:45",
-                "17:45"
-              ],
-              "sunday": ["08:45", "10:45", "13:45", "16:45"]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "ligne-2",
-      "name": "Ligne 2",
-      "color": "#4ECDC4",
-      "direction1": {
-        "name": "Lycée → Zone commerciale",
-        "stops": [
-          {
-            "name": "Lycée Victor Hugo",
-            "schedule": {
-              "weekdays": [
-                "07:00",
-                "07:30",
-                "08:00",
-                "12:00",
-                "12:30",
-                "16:30",
-                "17:00",
-                "17:30"
-              ],
-              "saturday": [
-                "08:00",
-                "10:00",
-                "12:00",
-                "14:00",
-                "16:00",
-                "18:00"
-              ],
-              "sunday": ["10:00", "14:00", "18:00"]
+              "weekdays": ["17:27", "17:37"],
+              "saturday": [],
+              "sunday": []
             }
           },
           {
-            "name": "Centre commercial",
+            "name": "Waziers - Langerois",
             "schedule": {
-              "weekdays": [
-                "07:15",
-                "07:45",
-                "08:15",
-                "12:15",
-                "12:45",
-                "16:45",
-                "17:15",
-                "17:45"
-              ],
-              "saturday": [
-                "08:15",
-                "10:15",
-                "12:15",
-                "14:15",
-                "16:15",
-                "18:15"
-              ],
-              "sunday": ["10:15", "14:15", "18:15"]
-            }
-          }
-        ]
-      },
-      "direction2": {
-        "name": "Zone commerciale → Lycée",
-        "stops": [
-          {
-            "name": "Centre commercial",
-            "schedule": {
-              "weekdays": [
-                "06:45",
-                "07:15",
-                "07:45",
-                "11:45",
-                "12:15",
-                "16:15",
-                "16:45",
-                "17:15"
-              ],
-              "saturday": [
-                "07:45",
-                "09:45",
-                "11:45",
-                "13:45",
-                "15:45",
-                "17:45"
-              ],
-              "sunday": ["09:45", "13:45", "17:45"]
+              "weekdays": ["17:25", "17:35"],
+              "saturday": [],
+              "sunday": []
             }
           },
           {
-            "name": "Lycée Victor Hugo",
+            "name": "Douai - Lespagnol",
             "schedule": {
-              "weekdays": [
-                "07:00",
-                "07:30",
-                "08:00",
-                "12:00",
-                "12:30",
-                "16:30",
-                "17:00",
-                "17:30"
-              ],
-              "saturday": [
-                "08:00",
-                "10:00",
-                "12:00",
-                "14:00",
-                "16:00",
-                "18:00"
-              ],
-              "sunday": ["10:00", "14:00", "18:00"]
+              "weekdays": ["17:23", "17:33"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Transformateur",
+            "schedule": {
+              "weekdays": ["17:21", "17:31"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Frais Marais Église",
+            "schedule": {
+              "weekdays": ["17:20", "17:30"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Douai - Arleux",
+            "schedule": {
+              "weekdays": ["17:19", "17:29"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Raches - La Fosse",
+            "schedule": {
+              "weekdays": ["17:18", "17:28"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Raches - Mairie",
+            "schedule": {
+              "weekdays": ["17:17", "17:27"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Raches - Placette",
+            "schedule": {
+              "weekdays": ["17:15", "17:25"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Raches - Cul Brûlé",
+            "schedule": {
+              "weekdays": ["17:14", "17:24"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Raches - Bois Vert",
+            "schedule": {
+              "weekdays": ["17:13", "17:23"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Flines-lez-Raches - Saltière",
+            "schedule": {
+              "weekdays": ["17:11", "17:21"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Flines-lez-Raches - Auberge",
+            "schedule": {
+              "weekdays": ["17:10", "17:20"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Flines-lez-Raches - Place",
+            "schedule": {
+              "weekdays": ["17:09", "17:19"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Flines-lez-Raches - Mairie",
+            "schedule": {
+              "weekdays": ["17:08", "17:18"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Flines-lez-Raches - Madeleine",
+            "schedule": {
+              "weekdays": ["17:06", "17:16"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Périsseile",
+            "schedule": {
+              "weekdays": ["17:04", "17:14"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Calvaire",
+            "schedule": {
+              "weekdays": ["17:03", "17:13"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Coutches - Place",
+            "schedule": {
+              "weekdays": ["17:00", "17:10"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Bouvignies - Place",
+            "schedule": {
+              "weekdays": ["17:04", "17:04"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Orchies - Zone de l'Europe",
+            "schedule": {
+              "weekdays": ["16:49", "16:59"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Orchies - Centre (Place De Lattre)",
+            "schedule": {
+              "weekdays": ["16:51", "16:52"],
+              "saturday": [],
+              "sunday": []
+            }
+          },
+          {
+            "name": "Orchies - Gare SNCF",
+            "schedule": {
+              "weekdays": ["16:49", "16:50"],
+              "saturday": [],
+              "sunday": []
             }
           }
         ]

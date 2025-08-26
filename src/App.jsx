@@ -1,0 +1,118 @@
+import { useState, useEffect } from "react";
+import {
+  ThemeProvider,
+  CssBaseline,
+  AppBar,
+  Toolbar,
+  Typography,
+  Container,
+  Box,
+  Paper,
+} from "@mui/material";
+import { DirectionsBus, Schedule } from "@mui/icons-material";
+import BusLines from "./components/BusLines";
+import theme from "./theme";
+
+function App() {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (date) => {
+    return date.toLocaleTimeString("fr-FR", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+  };
+
+  const formatDate = (date) => {
+    return date.toLocaleDateString("fr-FR", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  };
+
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box
+        sx={{
+          minHeight: "100vh",
+          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <AppBar position="sticky" elevation={0}>
+          <Toolbar>
+            <DirectionsBus sx={{ mr: 2, fontSize: 28 }} />
+            <Typography
+              variant="h5"
+              component="h1"
+              sx={{ flexGrow: 1, fontWeight: 600 }}
+            >
+              Horaires de Bus
+            </Typography>
+            <Box sx={{ textAlign: "right" }}>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{
+                  fontFamily: "Courier New, monospace",
+                  fontWeight: 600,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                }}
+              >
+                <Schedule fontSize="small" />
+                {formatTime(currentTime)}
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  textTransform: "capitalize",
+                  opacity: 0.8,
+                }}
+              >
+                {formatDate(currentTime)}
+              </Typography>
+            </Box>
+          </Toolbar>
+        </AppBar>
+
+        <Container maxWidth="lg" sx={{ flex: 1, py: 3 }}>
+          <BusLines />
+        </Container>
+
+        <Paper
+          component="footer"
+          elevation={0}
+          sx={{
+            mt: "auto",
+            py: 2,
+            textAlign: "center",
+            borderRadius: 0,
+            background: "rgba(255, 255, 255, 0.9)",
+            backdropFilter: "blur(10px)",
+          }}
+        >
+          <Typography variant="body2" color="text.secondary">
+            Application créée pour faciliter l'accès aux horaires de bus 📱
+          </Typography>
+        </Paper>
+      </Box>
+    </ThemeProvider>
+  );
+}
+
+export default App;

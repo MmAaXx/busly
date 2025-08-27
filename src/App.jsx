@@ -52,7 +52,24 @@ function App() {
           flexDirection: "column",
         }}
       >
-        <AppBar position="sticky" elevation={0}>
+        <AppBar
+          position="sticky"
+          elevation={0}
+          sx={{
+            // Protection pour iOS - empêche le contenu de passer derrière la barre de statut
+            paddingTop: "env(safe-area-inset-top)",
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              height: "env(safe-area-inset-top)",
+              backgroundColor: "primary.main",
+              zIndex: -1,
+            },
+          }}
+        >
           <Toolbar>
             <Box
               component="img"

@@ -4,7 +4,7 @@
   "description": "Application pour consulter rapidement les horaires de bus",
   "start_url": "/busly/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#667eea",
   "theme_color": "#667eea",
   "orientation": "portrait-primary",
   "categories": ["travel", "transport", "utilities"],

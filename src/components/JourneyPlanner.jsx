@@ -168,14 +168,6 @@ const JourneyPlanner = ({
       const aTripDay = getTripDay(a.route, a.departureStop.time);
       const bTripDay = getTripDay(b.route, b.departureStop.time);
 
-      // DEBUG: Log pour comprendre le problème
-      console.log(
-        `Route ${a.route.number} (${a.departureStop.time}): ${aTripDay.day} - ${aTripDay.label}`
-      );
-      console.log(
-        `Route ${b.route.number} (${b.departureStop.time}): ${bTripDay.day} - ${bTripDay.label}`
-      );
-
       // Priorité de tri : aujourd'hui > demain > passé
       const priorityOrder = {
         today: 1,
@@ -186,10 +178,6 @@ const JourneyPlanner = ({
 
       const aPriority = priorityOrder[aTripDay.day] || 4;
       const bPriority = priorityOrder[bTripDay.day] || 4;
-
-      console.log(
-        `Priorités: ${a.route.number}=${aPriority}, ${b.route.number}=${bPriority}`
-      );
 
       // Si différente priorité, trier par priorité
       if (aPriority !== bPriority) {

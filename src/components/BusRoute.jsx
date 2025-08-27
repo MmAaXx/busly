@@ -21,6 +21,7 @@ import {
   DirectionsBus,
   School,
   DateRange,
+  Flag,
 } from "@mui/icons-material";
 
 const BusRoute = ({ route, onStopClick }) => {
@@ -120,7 +121,7 @@ const BusRoute = ({ route, onStopClick }) => {
         opacity: isRouteActiveToday(route.days) ? 1 : 0.7,
       }}
     >
-      <CardContent>
+      <CardContent sx={{ pb: 1 }}>
         <Box
           display="flex"
           justifyContent="space-between"
@@ -160,13 +161,72 @@ const BusRoute = ({ route, onStopClick }) => {
           Direction: {route.direction}
         </Typography>
 
+        {/* Horaires de départ et d'arrivée */}
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          sx={{
+            backgroundColor: "grey.50",
+            p: 1.5,
+            borderRadius: 1,
+            mt: 2,
+            ...(nextStop && { mb: 1 }),
+            border: 1,
+            borderColor: "grey.200",
+          }}
+        >
+          <Box display="flex" alignItems="center" gap={1}>
+            <LocationOn fontSize="small" color="success" />
+            <Box>
+              <Typography variant="body2" fontWeight="bold">
+                {route.stops[0]?.time}
+              </Typography>
+              <Typography variant="caption" color="text.secondary">
+                Départ
+              </Typography>
+            </Box>
+          </Box>
+
+          <Box display="flex" alignItems="center" gap={1}>
+            <Typography variant="body2" color="text.secondary">
+              {(() => {
+                const [depHours, depMinutes] = route.stops[0]?.time
+                  .split(":")
+                  .map(Number) || [0, 0];
+                const [arrHours, arrMinutes] = route.stops[
+                  route.stops.length - 1
+                ]?.time
+                  .split(":")
+                  .map(Number) || [0, 0];
+                const duration =
+                  arrHours * 60 + arrMinutes - (depHours * 60 + depMinutes);
+                return `${duration} min`;
+              })()}
+            </Typography>
+            <DirectionsBus fontSize="small" />
+          </Box>
+
+          <Box display="flex" alignItems="center" gap={1}>
+            <Box textAlign="right">
+              <Typography variant="body2" fontWeight="bold">
+                {route.stops[route.stops.length - 1]?.time}
+              </Typography>
+              <Typography variant="caption" color="text.secondary">
+                Arrivée
+              </Typography>
+            </Box>
+            <Flag fontSize="small" color="error" />
+          </Box>
+        </Box>
+
         {nextStop && (
           <Box
             sx={{
               backgroundColor: "success.light",
               p: 1,
               borderRadius: 1,
-              mb: 1,
+              mb: 0,
             }}
           >
             <Typography variant="body2" fontWeight="bold">

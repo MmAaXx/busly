@@ -6,28 +6,74 @@ import {
   Autocomplete,
   TextField,
   Button,
-  Chip,
-  Card,
-  CardContent,
-  Grid,
-  Divider,
   Alert,
   Collapse,
   IconButton,
-  List,
-  ListItem,
-  ListItemText,
+  Grid,
+  Divider,
 } from "@mui/material";
 import {
   SwapVert,
   LocationOn,
   Flag,
   Schedule,
-  DirectionsBus,
   ExpandMore,
   ExpandLess,
+  Settings,
   AccessTime,
+  CalendarToday,
 } from "@mui/icons-material";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { DesktopTimePicker } from "@mui/x-date-pickers/DesktopTimePicker";
+import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
+import moment from "moment";
+import "moment/locale/fr";
+import JourneyCard from "./JourneyCard";
+
+// Configuration moment en français
+moment.locale("fr");
+moment.updateLocale("fr", {
+  months: [
+    "Janvier",
+    "Février",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Décembre",
+  ],
+  monthsShort: [
+    "Jan",
+    "Fév",
+    "Mar",
+    "Avr",
+    "Mai",
+    "Jun",
+    "Jul",
+    "Aoû",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Déc",
+  ],
+  weekdays: [
+    "Dimanche",
+    "Lundi",
+    "Mardi",
+    "Mercredi",
+    "Jeudi",
+    "Vendredi",
+    "Samedi",
+  ],
+  weekdaysShort: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"],
+  weekdaysMin: ["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa"],
+});
 
 const JourneyPlanner = ({
   busData,
@@ -46,6 +92,11 @@ const JourneyPlanner = ({
   const [allStops, setAllStops] = useState([]);
   const [showAlternatives, setShowAlternatives] = useState(false);
   const [journeyResults, setJourneyResults] = useState(null);
+
+  // Options avancées
+  const [showAdvancedOptions, setShowAdvancedOptions] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(() => moment());
+  const [selectedTime, setSelectedTime] = useState(() => moment());
 
   // Initialiser toutes les stations disponibles
   useEffect(() => {
@@ -163,32 +214,42 @@ const JourneyPlanner = ({
       });
     });
 
-    return results.sort((a, b) => {
-      // Obtenir le statut de chaque trajet (aujourd'hui/demain/passé)
-      const aTripDay = getTripDay(a.route, a.departureStop.time);
-      const bTripDay = getTripDay(b.route, b.departureStop.time);
+    // Filtrer les trajets passés et trier le reste
+    return results
+      .filter((result) => {
+        const tripDay = getTripDay(result.route, result.departureStop.time);
+        // Exclure les trajets passés (aujourd'hui ou date personnalisée)
+        return (
+          tripDay.day !== "today-passed" && tripDay.day !== "custom-date-passed"
+        );
+      })
+      .sort((a, b) => {
+        // Obtenir le statut de chaque trajet (aujourd'hui/demain/autre)
+        const aTripDay = getTripDay(a.route, a.departureStop.time);
+        const bTripDay = getTripDay(b.route, b.departureStop.time);
 
-      // Priorité de tri : aujourd'hui > demain > passé
-      const priorityOrder = {
-        today: 1,
-        tomorrow: 2,
-        "today-passed": 3,
-        other: 4,
-      };
+        // Priorité de tri : aujourd'hui > demain/custom-date > autre
+        const priorityOrder = {
+          today: 1,
+          tomorrow: 2,
+          "custom-date": 2, // Même priorité que demain
+          "custom-date-passed": 4, // Après "other" (ne devrait pas apparaître grâce au filtre)
+          other: 3,
+        };
 
-      const aPriority = priorityOrder[aTripDay.day] || 4;
-      const bPriority = priorityOrder[bTripDay.day] || 4;
+        const aPriority = priorityOrder[aTripDay.day] || 3;
+        const bPriority = priorityOrder[bTripDay.day] || 3;
 
-      // Si différente priorité, trier par priorité
-      if (aPriority !== bPriority) {
-        return aPriority - bPriority;
-      }
+        // Si différente priorité, trier par priorité
+        if (aPriority !== bPriority) {
+          return aPriority - bPriority;
+        }
 
-      // Même priorité, trier par heure de départ
-      const [aHours, aMinutes] = a.departureStop.time.split(":").map(Number);
-      const [bHours, bMinutes] = b.departureStop.time.split(":").map(Number);
-      return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
-    });
+        // Même priorité, trier par heure de départ
+        const [aHours, aMinutes] = a.departureStop.time.split(":").map(Number);
+        const [bHours, bMinutes] = b.departureStop.time.split(":").map(Number);
+        return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
+      });
   };
 
   const findAlternativeRoutes = (departureStop, arrivalStop) => {
@@ -234,32 +295,43 @@ const JourneyPlanner = ({
       });
     });
 
-    return alternatives.sort((a, b) => {
-      // Obtenir le statut de chaque trajet (aujourd'hui/demain/passé)
-      const aTripDay = getTripDay(a.route, a.departureStop.time);
-      const bTripDay = getTripDay(b.route, b.departureStop.time);
+    // Filtrer les trajets passés et trier le reste
+    return alternatives
+      .filter((alternative) => {
+        const tripDay = getTripDay(
+          alternative.route,
+          alternative.departureStop.time
+        );
+        // Exclure les trajets passés aujourd'hui
+        return tripDay.day !== "today-passed";
+      })
+      .sort((a, b) => {
+        // Obtenir le statut de chaque trajet (aujourd'hui/demain/autre)
+        const aTripDay = getTripDay(a.route, a.departureStop.time);
+        const bTripDay = getTripDay(b.route, b.departureStop.time);
 
-      // Priorité de tri : aujourd'hui > demain > passé
-      const priorityOrder = {
-        today: 1,
-        tomorrow: 2,
-        "today-passed": 3,
-        other: 4,
-      };
+        // Priorité de tri : aujourd'hui > demain/custom-date > autre
+        const priorityOrder = {
+          today: 1,
+          tomorrow: 2,
+          "custom-date": 2, // Même priorité que demain
+          "custom-date-passed": 4, // Après "other" (ne devrait pas apparaître grâce au filtre)
+          other: 3,
+        };
 
-      const aPriority = priorityOrder[aTripDay.day] || 4;
-      const bPriority = priorityOrder[bTripDay.day] || 4;
+        const aPriority = priorityOrder[aTripDay.day] || 3;
+        const bPriority = priorityOrder[bTripDay.day] || 3;
 
-      // Si différente priorité, trier par priorité
-      if (aPriority !== bPriority) {
-        return aPriority - bPriority;
-      }
+        // Si différente priorité, trier par priorité
+        if (aPriority !== bPriority) {
+          return aPriority - bPriority;
+        }
 
-      // Même priorité, trier par heure de départ
-      const [aHours, aMinutes] = a.departureStop.time.split(":").map(Number);
-      const [bHours, bMinutes] = b.departureStop.time.split(":").map(Number);
-      return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
-    });
+        // Même priorité, trier par heure de départ
+        const [aHours, aMinutes] = a.departureStop.time.split(":").map(Number);
+        const [bHours, bMinutes] = b.departureStop.time.split(":").map(Number);
+        return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
+      });
   };
 
   const handlePlanJourney = () => {
@@ -330,16 +402,36 @@ const JourneyPlanner = ({
     return route.days.includes(dayMap[today]);
   };
 
+  // Fonction pour détecter si on utilise une date/heure personnalisée
+  const isUsingCustomDateTime = () => {
+    const now = moment();
+    const currentDate = now.format("YYYY-MM-DD");
+    const currentTime = now.format("HH:mm");
+    const selDate = selectedDate.format("YYYY-MM-DD");
+    const selTime = selectedTime.format("HH:mm");
+
+    return selDate !== currentDate || selTime !== currentTime;
+  };
+
   const getTripDay = (route, departureTime) => {
-    const now = new Date();
-    const currentHour = now.getHours();
-    const currentMinute = now.getMinutes();
-    const currentTimeInMinutes = currentHour * 60 + currentMinute;
+    // Utiliser la date/heure sélectionnée si différente de maintenant
+    let referenceDate;
+    let currentTimeInMinutes;
+
+    if (isUsingCustomDateTime()) {
+      referenceDate = moment(selectedDate)
+        .hour(selectedTime.hour())
+        .minute(selectedTime.minute());
+      currentTimeInMinutes = referenceDate.hour() * 60 + referenceDate.minute();
+    } else {
+      referenceDate = moment();
+      currentTimeInMinutes = referenceDate.hour() * 60 + referenceDate.minute();
+    }
 
     const [depHours, depMinutes] = departureTime.split(":").map(Number);
     const departureTimeInMinutes = depHours * 60 + depMinutes;
 
-    const today = new Date().getDay();
+    const today = referenceDate.day();
     const tomorrow = (today + 1) % 7;
 
     const dayMap = {
@@ -355,6 +447,64 @@ const JourneyPlanner = ({
     const todayString = dayMap[today];
     const tomorrowString = dayMap[tomorrow];
 
+    // Si on utilise une date personnalisée
+    if (isUsingCustomDateTime()) {
+      const now = moment();
+      const isToday = referenceDate.isSame(now, "day");
+      const isTomorrow = referenceDate.isSame(now.clone().add(1, "day"), "day");
+
+      // Calculer le jour de la semaine pour la date sélectionnée
+      const selectedDay = referenceDate.day();
+      const selectedDayString = dayMap[selectedDay];
+
+      if (isToday) {
+        // Si c'est aujourd'hui, utiliser la logique normale
+        if (
+          route.days.includes(selectedDayString) &&
+          departureTimeInMinutes > currentTimeInMinutes
+        ) {
+          return { day: "today", label: "🟢 Aujourd'hui", circulates: true };
+        } else if (route.days.includes(selectedDayString)) {
+          return {
+            day: "today-passed",
+            label: "⚪ Aujourd'hui (passé)",
+            circulates: false,
+          };
+        }
+      } else if (isTomorrow) {
+        // Si c'est demain
+        if (route.days.includes(selectedDayString)) {
+          return { day: "tomorrow", label: "🟡 Demain", circulates: true };
+        }
+      } else {
+        // Pour toute autre date, afficher la date
+        if (route.days.includes(selectedDayString)) {
+          // Vérifier que l'heure du bus est après l'heure sélectionnée
+          if (departureTimeInMinutes >= currentTimeInMinutes) {
+            return {
+              day: "custom-date",
+              label: `📅 ${referenceDate.format("DD/MM/YYYY")}`,
+              circulates: true,
+            };
+          } else {
+            return {
+              day: "custom-date-passed",
+              label: `⚪ ${referenceDate.format("DD/MM/YYYY")} (passé)`,
+              circulates: false,
+            };
+          }
+        }
+      }
+
+      // Si le bus ne circule pas ce jour-là
+      return {
+        day: "other",
+        label: "⚪ Pas de circulation",
+        circulates: false,
+      };
+    }
+
+    // Logique normale pour la date actuelle
     // Si l'heure est passée et que le bus circule demain
     if (
       departureTimeInMinutes <= currentTimeInMinutes &&
@@ -389,8 +539,8 @@ const JourneyPlanner = ({
       <Paper
         elevation={3}
         sx={{
-          p: 4,
-          mb: 4,
+          p: { xs: 2, sm: 4 },
+          mb: { xs: 2, sm: 4 },
         }}
       >
         <Typography
@@ -482,12 +632,134 @@ const JourneyPlanner = ({
             />
           </Grid>
 
+          {/* Options avancées */}
+          <Grid item size={{ xs: 12 }}>
+            <Box display="flex" justifyContent="center" alignItems="center">
+              <Button
+                variant="text"
+                size="small"
+                onClick={() => setShowAdvancedOptions(!showAdvancedOptions)}
+                startIcon={<Settings />}
+                endIcon={showAdvancedOptions ? <ExpandLess /> : <ExpandMore />}
+                sx={{
+                  color: "text.primary",
+                  "&:hover": {
+                    backgroundColor: "action.hover",
+                  },
+                }}
+              >
+                Options avancées
+              </Button>
+            </Box>
+
+            <Collapse in={showAdvancedOptions}>
+              <Box
+                sx={{
+                  p: 2,
+                  mt: 2,
+                  backgroundColor: "grey.50",
+                  borderRadius: 2,
+                  border: 1,
+                  borderColor: "grey.200",
+                }}
+              >
+                <Typography
+                  variant="body2"
+                  sx={{ color: "text.secondary", mb: 2 }}
+                >
+                  Choisissez une date et heure pour planifier votre voyage
+                </Typography>
+
+                <LocalizationProvider
+                  dateAdapter={AdapterMoment}
+                  adapterLocale="fr"
+                  localeText={{
+                    // Boutons d'action
+                    todayButtonLabel: "Aujourd'hui",
+                    cancelButtonLabel: "Annuler",
+                    clearButtonLabel: "Effacer",
+                    okButtonLabel: "Valider",
+                    // Navigation DatePicker
+                    previousMonth: "Mois précédent",
+                    nextMonth: "Mois suivant",
+                  }}
+                >
+                  <Grid container spacing={2}>
+                    <Grid item size={{ xs: 12, sm: 6 }}>
+                      <DatePicker
+                        label="Date"
+                        value={selectedDate}
+                        onChange={(newValue) =>
+                          setSelectedDate(newValue || moment())
+                        }
+                        minDate={moment()}
+                        format="DD/MM/YYYY"
+                        slotProps={{
+                          textField: {
+                            fullWidth: true,
+                            InputProps: {
+                              startAdornment: (
+                                <CalendarToday
+                                  sx={{ color: "action.active", mr: 1 }}
+                                />
+                              ),
+                            },
+                          },
+                          actionBar: {
+                            actions: ["today", "cancel", "accept"],
+                          },
+                          dialog: {
+                            sx: {
+                              "& .MuiDialogTitle-root .MuiTypography-root": {
+                                fontSize: 0,
+                                "&:after": {
+                                  content: '"Sélectionner une date"',
+                                  fontSize: "1.25rem",
+                                  fontWeight: 500,
+                                },
+                              },
+                            },
+                          },
+                        }}
+                      />
+                    </Grid>
+                    <Grid item size={{ xs: 12, sm: 6 }}>
+                      <DesktopTimePicker
+                        label="Heure"
+                        value={selectedTime}
+                        onChange={(newValue) =>
+                          setSelectedTime(newValue || moment())
+                        }
+                        ampm={false}
+                        format="HH:mm"
+                        slotProps={{
+                          textField: {
+                            fullWidth: true,
+                            InputProps: {
+                              startAdornment: (
+                                <AccessTime
+                                  sx={{ color: "action.active", mr: 1 }}
+                                />
+                              ),
+                            },
+                          },
+                          actionBar: {
+                            actions: ["cancel", "accept"],
+                          },
+                        }}
+                      />
+                    </Grid>
+                  </Grid>
+                </LocalizationProvider>
+              </Box>
+            </Collapse>
+          </Grid>
+
           <Grid item size={{ xs: 12 }}>
             <Button
               variant="contained"
               onClick={handlePlanJourney}
               disabled={!departure || !arrival}
-              startIcon={<Schedule />}
               fullWidth
               size="large"
               sx={{
@@ -514,118 +786,24 @@ const JourneyPlanner = ({
         <Box>
           {/* Routes directes */}
           {journeyResults.directRoutes.length > 0 ? (
-            <Paper elevation={2} sx={{ p: 3, mb: 2 }}>
+            <Paper elevation={2} sx={{ p: 2, mb: 2 }}>
               <Typography
                 variant="h6"
                 gutterBottom
                 color="primary"
-                sx={{ mb: 1 }}
+                sx={{ mb: 2 }}
               >
                 🎯 Trajets directs trouvés
               </Typography>
               <Grid container spacing={2}>
                 {journeyResults.directRoutes.map((result, index) => (
                   <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={index}>
-                    <Card
-                      variant="outlined"
-                      sx={{
-                        borderColor: (() => {
-                          const tripDay = getTripDay(
-                            result.route,
-                            result.departureStop.time
-                          );
-                          return tripDay.day === "today"
-                            ? "success.main"
-                            : tripDay.day === "tomorrow"
-                            ? "warning.main"
-                            : "grey.300";
-                        })(),
-                        backgroundColor: (() => {
-                          const tripDay = getTripDay(
-                            result.route,
-                            result.departureStop.time
-                          );
-                          return tripDay.day === "today"
-                            ? "success.50"
-                            : tripDay.day === "tomorrow"
-                            ? "warning.50"
-                            : "grey.50";
-                        })(),
-                      }}
-                    >
-                      <CardContent>
-                        <Box mb={1}>
-                          <Grid
-                            container
-                            spacing={1}
-                            alignItems="center"
-                            justifyContent="center"
-                          >
-                            <Grid item size={12} textAlign="center">
-                              <Chip
-                                label={`Ligne ${result.route.number}`}
-                                color="primary"
-                                size="large"
-                                sx={{
-                                  mr: 1,
-                                  fontSize: "1.2rem",
-                                }}
-                              />
-                            </Grid>
-                            <Grid item size={12} textAlign="center">
-                              <Typography
-                                variant="body2"
-                                color="text.secondary"
-                              >
-                                {(() => {
-                                  const tripDay = getTripDay(
-                                    result.route,
-                                    result.departureStop.time
-                                  );
-                                  return tripDay.label;
-                                })()}
-                              </Typography>
-                            </Grid>
-                          </Grid>
-                        </Box>
-
-                        <Box
-                          display="flex"
-                          justifyContent="space-between"
-                          alignItems="center"
-                          mb={2}
-                        >
-                          <Box>
-                            <Typography variant="h6">
-                              {result.departureStop.time}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              Départ
-                            </Typography>
-                          </Box>
-                          <Box textAlign="center">
-                            <DirectionsBus color="primary" />
-                            <Typography variant="body2">
-                              {formatDuration(result.duration)}
-                            </Typography>
-                          </Box>
-                          <Box textAlign="right">
-                            <Typography variant="h6">
-                              {result.arrivalStop.time}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              Arrivée
-                            </Typography>
-                          </Box>
-                        </Box>
-
-                        <Divider sx={{ my: 1 }} />
-                        <Typography variant="body2" color="text.secondary">
-                          {result.stops.length} arrêts • Direction:{" "}
-                          {result.route.direction}
-                        </Typography>
-                      </CardContent>
-                    </Card>
+                    <JourneyCard
+                      result={result}
+                      isAlternative={false}
+                      getTripDay={getTripDay}
+                      formatDuration={formatDuration}
+                    />
                   </Grid>
                 ))}
               </Grid>
@@ -658,29 +836,17 @@ const JourneyPlanner = ({
               </Box>
 
               <Collapse in={showAlternatives}>
-                <Grid container spacing={2} sx={{ mt: 1 }}>
+                <Grid container spacing={2} sx={{ mt: 2 }}>
                   {journeyResults.alternativeRoutes
                     .slice(0, 4)
                     .map((result, index) => (
                       <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={index}>
-                        <Card variant="outlined">
-                          <CardContent>
-                            <Chip
-                              label={`Ligne ${result.route.number}`}
-                              color="secondary"
-                              size="small"
-                              sx={{ mb: 1 }}
-                            />
-                            <Typography variant="body2" gutterBottom>
-                              {result.departureStop.name} →{" "}
-                              {result.arrivalStop.name}
-                            </Typography>
-                            <Typography variant="h6">
-                              {result.departureStop.time} →{" "}
-                              {result.arrivalStop.time}
-                            </Typography>
-                          </CardContent>
-                        </Card>
+                        <JourneyCard
+                          result={result}
+                          isAlternative={true}
+                          getTripDay={getTripDay}
+                          formatDuration={formatDuration}
+                        />
                       </Grid>
                     ))}
                 </Grid>

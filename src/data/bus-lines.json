@@ -19,18 +19,54 @@
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "06:35"
             },
-            { "name": "Orchies - Centre (Place De Lattre)", "time": "06:37" },
-            { "name": "Orchies - Zone de l'Europe", "time": "06:39" },
-            { "name": "Coutiches - Houssoye", "time": "06:44" },
-            { "name": "Coutiches - Place", "time": "06:45" },
-            { "name": "Coutiches - Calvaire", "time": "06:46" },
-            { "name": "Coutiches - Périsseile", "time": "06:47" },
-            { "name": "Waziers - Langevin", "time": "07:05" },
-            { "name": "Douai - Gayant Expo", "time": "07:07" },
-            { "name": "Douai - Saint Michel", "time": "07:10" },
-            { "name": "Douai - Arsenal", "time": "07:12" },
-            { "name": "Douai - Place Carnot", "time": "07:14" },
-            { "name": "Douai - Place De Gaulle", "time": "07:18" }
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "06:37"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "06:39"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "06:44"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "06:45"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "06:46"
+            },
+            {
+              "name": "Coutiches - Périsseile",
+              "time": "06:47"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "07:05"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "07:07"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "07:10"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "07:12"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "07:14"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "07:18"
+            }
           ]
         },
         {
@@ -45,29 +81,98 @@
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "06:40"
             },
-            { "name": "Orchies - Centre (Place De Lattre)", "time": "06:42" },
-            { "name": "Orchies - Zone de l'Europe", "time": "06:44" },
-            { "name": "Coutiches - Houssoye", "time": "06:49" },
-            { "name": "Coutiches - Place", "time": "06:51" },
-            { "name": "Coutiches - Calvaire", "time": "06:53" },
-            { "name": "Coutiches - Périsseile", "time": "06:55" },
-            { "name": "Flines-lez-Raches - Madeleine", "time": "06:57" },
-            { "name": "Raches - Bois Vert", "time": "07:00" },
-            { "name": "Raches - Cul Brûlé", "time": "07:01" },
-            { "name": "Raches - Placette", "time": "07:02" },
-            { "name": "Raches - Mairie", "time": "07:04" },
-            { "name": "Raches - Le Pont", "time": "07:05" },
-            { "name": "Douai - Arkéos", "time": "07:06" },
-            { "name": "Douai - Frais Marais Église", "time": "07:07" },
-            { "name": "Douai - Transformateur", "time": "07:08" },
-            { "name": "Douai - Lespagnol", "time": "07:11" },
-            { "name": "Waziers - Langevin", "time": "07:13" },
-            { "name": "Douai - Gayant Expo", "time": "07:15" },
-            { "name": "Douai - Saint Michel", "time": "07:18" },
-            { "name": "Douai - Arsenal", "time": "07:20" },
-            { "name": "Douai - Place Carnot", "time": "07:23" },
-            { "name": "Douai - Place De Gaulle", "time": "07:28" },
-            { "name": "Douai - Lycée E. Lemonnier", "time": "07:40" }
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "06:42"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "06:44"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "06:49"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "06:51"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "06:53"
+            },
+            {
+              "name": "Coutiches - Périsseile",
+              "time": "06:55"
+            },
+            {
+              "name": "Flines-lez-raches - Madeleine",
+              "time": "06:57"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "07:00"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "07:01"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "07:02"
+            },
+            {
+              "name": "Raches - Mairie",
+              "time": "07:04"
+            },
+            {
+              "name": "Raches - Le Pont",
+              "time": "07:05"
+            },
+            {
+              "name": "Douai - Arkéos",
+              "time": "07:06"
+            },
+            {
+              "name": "Douai - Frais Marais Église",
+              "time": "07:07"
+            },
+            {
+              "name": "Douai - Transformateur",
+              "time": "07:08"
+            },
+            {
+              "name": "Douai - Lespagnol",
+              "time": "07:11"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "07:13"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "07:15"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "07:18"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "07:20"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "07:23"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "07:28"
+            },
+            {
+              "name": "Douai - Lycée E. Lemonnier",
+              "time": "07:40"
+            }
           ]
         },
         {
@@ -82,30 +187,102 @@
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "16:45"
             },
-            { "name": "Orchies - Centre (Place De Lattre)", "time": "16:47" },
-            { "name": "Orchies - Zone de l'Europe", "time": "16:49" },
-            { "name": "Coutiches - Houssoye", "time": "16:58" },
-            { "name": "Coutiches - Place", "time": "17:00" },
-            { "name": "Coutiches - Calvaire", "time": "17:03" },
-            { "name": "Coutiches - Périsseile", "time": "17:04" },
-            { "name": "Flines-lez-Raches - Madeleine", "time": "17:06" },
-            { "name": "Flines-lez-Raches - Mairie", "time": "17:08" },
-            { "name": "Flines-lez-Raches - Place", "time": "17:09" },
-            { "name": "Flines-lez-Raches - Auberge", "time": "17:10" },
-            { "name": "Flines-lez-Raches - Sablière", "time": "17:11" },
-            { "name": "Raches - Bois Vert", "time": "17:13" },
-            { "name": "Raches - Cul Brûlé", "time": "17:14" },
-            { "name": "Raches - Placette", "time": "17:15" },
-            { "name": "Raches - Mairie", "time": "17:17" },
-            { "name": "Raches - Le Pont", "time": "17:18" },
-            { "name": "Douai - Arkéos", "time": "17:19" },
-            { "name": "Douai - Frais Marais Église", "time": "17:20" },
-            { "name": "Douai - Transformateur", "time": "17:21" },
-            { "name": "Douai - Lespagnol", "time": "17:23" },
-            { "name": "Waziers - Langevin", "time": "17:25" },
-            { "name": "Douai - Gayant Expo", "time": "17:27" },
-            { "name": "Douai - Place Carnot", "time": "17:32" },
-            { "name": "Douai - Place De Gaulle", "time": "17:36" }
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "16:47"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "16:49"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "16:58"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "17:00"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "17:03"
+            },
+            {
+              "name": "Coutiches - Périsseile",
+              "time": "17:04"
+            },
+            {
+              "name": "Flines-lez-raches - Madeleine",
+              "time": "17:06"
+            },
+            {
+              "name": "Flines-lez-raches - Mairie",
+              "time": "17:08"
+            },
+            {
+              "name": "Flines-lez-raches - Place",
+              "time": "17:09"
+            },
+            {
+              "name": "Flines-lez-raches - Auberge",
+              "time": "17:10"
+            },
+            {
+              "name": "Flines-lez-raches - Sablière",
+              "time": "17:11"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "17:13"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "17:14"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "17:15"
+            },
+            {
+              "name": "Raches - Mairie",
+              "time": "17:17"
+            },
+            {
+              "name": "Raches - Le Pont",
+              "time": "17:18"
+            },
+            {
+              "name": "Douai - Arkéos",
+              "time": "17:19"
+            },
+            {
+              "name": "Douai - Frais Marais Église",
+              "time": "17:20"
+            },
+            {
+              "name": "Douai - Transformateur",
+              "time": "17:21"
+            },
+            {
+              "name": "Douai - Lespagnol",
+              "time": "17:23"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "17:25"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "17:27"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "17:32"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "17:36"
+            }
           ]
         },
         {
@@ -120,30 +297,102 @@
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "16:55"
             },
-            { "name": "Orchies - Centre (Place De Lattre)", "time": "16:57" },
-            { "name": "Orchies - Zone de l'Europe", "time": "16:59" },
-            { "name": "Coutiches - Houssoye", "time": "17:08" },
-            { "name": "Coutiches - Place", "time": "17:10" },
-            { "name": "Coutiches - Calvaire", "time": "17:13" },
-            { "name": "Coutiches - Périsseile", "time": "17:14" },
-            { "name": "Flines-lez-Raches - Madeleine", "time": "17:16" },
-            { "name": "Flines-lez-Raches - Mairie", "time": "17:18" },
-            { "name": "Flines-lez-Raches - Place", "time": "17:19" },
-            { "name": "Flines-lez-Raches - Auberge", "time": "17:20" },
-            { "name": "Flines-lez-Raches - Sablière", "time": "17:21" },
-            { "name": "Raches - Bois Vert", "time": "17:23" },
-            { "name": "Raches - Cul Brûlé", "time": "17:24" },
-            { "name": "Raches - Placette", "time": "17:25" },
-            { "name": "Raches - Mairie", "time": "17:27" },
-            { "name": "Raches - Le Pont", "time": "17:28" },
-            { "name": "Douai - Arkéos", "time": "17:29" },
-            { "name": "Douai - Frais Marais Église", "time": "17:30" },
-            { "name": "Douai - Transformateur", "time": "17:31" },
-            { "name": "Douai - Lespagnol", "time": "17:33" },
-            { "name": "Waziers - Langevin", "time": "17:35" },
-            { "name": "Douai - Gayant Expo", "time": "17:37" },
-            { "name": "Douai - Place Carnot", "time": "17:42" },
-            { "name": "Douai - Place De Gaulle", "time": "17:46" }
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "16:57"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "16:59"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "17:08"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "17:10"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "17:13"
+            },
+            {
+              "name": "Coutiches - Périsseile",
+              "time": "17:14"
+            },
+            {
+              "name": "Flines-lez-raches - Madeleine",
+              "time": "17:16"
+            },
+            {
+              "name": "Flines-lez-raches - Mairie",
+              "time": "17:18"
+            },
+            {
+              "name": "Flines-lez-raches - Place",
+              "time": "17:19"
+            },
+            {
+              "name": "Flines-lez-raches - Auberge",
+              "time": "17:20"
+            },
+            {
+              "name": "Flines-lez-raches - Sablière",
+              "time": "17:21"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "17:23"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "17:24"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "17:25"
+            },
+            {
+              "name": "Raches - Mairie",
+              "time": "17:27"
+            },
+            {
+              "name": "Raches - Le Pont",
+              "time": "17:28"
+            },
+            {
+              "name": "Douai - Arkéos",
+              "time": "17:29"
+            },
+            {
+              "name": "Douai - Frais Marais Église",
+              "time": "17:30"
+            },
+            {
+              "name": "Douai - Transformateur",
+              "time": "17:31"
+            },
+            {
+              "name": "Douai - Lespagnol",
+              "time": "17:33"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "17:35"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "17:37"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "17:42"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "17:46"
+            }
           ]
         },
         {
@@ -154,18 +403,54 @@
           "type": "college",
           "description": "Matin - Collèges (depuis Coutiches)",
           "stops": [
-            { "name": "Coutiches - La Jonquière", "time": "07:25" },
-            { "name": "Coutiches - Le Baterloo", "time": "07:27" },
-            { "name": "Coutiches - L'Epinchaux", "time": "07:29" },
-            { "name": "Coutiches - Rue des Sarts", "time": "07:31" },
-            { "name": "Faumont - Rue du Bois", "time": "07:33" },
-            { "name": "Faumont - Rue Dupire", "time": "07:36" },
-            { "name": "Faumont - Mairie", "time": "07:40" },
-            { "name": "Coutiches - Picterie", "time": "07:48" },
-            { "name": "Coutiches - Crupez", "time": "07:51" },
-            { "name": "Coutiches - Rue de Fâches", "time": "07:53" },
-            { "name": "Coutiches - Houssoye", "time": "07:55" },
-            { "name": "Orchies - Collège du Pévèle", "time": "08:10" },
+            {
+              "name": "Coutiches - La Jonquière",
+              "time": "07:25"
+            },
+            {
+              "name": "Coutiches - Le Baterloo",
+              "time": "07:27"
+            },
+            {
+              "name": "Coutiches - L'Epinchaux",
+              "time": "07:29"
+            },
+            {
+              "name": "Coutiches - Rue des Sarts",
+              "time": "07:31"
+            },
+            {
+              "name": "Faumont - Rue du Bois",
+              "time": "07:33"
+            },
+            {
+              "name": "Faumont - Rue Dupire",
+              "time": "07:36"
+            },
+            {
+              "name": "Faumont - Mairie",
+              "time": "07:40"
+            },
+            {
+              "name": "Coutiches - Picterie",
+              "time": "07:48"
+            },
+            {
+              "name": "Coutiches - Crupez",
+              "time": "07:51"
+            },
+            {
+              "name": "Coutiches - Rue de Fâches",
+              "time": "07:53"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "07:55"
+            },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "08:10"
+            },
             {
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "08:18"
@@ -180,25 +465,70 @@
           "type": "college",
           "description": "Mercredi midi - Collèges",
           "stops": [
-            { "name": "Orchies - Collège du Pévèle", "time": "12:30" },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "12:30"
+            },
             {
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "12:40"
             },
-            { "name": "Coutiches - Houssoye", "time": "12:47" },
-            { "name": "Coutiches - Rue de Fâches", "time": "12:50" },
-            { "name": "Coutiches - Crupez", "time": "12:53" },
-            { "name": "Coutiches - Picterie", "time": "12:55" },
-            { "name": "Faumont - Rue Dupire", "time": "12:57" },
-            { "name": "Faumont - Rue du Bois", "time": "12:58" },
-            { "name": "Coutiches - Rue des Sarts", "time": "13:01" },
-            { "name": "Coutiches - L'Epinchaux", "time": "13:03" },
-            { "name": "Coutiches - Le Baterloo", "time": "13:05" },
-            { "name": "Coutiches - La Jonquière", "time": "13:07" },
-            { "name": "Coutiches - Les 5 Chemins", "time": "13:10" },
-            { "name": "Coutiches - Le Bru", "time": "13:12" },
-            { "name": "Bouvignies - Calvaire", "time": "13:15" },
-            { "name": "Bouvignies - Le Pigeonnier", "time": "13:20" }
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "12:47"
+            },
+            {
+              "name": "Coutiches - Rue de Fâches",
+              "time": "12:50"
+            },
+            {
+              "name": "Coutiches - Crupez",
+              "time": "12:53"
+            },
+            {
+              "name": "Coutiches - Picterie",
+              "time": "12:55"
+            },
+            {
+              "name": "Faumont - Rue Dupire",
+              "time": "12:57"
+            },
+            {
+              "name": "Faumont - Rue du Bois",
+              "time": "12:58"
+            },
+            {
+              "name": "Coutiches - Rue des Sarts",
+              "time": "13:01"
+            },
+            {
+              "name": "Coutiches - L'Epinchaux",
+              "time": "13:03"
+            },
+            {
+              "name": "Coutiches - Le Baterloo",
+              "time": "13:05"
+            },
+            {
+              "name": "Coutiches - La Jonquière",
+              "time": "13:07"
+            },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "13:10"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "13:12"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "13:15"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "13:20"
+            }
           ]
         },
         {
@@ -209,21 +539,54 @@
           "type": "college",
           "description": "Mercredi midi - Collèges (trajet Flines/Anhiers)",
           "stops": [
-            { "name": "Orchies - Collège du Pévèle", "time": "12:30" },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "12:30"
+            },
             {
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "12:40"
             },
-            { "name": "Coutiches - Houssoye", "time": "12:47" },
-            { "name": "Coutiches - Place", "time": "12:48" },
-            { "name": "Coutiches - Calvaire", "time": "12:49" },
-            { "name": "Flines-lez-Raches - Madeleine", "time": "12:52" },
-            { "name": "Flines-lez-Raches - Mairie", "time": "12:53" },
-            { "name": "Flines-lez-Raches - Montreuil", "time": "12:59" },
-            { "name": "Anhiers - Route de Flines", "time": "13:03" },
-            { "name": "Anhiers - Église", "time": "13:04" },
-            { "name": "Anhiers - Rue des Écoles", "time": "13:05" },
-            { "name": "Anhiers - Le Petit Anhiers", "time": "13:07" }
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "12:47"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "12:48"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "12:49"
+            },
+            {
+              "name": "Flines-lez-raches - Madeleine",
+              "time": "12:52"
+            },
+            {
+              "name": "Flines-lez-raches - Mairie",
+              "time": "12:53"
+            },
+            {
+              "name": "Flines-lez-raches - Montreuil",
+              "time": "12:59"
+            },
+            {
+              "name": "Anhiers - Route de Flines",
+              "time": "13:03"
+            },
+            {
+              "name": "Anhiers - Église",
+              "time": "13:04"
+            },
+            {
+              "name": "Anhiers - Rue des Écoles",
+              "time": "13:05"
+            },
+            {
+              "name": "Anhiers - Le Petit Anhiers",
+              "time": "13:07"
+            }
           ]
         },
         {
@@ -234,24 +597,78 @@
           "type": "college",
           "description": "Après-midi - Collèges",
           "stops": [
-            { "name": "Orchies - Collège du Pévèle", "time": "16:00" },
-            { "name": "Coutiches - Rue de Fâches", "time": "16:10" },
-            { "name": "Coutiches - Crupez", "time": "16:11" },
-            { "name": "Coutiches - Picterie", "time": "16:13" },
-            { "name": "Faumont - Mairie", "time": "16:16" },
-            { "name": "Faumont - Boujon", "time": "16:19" },
-            { "name": "Faumont - Rue Dupire", "time": "16:20" },
-            { "name": "Faumont - Rue du Bois", "time": "16:23" },
-            { "name": "Coutiches - Rue des Sarts", "time": "16:26" },
-            { "name": "Coutiches - L'Epinchaux", "time": "16:28" },
-            { "name": "Coutiches - Le Baterloo", "time": "16:30" },
-            { "name": "Coutiches - La Jonquière", "time": "16:32" },
-            { "name": "Coutiches - Les 5 Chemins", "time": "16:35" },
-            { "name": "Coutiches - Le Bru", "time": "16:37" },
-            { "name": "Bouvignies - Calvaire", "time": "16:41" },
-            { "name": "Bouvignies - Le Pigeonnier", "time": "16:46" },
-            { "name": "Beuvry-la-Forêt - Grand Mariage", "time": "16:49" },
-            { "name": "Beuvry-la-Forêt - Les Arcins", "time": "16:51" }
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "16:00"
+            },
+            {
+              "name": "Coutiches - Rue de Fâches",
+              "time": "16:10"
+            },
+            {
+              "name": "Coutiches - Crupez",
+              "time": "16:11"
+            },
+            {
+              "name": "Coutiches - Picterie",
+              "time": "16:13"
+            },
+            {
+              "name": "Faumont - Mairie",
+              "time": "16:16"
+            },
+            {
+              "name": "Faumont - Boujon",
+              "time": "16:19"
+            },
+            {
+              "name": "Faumont - Rue Dupire",
+              "time": "16:20"
+            },
+            {
+              "name": "Faumont - Rue du Bois",
+              "time": "16:23"
+            },
+            {
+              "name": "Coutiches - Rue des Sarts",
+              "time": "16:26"
+            },
+            {
+              "name": "Coutiches - L'Epinchaux",
+              "time": "16:28"
+            },
+            {
+              "name": "Coutiches - Le Baterloo",
+              "time": "16:30"
+            },
+            {
+              "name": "Coutiches - La Jonquière",
+              "time": "16:32"
+            },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "16:35"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "16:37"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "16:41"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "16:46"
+            },
+            {
+              "name": "Beuvry-la-forêt - Grand Mariage",
+              "time": "16:49"
+            },
+            {
+              "name": "Beuvry-la-forêt - Les Arcins",
+              "time": "16:51"
+            }
           ]
         },
         {
@@ -266,35 +683,122 @@
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "17:05"
             },
-            { "name": "Orchies - Collège du Pévèle", "time": "17:15" },
-            { "name": "Coutiches - Houssoye", "time": "17:24" },
-            { "name": "Coutiches - Place", "time": "17:26" },
-            { "name": "Coutiches - Calvaire", "time": "17:28" },
-            { "name": "Coutiches - Rue de Fâches", "time": "17:28" },
-            { "name": "Coutiches - Périsseile", "time": "17:30" },
-            { "name": "Flines-lez-Raches - Madeleine", "time": "17:31" },
-            { "name": "Coutiches - Crupez", "time": "17:31" },
-            { "name": "Flines-lez-Raches - Mairie", "time": "17:33" },
-            { "name": "Coutiches - Picterie", "time": "17:33" },
-            { "name": "Flines-lez-Raches - Montreuil", "time": "17:37" },
-            { "name": "Faumont - Boujon", "time": "17:38" },
-            { "name": "Faumont - Rue Dupire", "time": "17:39" },
-            { "name": "Anhiers - Route de Flines", "time": "17:40" },
-            { "name": "Anhiers - Église", "time": "17:41" },
-            { "name": "Faumont - Rue du Bois", "time": "17:41" },
-            { "name": "Anhiers - Rue des Écoles", "time": "17:42" },
-            { "name": "Coutiches - Rue des Sarts", "time": "17:44" },
-            { "name": "Anhiers - Le Petit Anhiers", "time": "17:44" },
-            { "name": "Coutiches - L'Epinchaux", "time": "17:46" },
-            { "name": "Coutiches - Le Baterloo", "time": "17:48" },
-            { "name": "Coutiches - La Jonquière", "time": "17:50" },
-            { "name": "Coutiches - Les 5 Chemins", "time": "17:53" },
-            { "name": "Coutiches - Le Bru", "time": "17:55" },
-            { "name": "Waziers - Langevin", "time": "17:55" },
-            { "name": "Douai - Gayant Expo", "time": "17:57" },
-            { "name": "Bouvignies - Calvaire", "time": "17:58" },
-            { "name": "Douai - Place Carnot", "time": "18:02" },
-            { "name": "Douai - Place De Gaulle", "time": "18:05" }
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "17:15"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "17:24"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "17:26"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "17:28"
+            },
+            {
+              "name": "Coutiches - Rue de Fâches",
+              "time": "17:28"
+            },
+            {
+              "name": "Coutiches - Périsseile",
+              "time": "17:30"
+            },
+            {
+              "name": "Flines-lez-raches - Madeleine",
+              "time": "17:31"
+            },
+            {
+              "name": "Coutiches - Crupez",
+              "time": "17:31"
+            },
+            {
+              "name": "Flines-lez-raches - Mairie",
+              "time": "17:33"
+            },
+            {
+              "name": "Coutiches - Picterie",
+              "time": "17:33"
+            },
+            {
+              "name": "Flines-lez-raches - Montreuil",
+              "time": "17:37"
+            },
+            {
+              "name": "Faumont - Boujon",
+              "time": "17:38"
+            },
+            {
+              "name": "Faumont - Rue Dupire",
+              "time": "17:39"
+            },
+            {
+              "name": "Anhiers - Route de Flines",
+              "time": "17:40"
+            },
+            {
+              "name": "Anhiers - Église",
+              "time": "17:41"
+            },
+            {
+              "name": "Faumont - Rue du Bois",
+              "time": "17:41"
+            },
+            {
+              "name": "Anhiers - Rue des Écoles",
+              "time": "17:42"
+            },
+            {
+              "name": "Coutiches - Rue des Sarts",
+              "time": "17:44"
+            },
+            {
+              "name": "Anhiers - Le Petit Anhiers",
+              "time": "17:44"
+            },
+            {
+              "name": "Coutiches - L'Epinchaux",
+              "time": "17:46"
+            },
+            {
+              "name": "Coutiches - Le Baterloo",
+              "time": "17:48"
+            },
+            {
+              "name": "Coutiches - La Jonquière",
+              "time": "17:50"
+            },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "17:53"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "17:55"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "17:55"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "17:57"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "17:58"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "18:02"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "18:05"
+            }
           ]
         },
         {
@@ -309,7 +813,10 @@
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "17:05"
             },
-            { "name": "Orchies - Collège du Pévèle", "time": "17:15" }
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "17:15"
+            }
           ]
         },
         {
@@ -324,12 +831,30 @@
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "17:10"
             },
-            { "name": "Orchies - Collège du Pévèle", "time": "17:17" },
-            { "name": "Beuvry-la-Forêt - Les Arcins", "time": "17:26" },
-            { "name": "Beuvry-la-Forêt - Grand Mariage", "time": "17:28" },
-            { "name": "Bouvignies - Le Pigeonnier", "time": "17:33" },
-            { "name": "Douai - Place Carnot", "time": "18:02" },
-            { "name": "Douai - Place De Gaulle", "time": "18:05" }
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "17:17"
+            },
+            {
+              "name": "Beuvry-la-forêt - Les Arcins",
+              "time": "17:26"
+            },
+            {
+              "name": "Beuvry-la-forêt - Grand Mariage",
+              "time": "17:28"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "17:33"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "18:02"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "18:05"
+            }
           ]
         },
         {
@@ -344,24 +869,78 @@
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "17:50"
             },
-            { "name": "Coutiches - Houssoye", "time": "17:24" },
-            { "name": "Coutiches - Place", "time": "17:26" },
-            { "name": "Coutiches - Rue de Fâches", "time": "18:00" },
-            { "name": "Coutiches - Crupez", "time": "18:03" },
-            { "name": "Coutiches - Picterie", "time": "18:05" },
-            { "name": "Faumont - Mairie", "time": "18:08" },
-            { "name": "Faumont - Boujon", "time": "18:11" },
-            { "name": "Faumont - Rue Dupire", "time": "18:12" },
-            { "name": "Faumont - Rue du Bois", "time": "18:15" },
-            { "name": "Coutiches - Rue des Sarts", "time": "18:18" },
-            { "name": "Coutiches - L'Epinchaux", "time": "18:20" },
-            { "name": "Coutiches - Le Baterloo", "time": "18:22" },
-            { "name": "Coutiches - La Jonquière", "time": "18:24" },
-            { "name": "Coutiches - Les 5 Chemins", "time": "18:27" },
-            { "name": "Coutiches - Le Bru", "time": "18:29" },
-            { "name": "Bouvignies - Calvaire", "time": "18:33" },
-            { "name": "Bouvignies - Le Pigeonnier", "time": "18:38" },
-            { "name": "Beuvry-la-Forêt - Les Arcins", "time": "18:43" }
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "17:24"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "17:26"
+            },
+            {
+              "name": "Coutiches - Rue de Fâches",
+              "time": "18:00"
+            },
+            {
+              "name": "Coutiches - Crupez",
+              "time": "18:03"
+            },
+            {
+              "name": "Coutiches - Picterie",
+              "time": "18:05"
+            },
+            {
+              "name": "Faumont - Mairie",
+              "time": "18:08"
+            },
+            {
+              "name": "Faumont - Boujon",
+              "time": "18:11"
+            },
+            {
+              "name": "Faumont - Rue Dupire",
+              "time": "18:12"
+            },
+            {
+              "name": "Faumont - Rue du Bois",
+              "time": "18:15"
+            },
+            {
+              "name": "Coutiches - Rue des Sarts",
+              "time": "18:18"
+            },
+            {
+              "name": "Coutiches - L'Epinchaux",
+              "time": "18:20"
+            },
+            {
+              "name": "Coutiches - Le Baterloo",
+              "time": "18:22"
+            },
+            {
+              "name": "Coutiches - La Jonquière",
+              "time": "18:24"
+            },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "18:27"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "18:29"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "18:33"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "18:38"
+            },
+            {
+              "name": "Beuvry-la-forêt - Les Arcins",
+              "time": "18:43"
+            }
           ]
         },
         {
@@ -372,31 +951,106 @@
           "type": "school",
           "description": "Matin - Établissements scolaires",
           "stops": [
-            { "name": "Douai - Place De Gaulle", "time": "07:20" },
-            { "name": "Douai - Place Carnot", "time": "07:22" },
-            { "name": "Douai - Arsenal", "time": "07:26" },
-            { "name": "Douai - Saint Michel", "time": "07:28" },
-            { "name": "Douai - Gayant Expo", "time": "07:30" },
-            { "name": "Waziers - Langevin", "time": "07:32" },
-            { "name": "Douai - Lespagnol", "time": "07:34" },
-            { "name": "Douai - Transformateur", "time": "07:36" },
-            { "name": "Douai - Frais Marais Église", "time": "07:37" },
-            { "name": "Douai - Arkéos", "time": "07:38" },
-            { "name": "Raches - Le Pont", "time": "07:39" },
-            { "name": "Raches - Mairie", "time": "07:40" },
-            { "name": "Raches - Placette", "time": "07:42" },
-            { "name": "Raches - Cul Brûlé", "time": "07:43" },
-            { "name": "Raches - Bois Vert", "time": "07:44" },
-            { "name": "Flines-lez-Raches - Sablière", "time": "07:46" },
-            { "name": "Flines-lez-Raches - Auberge", "time": "07:47" },
-            { "name": "Flines-lez-Raches - Place", "time": "07:48" },
-            { "name": "Flines-lez-Raches - Mairie", "time": "07:49" },
-            { "name": "Flines-lez-Raches - Madeleine", "time": "07:51" },
-            { "name": "Coutiches - Périsseile", "time": "07:52" },
-            { "name": "Coutiches - Calvaire", "time": "07:53" },
-            { "name": "Coutiches - Place", "time": "07:55" },
-            { "name": "Coutiches - Houssoye", "time": "07:58" },
-            { "name": "Orchies - Collège du Pévèle", "time": "08:10" },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "07:20"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "07:22"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "07:26"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "07:28"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "07:30"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "07:32"
+            },
+            {
+              "name": "Douai - Lespagnol",
+              "time": "07:34"
+            },
+            {
+              "name": "Douai - Transformateur",
+              "time": "07:36"
+            },
+            {
+              "name": "Douai - Frais Marais Église",
+              "time": "07:37"
+            },
+            {
+              "name": "Douai - Arkéos",
+              "time": "07:38"
+            },
+            {
+              "name": "Raches - Le Pont",
+              "time": "07:39"
+            },
+            {
+              "name": "Raches - Mairie",
+              "time": "07:40"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "07:42"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "07:43"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "07:44"
+            },
+            {
+              "name": "Flines-lez-raches - Sablière",
+              "time": "07:46"
+            },
+            {
+              "name": "Flines-lez-raches - Auberge",
+              "time": "07:47"
+            },
+            {
+              "name": "Flines-lez-raches - Place",
+              "time": "07:48"
+            },
+            {
+              "name": "Flines-lez-raches - Mairie",
+              "time": "07:49"
+            },
+            {
+              "name": "Flines-lez-raches - Madeleine",
+              "time": "07:51"
+            },
+            {
+              "name": "Coutiches - Périsseile",
+              "time": "07:52"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "07:53"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "07:55"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "07:58"
+            },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "08:10"
+            },
             {
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "08:17"
@@ -411,11 +1065,26 @@
           "type": "school",
           "description": "Matin - Établissements scolaires (depuis Coutiches)",
           "stops": [
-            { "name": "Coutiches - Les 5 Chemins", "time": "07:35" },
-            { "name": "Coutiches - Le Bru", "time": "07:37" },
-            { "name": "Bouvignies - Calvaire", "time": "07:39" },
-            { "name": "Bouvignies - Le Pigeonnier", "time": "07:45" },
-            { "name": "Orchies - Collège du Pévèle", "time": "08:00" },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "07:35"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "07:37"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "07:39"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "07:45"
+            },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "08:00"
+            },
             {
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "08:07"
@@ -430,9 +1099,18 @@
           "type": "school",
           "description": "Matin - Établissements scolaires (depuis Bouvignies)",
           "stops": [
-            { "name": "Bouvignies - Le Pigeonnier", "time": "07:45" },
-            { "name": "Beuvry-la-Forêt - Grand Mariage", "time": "07:49" },
-            { "name": "Orchies - Collège du Pévèle", "time": "08:00" },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "07:45"
+            },
+            {
+              "name": "Beuvry-la-forêt - Grand Mariage",
+              "time": "07:49"
+            },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "08:00"
+            },
             {
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "08:07"
@@ -447,18 +1125,54 @@
           "type": "school",
           "description": "Mercredi midi - Établissements scolaires",
           "stops": [
-            { "name": "Douai - Place De Gaulle", "time": "12:40" },
-            { "name": "Douai - Place Carnot", "time": "12:42" },
-            { "name": "Douai - Arsenal", "time": "12:48" },
-            { "name": "Douai - Saint Michel", "time": "12:52" },
-            { "name": "Douai - Gayant Expo", "time": "12:53" },
-            { "name": "Waziers - Langevin", "time": "12:55" },
-            { "name": "Coutiches - Périsseile", "time": "13:13" },
-            { "name": "Coutiches - Calvaire", "time": "13:14" },
-            { "name": "Coutiches - Place", "time": "13:15" },
-            { "name": "Coutiches - Houssoye", "time": "13:16" },
-            { "name": "Orchies - Zone de l'Europe", "time": "13:21" },
-            { "name": "Orchies - Centre (Place De Lattre)", "time": "13:23" },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "12:40"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "12:42"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "12:48"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "12:52"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "12:53"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "12:55"
+            },
+            {
+              "name": "Coutiches - Périsseile",
+              "time": "13:13"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "13:14"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "13:15"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "13:16"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "13:21"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "13:23"
+            },
             {
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "13:25"
@@ -473,21 +1187,66 @@
           "type": "school",
           "description": "Après-midi - Établissements scolaires",
           "stops": [
-            { "name": "Douai - Place De Gaulle", "time": "17:50" },
-            { "name": "Douai - Place Carnot", "time": "17:55" },
-            { "name": "Douai - Arsenal", "time": "17:59" },
-            { "name": "Douai - Saint Michel", "time": "18:02" },
-            { "name": "Douai - Gayant Expo", "time": "18:03" },
-            { "name": "Waziers - Langevin", "time": "18:05" },
-            { "name": "Flines-lez-Raches - Auberge", "time": "18:20" },
-            { "name": "Flines-lez-Raches - Place", "time": "18:21" },
-            { "name": "Flines-lez-Raches - Mairie", "time": "18:22" },
-            { "name": "Coutiches - Les 5 Chemins", "time": "18:27" },
-            { "name": "Coutiches - Le Bru", "time": "18:29" },
-            { "name": "Bouvignies - Calvaire", "time": "18:31" },
-            { "name": "Bouvignies - Le Pigeonnier", "time": "18:33" },
-            { "name": "Beuvry-la-Forêt - Grand Mariage", "time": "18:37" },
-            { "name": "Beuvry-la-Forêt - Les Arcins", "time": "18:38" },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "17:50"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "17:55"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "17:59"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "18:02"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "18:03"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "18:05"
+            },
+            {
+              "name": "Flines-lez-raches - Auberge",
+              "time": "18:20"
+            },
+            {
+              "name": "Flines-lez-raches - Place",
+              "time": "18:21"
+            },
+            {
+              "name": "Flines-lez-raches - Mairie",
+              "time": "18:22"
+            },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "18:27"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "18:29"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "18:31"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "18:33"
+            },
+            {
+              "name": "Beuvry-la-forêt - Grand Mariage",
+              "time": "18:37"
+            },
+            {
+              "name": "Beuvry-la-forêt - Les Arcins",
+              "time": "18:38"
+            },
             {
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "18:43"
@@ -502,21 +1261,5060 @@
           "type": "school",
           "description": "Soir - Établissements scolaires",
           "stops": [
-            { "name": "Douai - Place De Gaulle", "time": "18:30" },
-            { "name": "Douai - Place Carnot", "time": "18:32" },
-            { "name": "Douai - Arsenal", "time": "18:38" },
-            { "name": "Douai - Saint Michel", "time": "18:43" },
-            { "name": "Douai - Gayant Expo", "time": "18:45" },
-            { "name": "Waziers - Langevin", "time": "18:47" },
-            { "name": "Coutiches - Périsseile", "time": "19:05" },
-            { "name": "Coutiches - Calvaire", "time": "19:06" },
-            { "name": "Coutiches - Place", "time": "19:07" },
-            { "name": "Coutiches - Houssoye", "time": "19:08" },
-            { "name": "Orchies - Zone de l'Europe", "time": "19:13" },
-            { "name": "Orchies - Centre (Place De Lattre)", "time": "19:15" },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "18:30"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "18:32"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "18:38"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "18:43"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "18:45"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "18:47"
+            },
+            {
+              "name": "Coutiches - Périsseile",
+              "time": "19:05"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "19:06"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "19:07"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "19:08"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "19:13"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "19:15"
+            },
             {
               "name": "Orchies - Gare SNCF (collège N.D Providence)",
               "time": "19:17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ligne-857",
+      "name": "Ligne 857",
+      "color": "#1E90FF",
+      "operator": "Arc-en-Ciel",
+      "description": "Ligne régulière - Orchies / Douai",
+      "routes": [
+        {
+          "id": "course-10",
+          "number": "10",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 10",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "06:00"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "06:02"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "06:03"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "06:04"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "06:05"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "06:07"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "06:09"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "06:10"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "06:11"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "06:12"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "06:13"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "06:15"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "06:16"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "06:17"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "06:18"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "06:19"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "06:22"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "06:23"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "06:24"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "06:26"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "06:27"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "06:28"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "06:29"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "06:31"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "06:33"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "06:34"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "06:35"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "06:36"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "06:43"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "06:45"
+            }
+          ]
+        },
+        {
+          "id": "course-20",
+          "number": "20",
+          "direction": "Douai → Orchies",
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 20",
+          "stops": [
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "06:40"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "06:41"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "06:43"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "06:45"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "06:47"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "06:49"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "06:51"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "07:02"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "07:04"
+            }
+          ]
+        },
+        {
+          "id": "course-30",
+          "number": "30",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 30",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "06:50"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "06:51"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "06:52"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "06:53"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "06:54"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "06:56"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "06:58"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "06:59"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "07:00"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "07:01"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "07:02"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "07:04"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "07:05"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "07:06"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "07:07"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "07:08"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "07:11"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "07:12"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "07:13"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "07:15"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "07:16"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "07:17"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "07:19"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "07:21"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "07:23"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "07:24"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "07:25"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "07:27"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "07:43"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "07:45"
+            }
+          ]
+        },
+        {
+          "id": "course-40",
+          "number": "40",
+          "direction": "Douai → Orchies",
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 40",
+          "stops": [
+            {
+              "name": "Anhiers - Le Petit Anhiers",
+              "time": "07:33"
+            },
+            {
+              "name": "Anhiers - Rue des Ecoles",
+              "time": "07:35"
+            },
+            {
+              "name": "Anhiers - Eglise",
+              "time": "07:36"
+            },
+            {
+              "name": "Anhiers - Route de Flines",
+              "time": "07:37"
+            },
+            {
+              "name": "Flines Lez Raches - Montreuil",
+              "time": "07:41"
+            },
+            {
+              "name": "Flines Lez Raches - Dulleu",
+              "time": "07:44"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "07:45"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "07:47"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "07:49"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "07:50"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "07:51"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "07:53"
+            },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "08:08"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "08:16"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:18"
+            }
+          ]
+        },
+        {
+          "id": "course-50",
+          "number": "50",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 50",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "07:57"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "08:01"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "08:06"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "08:09"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "08:10"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "08:12"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "08:14"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "08:15"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "08:16"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "08:17"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "08:18"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "08:20"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "08:21"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "08:22"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "08:23"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "08:24"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "08:27"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "08:28"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "08:29"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "08:31"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "08:32"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "08:33"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "08:34"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "08:36"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "08:38"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "08:39"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "08:40"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "08:41"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "08:46"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "08:48"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:50"
+            }
+          ]
+        },
+        {
+          "id": "course-60",
+          "number": "60",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 60",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "09:00"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "09:03"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "09:06"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "09:09"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "09:10"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "09:12"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "09:14"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "09:15"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "09:16"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "09:17"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "09:18"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "09:20"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "09:21"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "09:22"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "09:23"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "09:24"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "09:27"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "09:28"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "09:29"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "09:31"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "09:32"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "09:33"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "09:34"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "09:36"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "09:38"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "09:39"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "09:40"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "09:41"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "09:46"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "09:48"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "09:50"
+            }
+          ]
+        },
+        {
+          "id": "course-70",
+          "number": "70",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 70",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "10:02"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "10:04"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "10:05"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "10:06"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "10:07"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "10:09"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "10:11"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "10:12"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "10:13"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "10:14"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "10:15"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "10:17"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "10:18"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "10:19"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "10:20"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "10:21"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "10:24"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "10:25"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "10:26"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "10:28"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "10:29"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "10:30"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "10:31"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "10:33"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "10:35"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "10:36"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "10:37"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "10:38"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "10:43"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "10:45"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "10:47"
+            }
+          ]
+        },
+        {
+          "id": "course-80",
+          "number": "80",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 80",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "11:07"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "11:09"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "11:10"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "11:11"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "11:12"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "11:14"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "11:16"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "11:17"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "11:18"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "11:19"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "11:20"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "11:22"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "11:23"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "11:24"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "11:25"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "11:26"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "11:29"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "11:30"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "11:31"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "11:33"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "11:34"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "11:35"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "11:36"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "11:38"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "11:40"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "11:41"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "11:42"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "11:43"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "11:48"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "11:50"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "11:52"
+            }
+          ]
+        },
+        {
+          "id": "course-90",
+          "number": "90",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 90",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "12:15"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "12:20"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "12:24"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "12:27"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "12:28"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "12:30"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "12:32"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "12:33"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "12:34"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "12:35"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "12:36"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "12:38"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "12:39"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "12:40"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "12:41"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "12:42"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "12:45"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "12:46"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "12:47"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "12:49"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "12:50"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "12:51"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "12:52"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "12:54"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "12:56"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "12:57"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "12:58"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "12:59"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "13:04"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "13:06"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "13:08"
+            }
+          ]
+        },
+        {
+          "id": "course-100",
+          "number": "100",
+          "direction": "Douai → Orchies",
+          "days": ["wednesday", "saturday"],
+          "type": "school",
+          "description": "Course 100",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "12:25"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "12:30"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "12:34"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "12:37"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "12:38"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "12:40"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "12:50"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "12:51"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "12:52"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "12:54"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "12:55"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "12:56"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "12:57"
+            },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "13:02"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "13:04"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "13:06"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "13:08"
+            },
+            {
+              "name": "Marchiennes - Sec Marais",
+              "time": "13:10"
+            },
+            {
+              "name": "Beuvry LA Foret - Grand Mariage",
+              "time": "13:12"
+            },
+            {
+              "name": "Beuvry LA Foret - Les Arcins",
+              "time": "13:13"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "13:18"
+            }
+          ]
+        },
+        {
+          "id": "course-110",
+          "number": "110",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 110",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "13:12"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "13:13"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "13:15"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "13:16"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "13:17"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "13:19"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "13:21"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "13:22"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "13:23"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "13:24"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "13:25"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "13:27"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "13:28"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "13:29"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "13:30"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "13:31"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "13:34"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "13:35"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "13:36"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "13:38"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "13:39"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "13:40"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "13:41"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "13:43"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "13:45"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "13:46"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "13:47"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "13:48"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "13:53"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "13:55"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "13:57"
+            }
+          ]
+        },
+        {
+          "id": "course-120",
+          "number": "120",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 120",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "14:22"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "14:24"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "14:25"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "14:26"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "14:27"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "14:29"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "14:31"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "14:32"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "14:33"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "14:34"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "14:35"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "14:37"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "14:38"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "14:39"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "14:40"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "14:41"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "14:44"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "14:45"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "14:46"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "14:48"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "14:49"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "14:50"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "14:51"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "14:53"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "14:55"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "14:56"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "14:57"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "14:58"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "15:03"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "15:05"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "15:07"
+            }
+          ]
+        },
+        {
+          "id": "course-130",
+          "number": "130",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 130",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "15:22"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "15:24"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "15:25"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "15:26"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "15:27"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "15:29"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "15:31"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "15:32"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "15:33"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "15:34"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "15:35"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "15:37"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "15:38"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "15:39"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "15:40"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "15:41"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "15:44"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "15:45"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "15:46"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "15:48"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "15:49"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "15:50"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "15:51"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "15:53"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "15:55"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "15:56"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "15:57"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "15:58"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "16:03"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "16:05"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "16:07"
+            }
+          ]
+        },
+        {
+          "id": "course-140",
+          "number": "140",
+          "direction": "Douai → Orchies",
+          "days": ["monday", "tuesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 140",
+          "stops": [
+            {
+              "name": "Douai - Lycée E. Lemonnier",
+              "time": "16:05"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "16:15"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "16:17"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "16:23"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "16:27"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "16:28"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "16:30"
+            },
+            {
+              "name": "Douai - Lespagnol",
+              "time": "16:32"
+            },
+            {
+              "name": "Douai - Transformateur",
+              "time": "16:34"
+            },
+            {
+              "name": "Douai - Frais Marais Eglise",
+              "time": "16:35"
+            },
+            {
+              "name": "Douai - Arkéos",
+              "time": "16:36"
+            },
+            {
+              "name": "Raches - Le Pont",
+              "time": "16:37"
+            },
+            {
+              "name": "Raches - Mairie",
+              "time": "16:38"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "16:40"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "16:41"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "16:42"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "16:44"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "16:45"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "16:46"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "16:47"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "16:49"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "16:51"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "16:52"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "16:53"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "16:54"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "16:59"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "17:01"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:03"
+            }
+          ]
+        },
+        {
+          "id": "course-150",
+          "number": "150",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 150",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "16:15"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "16:20"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "16:24"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "16:28"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "16:30"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "16:32"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "16:34"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "16:35"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "16:36"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "16:37"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "16:38"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "16:40"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "16:41"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "16:42"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "16:43"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "16:44"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "16:47"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "16:48"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "16:49"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "16:51"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "16:52"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "16:53"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "16:54"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "16:56"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "16:58"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "16:59"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "17:00"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "17:01"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "17:06"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "17:08"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:10"
+            }
+          ]
+        },
+        {
+          "id": "course-160",
+          "number": "160",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 160",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "17:15"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "17:20"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "17:24"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "17:28"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "17:30"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "17:32"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "17:34"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "17:35"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "17:36"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "17:37"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "17:38"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "17:40"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "17:41"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "17:42"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "17:43"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "17:44"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "17:47"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "17:48"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "17:49"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "17:51"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "17:52"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "17:53"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "17:54"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "17:56"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "17:58"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "17:59"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "18:00"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "18:01"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "18:06"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "18:08"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "18:10"
+            }
+          ]
+        },
+        {
+          "id": "course-170",
+          "number": "170",
+          "direction": "Douai → Orchies",
+          "days": ["wednesday"],
+          "type": "school",
+          "description": "Course 170",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "17:20"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "17:25"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "17:29"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "17:32"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "17:33"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "17:35"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "17:45"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "17:46"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "17:47"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "17:49"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "17:50"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "17:51"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "17:52"
+            },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "17:57"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "17:59"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "18:01"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "18:03"
+            },
+            {
+              "name": "Marchiennes - Sec Marais",
+              "time": "18:05"
+            },
+            {
+              "name": "Beuvry LA Foret - Grand Mariage",
+              "time": "18:07"
+            },
+            {
+              "name": "Beuvry LA Foret - Les Arcins",
+              "time": "18:08"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "18:13"
+            }
+          ]
+        },
+        {
+          "id": "course-210",
+          "number": "210",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 210",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "17:20"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "17:25"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "17:29"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "17:32"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "17:33"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "17:35"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "17:45"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "17:46"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "17:47"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "17:49"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "17:50"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "17:51"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "17:52"
+            },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "17:57"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "17:59"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "18:01"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "19:03"
+            },
+            {
+              "name": "Marchiennes - Sec Marais",
+              "time": "18:05"
+            },
+            {
+              "name": "Beuvry LA Foret - Grand Mariage",
+              "time": "18:07"
+            },
+            {
+              "name": "Beuvry LA Foret - Les Arcins",
+              "time": "18:08"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "18:13"
+            }
+          ]
+        },
+        {
+          "id": "course-180",
+          "number": "180",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 180",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "18:15"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "18:20"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "18:24"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "18:28"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "18:30"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "18:32"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "18:34"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "18:35"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "18:36"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "18:37"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "18:38"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "18:40"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "18:41"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "18:42"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "18:43"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "18:44"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "18:47"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "18:48"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "18:49"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "18:51"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "18:52"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "18:53"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "18:54"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "18:56"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "18:58"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "18:59"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "19:00"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "19:01"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "19:06"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "19:08"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "19:10"
+            }
+          ]
+        },
+        {
+          "id": "course-190",
+          "number": "190",
+          "direction": "Douai → Orchies",
+          "days": ["monday", "tuesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 190",
+          "stops": [
+            {
+              "name": "Douai - Lycée E. Lemonnier",
+              "time": "18:25"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "18:35"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "18:38"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "18:41"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "18:43"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "18:45"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "18:47"
+            },
+            {
+              "name": "Douai - Lespagnol",
+              "time": "18:49"
+            },
+            {
+              "name": "Douai - Transformateur",
+              "time": "18:51"
+            },
+            {
+              "name": "Douai - Frais Marais Eglise",
+              "time": "18:52"
+            },
+            {
+              "name": "Douai - Arkéos",
+              "time": "18:53"
+            },
+            {
+              "name": "Raches - Le Pont",
+              "time": "18:54"
+            },
+            {
+              "name": "Raches - Mairie",
+              "time": "18:55"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "18:57"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "18:58"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "18:59"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "19:01"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "19:02"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "19:03"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "19:04"
+            },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "19:09"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "19:11"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "19:13"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "19:15"
+            },
+            {
+              "name": "Marchiennes - Sec Marais",
+              "time": "19:17"
+            },
+            {
+              "name": "Beuvry LA Foret - Grand Mariage",
+              "time": "19:19"
+            },
+            {
+              "name": "Beuvry LA Foret - Les Arcins",
+              "time": "19:20"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "19:25"
+            }
+          ]
+        },
+        {
+          "id": "course-200",
+          "number": "200",
+          "direction": "Douai → Orchies",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 200",
+          "stops": [
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "19:19"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "19:21"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "19:22"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "19:24"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "19:25"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "19:27"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "19:29"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "19:30"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "19:31"
+            },
+            {
+              "name": "Roost Warendin - Bellefontaine",
+              "time": "19:32"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "19:33"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "19:35"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "19:36"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "19:37"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "19:38"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "19:39"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "19:42"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "19:43"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "19:44"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "19:46"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "19:47"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "19:48"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "19:49"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "19:51"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "19:53"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "19:54"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "19:55"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "19:56"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "20:01"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "20:03"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "20:05"
+            }
+          ]
+        },
+        {
+          "id": "course-11",
+          "number": "11",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 11",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "05:15"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "05:17"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "05:19"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "05:23"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "05:24"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "05:25"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "05:26"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "05:28"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "05:29"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "05:30"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "05:31"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "05:32"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "05:34"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "05:35"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "05:36"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "05:38"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "05:39"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "05:40"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "05:41"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "05:42"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "05:44"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "05:45"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "05:46"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "05:47"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "05:47"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "05:49"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "05:50"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "05:51"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "05:52"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "05:53"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "05:55"
+            }
+          ]
+        },
+        {
+          "id": "course-21",
+          "number": "21",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 21",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "06:00"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "06:02"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "06:04"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "06:09"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "06:10"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "06:11"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "06:12"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "06:14"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "06:16"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "06:17"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "06:18"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "06:19"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "06:21"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "06:22"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "06:23"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "06:26"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "06:27"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "06:28"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "06:29"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "06:30"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "06:32"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "06:33"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "06:34"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "06:35"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "06:36"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "06:38"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "06:40"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "06:41"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "06:42"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "06:43"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "06:45"
+            }
+          ]
+        },
+        {
+          "id": "course-31",
+          "number": "31",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 31",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "06:20"
+            },
+            {
+              "name": "Beuvry LA Foret - Les Arcins",
+              "time": "06:24"
+            },
+            {
+              "name": "Beuvry LA Foret - Grand Mariage",
+              "time": "06:25"
+            },
+            {
+              "name": "Marchiennes - Sec Marais",
+              "time": "06:27"
+            },
+            {
+              "name": "Bouvignies - Le Pigeonnier",
+              "time": "06:30"
+            },
+            {
+              "name": "Bouvignies - Calvaire",
+              "time": "06:32"
+            },
+            {
+              "name": "Coutiches - Le Bru",
+              "time": "06:34"
+            },
+            {
+              "name": "Coutiches - Les 5 Chemins",
+              "time": "06:36"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "06:41"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "06:43"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "06:44"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "06:45"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "06:47"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "06:48"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "06:49"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "06:59"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "07:01"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "07:03"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "07:05"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "07:07"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "07:09"
+            }
+          ]
+        },
+        {
+          "id": "course-41",
+          "number": "41",
+          "direction": "Orchies → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 41",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "06:30"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "06:32"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "06:34"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "06:39"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "06:40"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "06:41"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "06:42"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "06:44"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "06:46"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "06:48"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "06:49"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "06:50"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "06:52"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "06:53"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "06:54"
+            },
+            {
+              "name": "Raches - Mairie",
+              "time": "06:56"
+            },
+            {
+              "name": "Raches - Le Pont",
+              "time": "06:57"
+            },
+            {
+              "name": "Douai - Arkéos",
+              "time": "06:58"
+            },
+            {
+              "name": "Douai - Frais Marais Eglise",
+              "time": "06:59"
+            },
+            {
+              "name": "Douai - Transformateur",
+              "time": "07:00"
+            },
+            {
+              "name": "Douai - Lespagnol",
+              "time": "07:03"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "07:05"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "07:07"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "07:14"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "07:18"
+            },
+            {
+              "name": "Douai - Lycée E. Lemonnier",
+              "time": "07:30"
+            }
+          ]
+        },
+        {
+          "id": "course-51",
+          "number": "51",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 51",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "06:50"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "06:52"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "06:54"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "06:59"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "07:00"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "07:01"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "07:02"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "07:04"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "07:06"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "07:08"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "07:09"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "07:10"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "07:12"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "07:13"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "07:14"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "07:17"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "07:18"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "07:19"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "07:20"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "07:21"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "07:24"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "07:25"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "07:26"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "07:27"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "07:28"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "07:30"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "07:32"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "07:35"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "07:38"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "07:41"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "07:43"
+            }
+          ]
+        },
+        {
+          "id": "course-61",
+          "number": "61",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 61",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:00"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "08:02"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "08:04"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "08:09"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "08:10"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "08:11"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "08:12"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "08:14"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "08:16"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "08:18"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "08:19"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "08:20"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "08:22"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "08:23"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "08:24"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "08:27"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "08:28"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "08:29"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "08:30"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "08:31"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "08:34"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "08:35"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "08:36"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "08:37"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "08:38"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "08:40"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "08:42"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "08:45"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "08:48"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "08:51"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "08:53"
+            }
+          ]
+        },
+        {
+          "id": "course-71",
+          "number": "71",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 71",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "09:00"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "09:02"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "09:04"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "09:09"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "09:10"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "09:11"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "09:12"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "09:14"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "09:16"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "09:17"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "09:18"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "09:19"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "09:21"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "09:22"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "09:23"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "09:26"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "09:27"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "09:28"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "09:29"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "09:30"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "09:32"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "09:33"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "09:34"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "09:35"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "09:36"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "09:38"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "09:40"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "09:41"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "09:42"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "09:43"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "09:45"
+            }
+          ]
+        },
+        {
+          "id": "course-81",
+          "number": "81",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 81",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "10:00"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "10:02"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "10:04"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "10:09"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "10:10"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "10:11"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "10:12"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "10:14"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "10:16"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "10:17"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "10:18"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "10:19"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "10:21"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "10:22"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "10:23"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "10:26"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "10:27"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "10:28"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "10:29"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "10:30"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "10:32"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "10:33"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "10:34"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "10:35"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "10:36"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "10:38"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "10:40"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "10:41"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "10:42"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "10:43"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "10:45"
+            }
+          ]
+        },
+        {
+          "id": "course-91",
+          "number": "91",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 91",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "11:00"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "11:02"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "11:04"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "11:09"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "11:10"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "11:11"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "11:12"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "11:14"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "11:16"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "11:17"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "11:18"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "11:19"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "11:21"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "11:22"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "11:23"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "11:26"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "11:27"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "11:28"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "11:29"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "11:30"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "11:32"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "11:33"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "11:34"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "11:35"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "11:36"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "11:38"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "11:40"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "11:42"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "11:44"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "11:46"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "11:48"
+            }
+          ]
+        },
+        {
+          "id": "course-101",
+          "number": "101",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 101",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "12:20"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "12:22"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "12:24"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "12:29"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "12:30"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "12:31"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "12:32"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "12:34"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "12:36"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "12:37"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "12:38"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "12:39"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "12:41"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "12:42"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "12:43"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "12:46"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "12:47"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "12:48"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "12:49"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "12:50"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "12:52"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "12:53"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "12:54"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "12:55"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "12:56"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "12:58"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "13:00"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "13:01"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "13:02"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "13:03"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "13:05"
+            }
+          ]
+        },
+        {
+          "id": "course-111",
+          "number": "111",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 111",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "13:15"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "13:17"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "13:19"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "13:24"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "13:25"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "13:26"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "13:27"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "13:29"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "13:31"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "13:32"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "13:33"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "13:34"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "13:36"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "13:37"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "13:38"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "13:41"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "13:42"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "13:43"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "13:44"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "13:45"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "13:47"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "13:48"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "13:49"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "13:50"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "13:51"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "13:53"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "13:55"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "13:56"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "13:57"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "13:58"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "14:00"
+            }
+          ]
+        },
+        {
+          "id": "course-121",
+          "number": "121",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 121",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "14:15"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "14:17"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "14:19"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "14:24"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "14:25"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "14:26"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "14:27"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "14:29"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "14:31"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "14:32"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "14:33"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "14:34"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "14:36"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "14:37"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "14:38"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "14:41"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "14:42"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "14:43"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "14:44"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "14:45"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "14:47"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "14:48"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "14:49"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "14:50"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "14:51"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "14:53"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "14:55"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "14:56"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "14:57"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "14:58"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "15:00"
+            }
+          ]
+        },
+        {
+          "id": "course-131",
+          "number": "131",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 131",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "15:15"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "15:17"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "15:19"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "15:24"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "15:25"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "15:26"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "15:27"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "15:29"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "15:31"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "15:32"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "15:33"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "15:34"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "15:36"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "15:37"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "15:38"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "15:41"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "15:42"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "15:43"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "15:44"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "15:45"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "15:47"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "15:48"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "15:49"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "15:50"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "15:51"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "15:53"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "15:55"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "15:57"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "15:59"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "16:01"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "16:03"
+            }
+          ]
+        },
+        {
+          "id": "course-141",
+          "number": "141",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 141",
+          "stops": [
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "16:10"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "16:20"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "16:22"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "16:24"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "16:29"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "16:30"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "16:31"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "16:32"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "16:34"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "16:36"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "16:37"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "16:38"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "16:39"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "16:41"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "16:42"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "16:43"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "16:46"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "16:47"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "16:48"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "16:49"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "16:50"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "16:52"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "16:53"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "16:54"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "16:55"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "16:56"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "16:58"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "17:00"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "17:02"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "17:04"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "17:06"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "17:08"
+            }
+          ]
+        },
+        {
+          "id": "course-151",
+          "number": "151",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 151",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:20"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "17:22"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "17:24"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "17:29"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "17:30"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "17:31"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "17:32"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "17:34"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "17:36"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "17:37"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "17:38"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "17:39"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "17:41"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "17:42"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "17:43"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "17:46"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "17:47"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "17:48"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "17:49"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "17:50"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "17:52"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "17:53"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "17:54"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "17:55"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "17:56"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "17:58"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "18:00"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "18:02"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "18:04"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "18:06"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "18:08"
+            }
+          ]
+        },
+        {
+          "id": "course-161",
+          "number": "161",
+          "direction": "Orchies → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 161",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:47"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "17:49"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "17:51"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "17:56"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "17:57"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "17:58"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "17:59"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "18:01"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "18:03"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "18:04"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "18:05"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "18:06"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "18:08"
+            }
+          ]
+        },
+        {
+          "id": "course-171",
+          "number": "171",
+          "direction": "Orchies → Douai",
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "type": "school",
+          "description": "Course 171",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "18:20"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "18:22"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "18:24"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "18:29"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "18:30"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "18:31"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "18:32"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "18:34"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "18:36"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "18:37"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "18:38"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "18:39"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "18:41"
+            },
+            {
+              "name": "Raches - Cul Brûlé",
+              "time": "18:42"
+            },
+            {
+              "name": "Raches - Placette",
+              "time": "18:43"
+            },
+            {
+              "name": "Roost Warendin - Epinettes",
+              "time": "18:46"
+            },
+            {
+              "name": "Roost Warendin - Vaillant",
+              "time": "18:47"
+            },
+            {
+              "name": "Roost Warendin - Brasserie",
+              "time": "18:48"
+            },
+            {
+              "name": "Roost Warendin - Foyer",
+              "time": "18:49"
+            },
+            {
+              "name": "Roost Warendin - 4 Pavés",
+              "time": "18:50"
+            },
+            {
+              "name": "Roost Warendin - Barrière du Marais",
+              "time": "18:52"
+            },
+            {
+              "name": "Roost Warendin - Belleforière",
+              "time": "18:53"
+            },
+            {
+              "name": "Roost Warendin - Escarpelle",
+              "time": "18:54"
+            },
+            {
+              "name": "Douai - Scarpe",
+              "time": "18:55"
+            },
+            {
+              "name": "Douai - Pont du Fort",
+              "time": "18:56"
+            },
+            {
+              "name": "Waziers - Langevin",
+              "time": "18:58"
+            },
+            {
+              "name": "Douai - Gayant Expo",
+              "time": "19:00"
+            },
+            {
+              "name": "Douai - Saint Michel",
+              "time": "19:01"
+            },
+            {
+              "name": "Douai - Arsenal",
+              "time": "19:02"
+            },
+            {
+              "name": "Douai - Place Carnot",
+              "time": "19:03"
+            },
+            {
+              "name": "Douai - Place De Gaulle",
+              "time": "19:05"
+            }
+          ]
+        },
+        {
+          "id": "course-181",
+          "number": "181",
+          "direction": "Orchies → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 181",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "18:45"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "18:47"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "18:49"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "18:54"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "18:55"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "18:56"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "18:57"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "18:59"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "19:01"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "19:02"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "19:03"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "19:04"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "19:06"
+            }
+          ]
+        },
+        {
+          "id": "course-191",
+          "number": "191",
+          "direction": "Orchies → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 191",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "19:15"
+            },
+            {
+              "name": "Orchies - Centre (Place De Lattre)",
+              "time": "19:17"
+            },
+            {
+              "name": "Orchies - Zone de l'Europe",
+              "time": "19:19"
+            },
+            {
+              "name": "Coutiches - Houssoye",
+              "time": "19:24"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "19:25"
+            },
+            {
+              "name": "Coutiches - Calvaire",
+              "time": "19:26"
+            },
+            {
+              "name": "Coutiches - Périsselle",
+              "time": "19:27"
+            },
+            {
+              "name": "Flines Lez Raches - Madeleine",
+              "time": "19:29"
+            },
+            {
+              "name": "Flines Lez Raches - Mairie",
+              "time": "19:31"
+            },
+            {
+              "name": "Flines Lez Raches - Place",
+              "time": "19:32"
+            },
+            {
+              "name": "Flines Lez Raches - Auberge",
+              "time": "19:33"
+            },
+            {
+              "name": "Flines Lez Raches - Sablière",
+              "time": "19:34"
+            },
+            {
+              "name": "Raches - Bois Vert",
+              "time": "19:36"
             }
           ]
         }

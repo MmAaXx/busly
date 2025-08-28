@@ -11,13 +11,7 @@
           "id": "course-321",
           "number": "321",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Matin - Établissements scolaires",
           "stops": [
@@ -79,13 +73,7 @@
           "id": "course-361",
           "number": "361",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Matin - Établissements scolaires",
           "stops": [
@@ -191,9 +179,7 @@
           "id": "course-383",
           "number": "383",
           "direction": "Orchies → Douai",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "school",
           "description": "Mercredi après-midi - Établissements scolaires",
           "stops": [
@@ -303,12 +289,7 @@
           "id": "course-381",
           "number": "381",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "school",
           "description": "Après-midi - Établissements scolaires",
           "stops": [
@@ -418,13 +399,7 @@
           "id": "course-711",
           "number": "711",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "college",
           "description": "Matin - Collèges (depuis Coutiches)",
           "stops": [
@@ -486,9 +461,7 @@
           "id": "course-710",
           "number": "710",
           "direction": "Orchies → Douai",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "college",
           "description": "Mercredi midi - Collèges",
           "stops": [
@@ -562,9 +535,7 @@
           "id": "course-720",
           "number": "720",
           "direction": "Orchies → Douai",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "college",
           "description": "Mercredi midi - Collèges (trajet Flines/Anhiers)",
           "stops": [
@@ -622,12 +593,7 @@
           "id": "course-730",
           "number": "730",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "college",
           "description": "Après-midi - Collèges",
           "stops": [
@@ -709,12 +675,7 @@
           "id": "course-740",
           "number": "740",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "college",
           "description": "Après-midi - Collèges (route complète)",
           "stops": [
@@ -844,12 +805,7 @@
           "id": "course-750",
           "number": "750",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "college",
           "description": "Après-midi - Collèges (trajet court)",
           "stops": [
@@ -867,12 +823,7 @@
           "id": "course-760",
           "number": "760",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "college",
           "description": "Après-midi - Collèges (Orchies-Beuvry-Douai)",
           "stops": [
@@ -910,12 +861,7 @@
           "id": "course-770",
           "number": "770",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "college",
           "description": "Soirée - Collèges (route complète)",
           "stops": [
@@ -1001,13 +947,7 @@
           "id": "course-330",
           "number": "330",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Matin - Établissements scolaires",
           "stops": [
@@ -1121,13 +1061,7 @@
           "id": "course-320",
           "number": "320",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Matin - Établissements scolaires (depuis Coutiches)",
           "stops": [
@@ -1161,13 +1095,7 @@
           "id": "course-340",
           "number": "340",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Matin - Établissements scolaires (depuis Bouvignies)",
           "stops": [
@@ -1193,9 +1121,7 @@
           "id": "course-360",
           "number": "360",
           "direction": "Douai → Orchies",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "school",
           "description": "Mercredi midi - Établissements scolaires",
           "stops": [
@@ -1257,13 +1183,7 @@
           "id": "course-440",
           "number": "440",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Après-midi - Établissements scolaires",
           "stops": [
@@ -1337,12 +1257,7 @@
           "id": "course-410",
           "number": "410",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "school",
           "description": "Soir - Établissements scolaires",
           "stops": [
@@ -1550,13 +1465,7 @@
           "id": "course-20",
           "number": "20",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 20",
           "stops": [
@@ -1739,13 +1648,7 @@
           "id": "course-40",
           "number": "40",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 40",
           "stops": [
@@ -2520,10 +2423,7 @@
           "id": "course-100",
           "number": "100",
           "direction": "Douai → Orchies",
-          "days": [
-            "wednesday",
-            "saturday"
-          ],
+          "days": ["wednesday", "saturday"],
           "type": "school",
           "description": "Course 100",
           "stops": [
@@ -3040,13 +2940,7 @@
           "id": "course-140",
           "number": "140",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 140",
           "stops": [
@@ -3450,9 +3344,7 @@
           "id": "course-170",
           "number": "170",
           "direction": "Douai → Orchies",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "school",
           "description": "Course 170",
           "stops": [
@@ -3788,13 +3680,7 @@
           "id": "course-190",
           "number": "190",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 190",
           "stops": [
@@ -4440,13 +4326,7 @@
           "id": "course-41",
           "number": "41",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 41",
           "stops": [
@@ -6115,13 +5995,7 @@
           "id": "course-161",
           "number": "161",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 161",
           "stops": [
@@ -6324,13 +6198,7 @@
           "id": "course-181",
           "number": "181",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 181",
           "stops": [
@@ -6392,13 +6260,7 @@
           "id": "course-191",
           "number": "191",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 191",
           "stops": [

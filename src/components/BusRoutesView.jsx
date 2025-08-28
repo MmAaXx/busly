@@ -17,6 +17,8 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import {
   DirectionsBus,
@@ -38,6 +40,10 @@ const BusRoutesView = () => {
   const [filterType, setFilterType] = useState("all");
   const [filterDirection, setFilterDirection] = useState("all");
   const [currentDay, setCurrentDay] = useState("");
+
+  // Détection responsive
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   // Hook pour les préférences utilisateur
   const {
@@ -151,9 +157,22 @@ const BusRoutesView = () => {
   const routesByDirection = getRoutesByDirection();
 
   return (
-    <Box sx={{ maxWidth: 1200, margin: "0 auto", padding: 1 }}>
-      <Paper elevation={3} sx={{ px: 2, py: 1, marginBottom: 3 }}>
-        <Tabs value={selectedTab} onChange={handleTabChange} sx={{ mb: 3 }}>
+    <Box sx={{ maxWidth: 1200, margin: "0 auto", padding: 0 }}>
+      <Paper
+        elevation={3}
+        sx={{
+          p: 0,
+          marginBottom: 3,
+          background: "transparent",
+          boxShadow: "none",
+        }}
+      >
+        <Tabs
+          value={selectedTab}
+          onChange={handleTabChange}
+          centered={!isMobile}
+          sx={{ mb: 3, background: "white", borderRadius: "10px" }}
+        >
           <Tab label="🗺️ Rechercher un bus" />
           <Tab label="🚌 Voir toutes les lignes de bus" />
         </Tabs>

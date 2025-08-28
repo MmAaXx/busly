@@ -6,28 +6,20 @@ import {
   Autocomplete,
   TextField,
   Button,
-  Chip,
-  Card,
-  CardContent,
-  Grid,
-  Divider,
   Alert,
   Collapse,
   IconButton,
-  List,
-  ListItem,
-  ListItemText,
+  Grid,
 } from "@mui/material";
 import {
   SwapVert,
   LocationOn,
   Flag,
   Schedule,
-  DirectionsBus,
   ExpandMore,
   ExpandLess,
-  AccessTime,
 } from "@mui/icons-material";
+import JourneyCard from "./JourneyCard";
 
 const JourneyPlanner = ({
   busData,
@@ -278,7 +270,6 @@ const JourneyPlanner = ({
   };
 
   const handlePlanJourney = () => {
-    console.log("handlePlanJourney");
     if (!departure || !arrival) {
       return;
     }
@@ -405,8 +396,8 @@ const JourneyPlanner = ({
       <Paper
         elevation={3}
         sx={{
-          p: 4,
-          mb: 4,
+          p: { xs: 2, sm: 4 },
+          mb: { xs: 2, sm: 4 },
         }}
       >
         <Typography
@@ -530,118 +521,24 @@ const JourneyPlanner = ({
         <Box>
           {/* Routes directes */}
           {journeyResults.directRoutes.length > 0 ? (
-            <Paper elevation={2} sx={{ p: 3, mb: 2 }}>
+            <Paper elevation={2} sx={{ p: 2, mb: 2 }}>
               <Typography
                 variant="h6"
                 gutterBottom
                 color="primary"
-                sx={{ mb: 1 }}
+                sx={{ mb: 2 }}
               >
                 🎯 Trajets directs trouvés
               </Typography>
               <Grid container spacing={2}>
                 {journeyResults.directRoutes.map((result, index) => (
                   <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={index}>
-                    <Card
-                      variant="outlined"
-                      sx={{
-                        borderColor: (() => {
-                          const tripDay = getTripDay(
-                            result.route,
-                            result.departureStop.time
-                          );
-                          return tripDay.day === "today"
-                            ? "success.main"
-                            : tripDay.day === "tomorrow"
-                            ? "warning.main"
-                            : "grey.300";
-                        })(),
-                        backgroundColor: (() => {
-                          const tripDay = getTripDay(
-                            result.route,
-                            result.departureStop.time
-                          );
-                          return tripDay.day === "today"
-                            ? "success.50"
-                            : tripDay.day === "tomorrow"
-                            ? "warning.50"
-                            : "grey.50";
-                        })(),
-                      }}
-                    >
-                      <CardContent>
-                        <Box mb={1}>
-                          <Grid
-                            container
-                            spacing={1}
-                            alignItems="center"
-                            justifyContent="center"
-                          >
-                            <Grid item size={12} textAlign="center">
-                              <Chip
-                                label={`Ligne ${result.route.number}`}
-                                color="primary"
-                                size="large"
-                                sx={{
-                                  mr: 1,
-                                  fontSize: "1.2rem",
-                                }}
-                              />
-                            </Grid>
-                            <Grid item size={12} textAlign="center">
-                              <Typography
-                                variant="body2"
-                                color="text.secondary"
-                              >
-                                {(() => {
-                                  const tripDay = getTripDay(
-                                    result.route,
-                                    result.departureStop.time
-                                  );
-                                  return tripDay.label;
-                                })()}
-                              </Typography>
-                            </Grid>
-                          </Grid>
-                        </Box>
-
-                        <Box
-                          display="flex"
-                          justifyContent="space-between"
-                          alignItems="center"
-                          mb={2}
-                        >
-                          <Box>
-                            <Typography variant="h6">
-                              {result.departureStop.time}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              Départ
-                            </Typography>
-                          </Box>
-                          <Box textAlign="center">
-                            <DirectionsBus color="primary" />
-                            <Typography variant="body2">
-                              {formatDuration(result.duration)}
-                            </Typography>
-                          </Box>
-                          <Box textAlign="right">
-                            <Typography variant="h6">
-                              {result.arrivalStop.time}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              Arrivée
-                            </Typography>
-                          </Box>
-                        </Box>
-
-                        <Divider sx={{ my: 1 }} />
-                        <Typography variant="body2" color="text.secondary">
-                          {result.stops.length} arrêts • Direction:{" "}
-                          {result.route.direction}
-                        </Typography>
-                      </CardContent>
-                    </Card>
+                    <JourneyCard
+                      result={result}
+                      isAlternative={false}
+                      getTripDay={getTripDay}
+                      formatDuration={formatDuration}
+                    />
                   </Grid>
                 ))}
               </Grid>
@@ -662,7 +559,7 @@ const JourneyPlanner = ({
                 onClick={() => setShowAlternatives(!showAlternatives)}
                 sx={{ cursor: "pointer" }}
               >
-                <Typography variant="h6" color="secondary">
+                <Typography variant="h6" color="secondary" sx={{ mb: 2 }}>
                   🔄 Trajets alternatifs dans les mêmes villes
                 </Typography>
                 <IconButton
@@ -679,24 +576,12 @@ const JourneyPlanner = ({
                     .slice(0, 4)
                     .map((result, index) => (
                       <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={index}>
-                        <Card variant="outlined">
-                          <CardContent>
-                            <Chip
-                              label={`Ligne ${result.route.number}`}
-                              color="secondary"
-                              size="small"
-                              sx={{ mb: 1 }}
-                            />
-                            <Typography variant="body2" gutterBottom>
-                              {result.departureStop.name} →{" "}
-                              {result.arrivalStop.name}
-                            </Typography>
-                            <Typography variant="h6">
-                              {result.departureStop.time} →{" "}
-                              {result.arrivalStop.time}
-                            </Typography>
-                          </CardContent>
-                        </Card>
+                        <JourneyCard
+                          result={result}
+                          isAlternative={true}
+                          getTripDay={getTripDay}
+                          formatDuration={formatDuration}
+                        />
                       </Grid>
                     ))}
                 </Grid>

@@ -163,32 +163,38 @@ const JourneyPlanner = ({
       });
     });
 
-    return results.sort((a, b) => {
-      // Obtenir le statut de chaque trajet (aujourd'hui/demain/passé)
-      const aTripDay = getTripDay(a.route, a.departureStop.time);
-      const bTripDay = getTripDay(b.route, b.departureStop.time);
+    // Filtrer les trajets passés et trier le reste
+    return results
+      .filter((result) => {
+        const tripDay = getTripDay(result.route, result.departureStop.time);
+        // Exclure les trajets passés aujourd'hui
+        return tripDay.day !== "today-passed";
+      })
+      .sort((a, b) => {
+        // Obtenir le statut de chaque trajet (aujourd'hui/demain/autre)
+        const aTripDay = getTripDay(a.route, a.departureStop.time);
+        const bTripDay = getTripDay(b.route, b.departureStop.time);
 
-      // Priorité de tri : aujourd'hui > demain > passé
-      const priorityOrder = {
-        today: 1,
-        tomorrow: 2,
-        "today-passed": 3,
-        other: 4,
-      };
+        // Priorité de tri : aujourd'hui > demain > autre
+        const priorityOrder = {
+          today: 1,
+          tomorrow: 2,
+          other: 3,
+        };
 
-      const aPriority = priorityOrder[aTripDay.day] || 4;
-      const bPriority = priorityOrder[bTripDay.day] || 4;
+        const aPriority = priorityOrder[aTripDay.day] || 3;
+        const bPriority = priorityOrder[bTripDay.day] || 3;
 
-      // Si différente priorité, trier par priorité
-      if (aPriority !== bPriority) {
-        return aPriority - bPriority;
-      }
+        // Si différente priorité, trier par priorité
+        if (aPriority !== bPriority) {
+          return aPriority - bPriority;
+        }
 
-      // Même priorité, trier par heure de départ
-      const [aHours, aMinutes] = a.departureStop.time.split(":").map(Number);
-      const [bHours, bMinutes] = b.departureStop.time.split(":").map(Number);
-      return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
-    });
+        // Même priorité, trier par heure de départ
+        const [aHours, aMinutes] = a.departureStop.time.split(":").map(Number);
+        const [bHours, bMinutes] = b.departureStop.time.split(":").map(Number);
+        return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
+      });
   };
 
   const findAlternativeRoutes = (departureStop, arrivalStop) => {
@@ -234,35 +240,45 @@ const JourneyPlanner = ({
       });
     });
 
-    return alternatives.sort((a, b) => {
-      // Obtenir le statut de chaque trajet (aujourd'hui/demain/passé)
-      const aTripDay = getTripDay(a.route, a.departureStop.time);
-      const bTripDay = getTripDay(b.route, b.departureStop.time);
+    // Filtrer les trajets passés et trier le reste
+    return alternatives
+      .filter((alternative) => {
+        const tripDay = getTripDay(
+          alternative.route,
+          alternative.departureStop.time
+        );
+        // Exclure les trajets passés aujourd'hui
+        return tripDay.day !== "today-passed";
+      })
+      .sort((a, b) => {
+        // Obtenir le statut de chaque trajet (aujourd'hui/demain/autre)
+        const aTripDay = getTripDay(a.route, a.departureStop.time);
+        const bTripDay = getTripDay(b.route, b.departureStop.time);
 
-      // Priorité de tri : aujourd'hui > demain > passé
-      const priorityOrder = {
-        today: 1,
-        tomorrow: 2,
-        "today-passed": 3,
-        other: 4,
-      };
+        // Priorité de tri : aujourd'hui > demain > autre
+        const priorityOrder = {
+          today: 1,
+          tomorrow: 2,
+          other: 3,
+        };
 
-      const aPriority = priorityOrder[aTripDay.day] || 4;
-      const bPriority = priorityOrder[bTripDay.day] || 4;
+        const aPriority = priorityOrder[aTripDay.day] || 3;
+        const bPriority = priorityOrder[bTripDay.day] || 3;
 
-      // Si différente priorité, trier par priorité
-      if (aPriority !== bPriority) {
-        return aPriority - bPriority;
-      }
+        // Si différente priorité, trier par priorité
+        if (aPriority !== bPriority) {
+          return aPriority - bPriority;
+        }
 
-      // Même priorité, trier par heure de départ
-      const [aHours, aMinutes] = a.departureStop.time.split(":").map(Number);
-      const [bHours, bMinutes] = b.departureStop.time.split(":").map(Number);
-      return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
-    });
+        // Même priorité, trier par heure de départ
+        const [aHours, aMinutes] = a.departureStop.time.split(":").map(Number);
+        const [bHours, bMinutes] = b.departureStop.time.split(":").map(Number);
+        return aHours * 60 + aMinutes - (bHours * 60 + bMinutes);
+      });
   };
 
   const handlePlanJourney = () => {
+    console.log("handlePlanJourney");
     if (!departure || !arrival) {
       return;
     }

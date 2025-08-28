@@ -33,6 +33,47 @@ import JourneyCard from "./JourneyCard";
 
 // Configuration moment en français
 moment.locale("fr");
+moment.updateLocale("fr", {
+  months: [
+    "Janvier",
+    "Février",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Décembre",
+  ],
+  monthsShort: [
+    "Jan",
+    "Fév",
+    "Mar",
+    "Avr",
+    "Mai",
+    "Jun",
+    "Jul",
+    "Aoû",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Déc",
+  ],
+  weekdays: [
+    "Dimanche",
+    "Lundi",
+    "Mardi",
+    "Mercredi",
+    "Jeudi",
+    "Vendredi",
+    "Samedi",
+  ],
+  weekdaysShort: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"],
+  weekdaysMin: ["Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa"],
+});
 
 const JourneyPlanner = ({
   busData,
@@ -593,12 +634,7 @@ const JourneyPlanner = ({
 
           {/* Options avancées */}
           <Grid item size={{ xs: 12 }}>
-            <Box
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              sx={{ mb: 2 }}
-            >
+            <Box display="flex" justifyContent="center" alignItems="center">
               <Button
                 variant="text"
                 size="small"
@@ -620,7 +656,7 @@ const JourneyPlanner = ({
               <Box
                 sx={{
                   p: 2,
-                  mb: 2,
+                  mt: 2,
                   backgroundColor: "grey.50",
                   borderRadius: 2,
                   border: 1,
@@ -637,6 +673,16 @@ const JourneyPlanner = ({
                 <LocalizationProvider
                   dateAdapter={AdapterMoment}
                   adapterLocale="fr"
+                  localeText={{
+                    // Boutons d'action
+                    todayButtonLabel: "Aujourd'hui",
+                    cancelButtonLabel: "Annuler",
+                    clearButtonLabel: "Effacer",
+                    okButtonLabel: "Valider",
+                    // Navigation DatePicker
+                    previousMonth: "Mois précédent",
+                    nextMonth: "Mois suivant",
+                  }}
                 >
                   <Grid container spacing={2}>
                     <Grid item size={{ xs: 12, sm: 6 }}>
@@ -646,6 +692,8 @@ const JourneyPlanner = ({
                         onChange={(newValue) =>
                           setSelectedDate(newValue || moment())
                         }
+                        minDate={moment()}
+                        format="DD/MM/YYYY"
                         slotProps={{
                           textField: {
                             fullWidth: true,
@@ -655,6 +703,21 @@ const JourneyPlanner = ({
                                   sx={{ color: "action.active", mr: 1 }}
                                 />
                               ),
+                            },
+                          },
+                          actionBar: {
+                            actions: ["today", "cancel", "accept"],
+                          },
+                          dialog: {
+                            sx: {
+                              "& .MuiDialogTitle-root .MuiTypography-root": {
+                                fontSize: 0,
+                                "&:after": {
+                                  content: '"Sélectionner une date"',
+                                  fontSize: "1.25rem",
+                                  fontWeight: 500,
+                                },
+                              },
                             },
                           },
                         }}
@@ -668,6 +731,7 @@ const JourneyPlanner = ({
                           setSelectedTime(newValue || moment())
                         }
                         ampm={false}
+                        format="HH:mm"
                         slotProps={{
                           textField: {
                             fullWidth: true,
@@ -678,6 +742,9 @@ const JourneyPlanner = ({
                                 />
                               ),
                             },
+                          },
+                          actionBar: {
+                            actions: ["cancel", "accept"],
                           },
                         }}
                       />
@@ -757,7 +824,7 @@ const JourneyPlanner = ({
                 onClick={() => setShowAlternatives(!showAlternatives)}
                 sx={{ cursor: "pointer" }}
               >
-                <Typography variant="h6" color="secondary" sx={{ mb: 2 }}>
+                <Typography variant="h6" color="secondary">
                   🔄 Trajets alternatifs dans les mêmes villes
                 </Typography>
                 <IconButton
@@ -769,7 +836,7 @@ const JourneyPlanner = ({
               </Box>
 
               <Collapse in={showAlternatives}>
-                <Grid container spacing={2} sx={{ mt: 1 }}>
+                <Grid container spacing={2} sx={{ mt: 2 }}>
                   {journeyResults.alternativeRoutes
                     .slice(0, 4)
                     .map((result, index) => (

@@ -98,10 +98,11 @@ const BusRoutesView = () => {
 
   // Filtrer les routes selon les critères
   const getFilteredRoutes = () => {
-    const line = busData.lines[0]; // Pour l'instant on n'a qu'une ligne
-    if (!line) return [];
-
-    let filteredRoutes = line.routes;
+    // Récupérer toutes les routes de toutes les lignes
+    let filteredRoutes = [];
+    busData.lines.forEach((line) => {
+      filteredRoutes = filteredRoutes.concat(line.routes);
+    });
 
     // Filtre par terme de recherche
     if (searchTerm) {
@@ -135,24 +136,19 @@ const BusRoutesView = () => {
   // Grouper les routes par direction
   const getRoutesByDirection = () => {
     const filteredRoutes = getFilteredRoutes();
-    const grouped = {
-      "Orchies → Douai": [],
-      "Douai → Orchies": [],
-    };
+    const grouped = {};
 
     filteredRoutes.forEach((route) => {
-      if (route.direction.includes("Orchies → Douai")) {
-        grouped["Orchies → Douai"].push(route);
-      } else if (route.direction.includes("Douai → Orchies")) {
-        grouped["Douai → Orchies"].push(route);
+      if (!grouped[route.direction]) {
+        grouped[route.direction] = [];
       }
+      grouped[route.direction].push(route);
     });
 
     return grouped;
   };
 
   const routesByDirection = getRoutesByDirection();
-  const line = busData.lines[0];
 
   return (
     <Box sx={{ maxWidth: 1200, margin: "0 auto", padding: 1 }}>
@@ -202,7 +198,7 @@ const BusRoutesView = () => {
             <Box>
               <Paper elevation={1} sx={{ p: 2, mb: 3 }}>
                 <Typography variant="h6" gutterBottom>
-                  {line?.name} - {line?.description}
+                  Toutes les lignes de bus
                 </Typography>
 
                 {/* Filtres */}

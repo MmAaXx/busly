@@ -404,6 +404,11 @@ const JourneyPlanner = ({
 
   // Fonction pour détecter si on utilise une date/heure personnalisée
   const isUsingCustomDateTime = () => {
+    // Si les options avancées sont fermées, toujours utiliser l'heure actuelle
+    if (!showAdvancedOptions) {
+      return false;
+    }
+
     const now = moment();
     const currentDate = now.format("YYYY-MM-DD");
     const currentTime = now.format("HH:mm");

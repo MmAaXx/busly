@@ -418,6 +418,21 @@ const JourneyPlanner = ({
     return selDate !== currentDate || selTime !== currentTime;
   };
 
+  const getNoResultMessage = () => {
+    let date = moment();
+    let time = moment();
+    if (isUsingCustomDateTime()) {
+      date = selectedDate;
+      time = selectedTime;
+    }
+
+    return `Aucun trajet direct trouvé entre ces deux arrêts pour la date ${date.format(
+      "DD/MM/YYYY"
+    )} à ${time.format(
+      "HH:mm"
+    )}. Vous pouvez essayer de changer la date ou l'heure.`;
+  };
+
   const getTripDay = (route, departureTime) => {
     // Utiliser la date/heure sélectionnée si différente de maintenant
     let referenceDate;
@@ -815,7 +830,7 @@ const JourneyPlanner = ({
             </Paper>
           ) : (
             <Alert severity="info" sx={{ mb: 2 }}>
-              Aucun trajet direct trouvé entre ces deux arrêts.
+              {getNoResultMessage()}
             </Alert>
           )}
 

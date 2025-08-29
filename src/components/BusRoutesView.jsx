@@ -82,10 +82,31 @@ const BusRoutesView = () => {
           value={selectedTab}
           onChange={handleTabChange}
           centered={!isMobile}
-          sx={{ mb: 3, background: "white", borderRadius: "10px" }}
+          TabIndicatorProps={{
+            children: <span className="MuiTabs-indicatorSpan" />,
+          }}
+          sx={{
+            mb: 3,
+            background: "white",
+            borderRadius: "10px",
+            "& .MuiTabs-indicator": {
+              display: "flex",
+              height: "5px",
+              justifyContent: "center",
+              backgroundColor: "transparent",
+            },
+            "& .MuiTabs-indicatorSpan": {
+              maxWidth: 80,
+              borderRadius: "10px",
+              height: "5px",
+              borderBottom: "1px solid white",
+              width: "100%",
+              backgroundColor: "primary.main",
+            },
+          }}
         >
-          <Tab label="🗺️ Rechercher un bus" />
-          <Tab label="🚌 Voir toutes les lignes de bus" />
+          <Tab label="🗺️ Trouver un bus" />
+          <Tab label="🚌 Toutes les lignes de bus" />
         </Tabs>
 
         {/* Onglet Planificateur de voyage */}

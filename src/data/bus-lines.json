@@ -11,13 +11,7 @@
           "id": "course-321",
           "number": "321",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Matin - Établissements scolaires",
           "stops": [
@@ -46,7 +40,7 @@
               "time": "06:46"
             },
             {
-              "name": "Coutiches - Périsseile",
+              "name": "Coutiches - Périsselle",
               "time": "06:47"
             },
             {
@@ -79,13 +73,7 @@
           "id": "course-361",
           "number": "361",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Matin - Établissements scolaires",
           "stops": [
@@ -114,7 +102,7 @@
               "time": "06:53"
             },
             {
-              "name": "Coutiches - Périsseile",
+              "name": "Coutiches - Périsselle",
               "time": "06:55"
             },
             {
@@ -191,9 +179,7 @@
           "id": "course-383",
           "number": "383",
           "direction": "Orchies → Douai",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "school",
           "description": "Mercredi après-midi - Établissements scolaires",
           "stops": [
@@ -222,7 +208,7 @@
               "time": "17:03"
             },
             {
-              "name": "Coutiches - Périsseile",
+              "name": "Coutiches - Périsselle",
               "time": "17:04"
             },
             {
@@ -303,12 +289,7 @@
           "id": "course-381",
           "number": "381",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "school",
           "description": "Après-midi - Établissements scolaires",
           "stops": [
@@ -337,7 +318,7 @@
               "time": "17:13"
             },
             {
-              "name": "Coutiches - Périsseile",
+              "name": "Coutiches - Périsselle",
               "time": "17:14"
             },
             {
@@ -418,13 +399,7 @@
           "id": "course-711",
           "number": "711",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "college",
           "description": "Matin - Collèges (depuis Coutiches)",
           "stops": [
@@ -486,9 +461,7 @@
           "id": "course-710",
           "number": "710",
           "direction": "Orchies → Douai",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "college",
           "description": "Mercredi midi - Collèges",
           "stops": [
@@ -562,9 +535,7 @@
           "id": "course-720",
           "number": "720",
           "direction": "Orchies → Douai",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "college",
           "description": "Mercredi midi - Collèges (trajet Flines/Anhiers)",
           "stops": [
@@ -622,12 +593,7 @@
           "id": "course-730",
           "number": "730",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "college",
           "description": "Après-midi - Collèges",
           "stops": [
@@ -709,12 +675,7 @@
           "id": "course-740",
           "number": "740",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "college",
           "description": "Après-midi - Collèges (route complète)",
           "stops": [
@@ -743,7 +704,7 @@
               "time": "17:28"
             },
             {
-              "name": "Coutiches - Périsseile",
+              "name": "Coutiches - Périsselle",
               "time": "17:30"
             },
             {
@@ -844,12 +805,7 @@
           "id": "course-750",
           "number": "750",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "college",
           "description": "Après-midi - Collèges (trajet court)",
           "stops": [
@@ -867,12 +823,7 @@
           "id": "course-760",
           "number": "760",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "college",
           "description": "Après-midi - Collèges (Orchies-Beuvry-Douai)",
           "stops": [
@@ -910,12 +861,7 @@
           "id": "course-770",
           "number": "770",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "college",
           "description": "Soirée - Collèges (route complète)",
           "stops": [
@@ -1001,13 +947,7 @@
           "id": "course-330",
           "number": "330",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Matin - Établissements scolaires",
           "stops": [
@@ -1092,7 +1032,7 @@
               "time": "07:51"
             },
             {
-              "name": "Coutiches - Périsseile",
+              "name": "Coutiches - Périsselle",
               "time": "07:52"
             },
             {
@@ -1121,13 +1061,7 @@
           "id": "course-320",
           "number": "320",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Matin - Établissements scolaires (depuis Coutiches)",
           "stops": [
@@ -1161,13 +1095,7 @@
           "id": "course-340",
           "number": "340",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Matin - Établissements scolaires (depuis Bouvignies)",
           "stops": [
@@ -1193,9 +1121,7 @@
           "id": "course-360",
           "number": "360",
           "direction": "Douai → Orchies",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "school",
           "description": "Mercredi midi - Établissements scolaires",
           "stops": [
@@ -1224,7 +1150,7 @@
               "time": "12:55"
             },
             {
-              "name": "Coutiches - Périsseile",
+              "name": "Coutiches - Périsselle",
               "time": "13:13"
             },
             {
@@ -1257,13 +1183,7 @@
           "id": "course-440",
           "number": "440",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Après-midi - Établissements scolaires",
           "stops": [
@@ -1337,12 +1257,7 @@
           "id": "course-410",
           "number": "410",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "school",
           "description": "Soir - Établissements scolaires",
           "stops": [
@@ -1371,7 +1286,7 @@
               "time": "18:47"
             },
             {
-              "name": "Coutiches - Périsseile",
+              "name": "Coutiches - Périsselle",
               "time": "19:05"
             },
             {
@@ -1461,7 +1376,7 @@
               "time": "06:11"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "06:12"
             },
             {
@@ -1550,13 +1465,7 @@
           "id": "course-20",
           "number": "20",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 20",
           "stops": [
@@ -1650,7 +1559,7 @@
               "time": "07:00"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "07:01"
             },
             {
@@ -1739,13 +1648,7 @@
           "id": "course-40",
           "number": "40",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 40",
           "stops": [
@@ -1754,11 +1657,11 @@
               "time": "07:33"
             },
             {
-              "name": "Anhiers - Rue des Ecoles",
+              "name": "Anhiers - Rue des Écoles",
               "time": "07:35"
             },
             {
-              "name": "Anhiers - Eglise",
+              "name": "Anhiers - Église",
               "time": "07:36"
             },
             {
@@ -1863,7 +1766,7 @@
               "time": "08:16"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "08:17"
             },
             {
@@ -2004,7 +1907,7 @@
               "time": "09:16"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "09:17"
             },
             {
@@ -2145,7 +2048,7 @@
               "time": "10:13"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "10:14"
             },
             {
@@ -2286,7 +2189,7 @@
               "time": "11:18"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "11:19"
             },
             {
@@ -2427,7 +2330,7 @@
               "time": "12:34"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "12:35"
             },
             {
@@ -2520,10 +2423,7 @@
           "id": "course-100",
           "number": "100",
           "direction": "Douai → Orchies",
-          "days": [
-            "wednesday",
-            "saturday"
-          ],
+          "days": ["wednesday", "saturday"],
           "type": "school",
           "description": "Course 100",
           "stops": [
@@ -2665,7 +2565,7 @@
               "time": "13:23"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "13:24"
             },
             {
@@ -2806,7 +2706,7 @@
               "time": "14:33"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "14:34"
             },
             {
@@ -2947,7 +2847,7 @@
               "time": "15:33"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "15:34"
             },
             {
@@ -3040,12 +2940,7 @@
           "id": "course-140",
           "number": "140",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 140",
           "stops": [
@@ -3086,7 +2981,7 @@
               "time": "16:34"
             },
             {
-              "name": "Douai - Frais Marais Eglise",
+              "name": "Douai - Frais Marais Église",
               "time": "16:35"
             },
             {
@@ -3215,7 +3110,7 @@
               "time": "16:36"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "16:37"
             },
             {
@@ -3356,7 +3251,7 @@
               "time": "17:36"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "17:37"
             },
             {
@@ -3449,9 +3344,7 @@
           "id": "course-170",
           "number": "170",
           "direction": "Douai → Orchies",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "school",
           "description": "Course 170",
           "stops": [
@@ -3694,7 +3587,7 @@
               "time": "18:36"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "18:37"
             },
             {
@@ -3787,12 +3680,7 @@
           "id": "course-190",
           "number": "190",
           "direction": "Douai → Orchies",
-          "days": [
-            "monday",
-            "tuesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 190",
           "stops": [
@@ -3833,7 +3721,7 @@
               "time": "18:51"
             },
             {
-              "name": "Douai - Frais Marais Eglise",
+              "name": "Douai - Frais Marais Église",
               "time": "18:52"
             },
             {
@@ -3962,7 +3850,7 @@
               "time": "19:31"
             },
             {
-              "name": "Roost Warendin - Bellefontaine",
+              "name": "Roost Warendin - Belleforière",
               "time": "19:32"
             },
             {
@@ -4438,13 +4326,7 @@
           "id": "course-41",
           "number": "41",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 41",
           "stops": [
@@ -4521,7 +4403,7 @@
               "time": "06:58"
             },
             {
-              "name": "Douai - Frais Marais Eglise",
+              "name": "Douai - Frais Marais Église",
               "time": "06:59"
             },
             {
@@ -6113,13 +5995,7 @@
           "id": "course-161",
           "number": "161",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 161",
           "stops": [
@@ -6322,13 +6198,7 @@
           "id": "course-181",
           "number": "181",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 181",
           "stops": [
@@ -6390,13 +6260,7 @@
           "id": "course-191",
           "number": "191",
           "direction": "Orchies → Douai",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "school",
           "description": "Course 191",
           "stops": [
@@ -7824,13 +7688,7 @@
           "id": "course-141",
           "number": "141",
           "direction": "Aniche → Villeneuve d'Ascq",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "regular",
           "description": "Course 141",
           "stops": [
@@ -7920,13 +7778,7 @@
           "id": "course-145",
           "number": "145",
           "direction": "Aniche → Villeneuve d'Ascq",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "regular",
           "description": "Course 145",
           "stops": [
@@ -8255,13 +8107,7 @@
           "id": "course-181",
           "number": "181",
           "direction": "Aniche → Villeneuve d'Ascq",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "regular",
           "description": "Course 181",
           "stops": [
@@ -8363,9 +8209,7 @@
           "id": "course-911",
           "number": "911",
           "direction": "Aniche → Villeneuve d'Ascq",
-          "days": [
-            "sunday"
-          ],
+          "days": ["sunday"],
           "type": "regular",
           "description": "Course 911",
           "stops": [
@@ -8479,9 +8323,7 @@
           "id": "course-921",
           "number": "921",
           "direction": "Aniche → Villeneuve d'Ascq",
-          "days": [
-            "sunday"
-          ],
+          "days": ["sunday"],
           "type": "regular",
           "description": "Course 921",
           "stops": [
@@ -8910,13 +8752,7 @@
           "id": "course-40",
           "number": "40",
           "direction": "Villeneuve d'Ascq → Aniche",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "regular",
           "description": "Course 40",
           "stops": [
@@ -9418,9 +9254,7 @@
           "id": "course-100",
           "number": "100",
           "direction": "Villeneuve d'Ascq → Aniche",
-          "days": [
-            "wednesday"
-          ],
+          "days": ["wednesday"],
           "type": "regular",
           "description": "Course 100",
           "stops": [
@@ -9595,13 +9429,7 @@
           "id": "course-130",
           "number": "130",
           "direction": "Villeneuve d'Ascq → Aniche",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "regular",
           "description": "Course 130",
           "stops": [
@@ -9909,13 +9737,7 @@
           "id": "course-160",
           "number": "160",
           "direction": "Villeneuve d'Ascq → Aniche",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "regular",
           "description": "Course 160",
           "stops": [
@@ -10154,13 +9976,7 @@
           "id": "course-170",
           "number": "170",
           "direction": "Villeneuve d'Ascq → Aniche",
-          "days": [
-            "monday",
-            "tuesday",
-            "wednesday",
-            "thursday",
-            "friday"
-          ],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
           "type": "regular",
           "description": "Course 170",
           "stops": [
@@ -10367,9 +10183,7 @@
           "id": "course-910",
           "number": "910",
           "direction": "Villeneuve d'Ascq → Aniche",
-          "days": [
-            "sunday"
-          ],
+          "days": ["sunday"],
           "type": "regular",
           "description": "Course 910",
           "stops": [
@@ -10483,9 +10297,7 @@
           "id": "course-920",
           "number": "920",
           "direction": "Villeneuve d'Ascq → Aniche",
-          "days": [
-            "sunday"
-          ],
+          "days": ["sunday"],
           "type": "regular",
           "description": "Course 920",
           "stops": [
@@ -10592,6 +10404,477 @@
             {
               "name": "Aniche - Delforge",
               "time": "19:55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ligne-884S",
+      "name": "Ligne 884S",
+      "color": "#9C27B0",
+      "operator": "Arc-en-Ciel",
+      "description": "Établissements scolaires - Orchies ↔ Sameon",
+      "routes": [
+        {
+          "id": "course-310",
+          "number": "310",
+          "direction": "Orchies → Sameon",
+          "days": ["wednesday"],
+          "type": "school",
+          "description": "Course 310",
+          "stops": [
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "12:30"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "12:40"
+            },
+            {
+              "name": "Orchies - Stade",
+              "time": "12:45"
+            },
+            {
+              "name": "Orchies - Gendarmerie",
+              "time": "12:46"
+            },
+            {
+              "name": "Beuvry la Forêt - Cimetière",
+              "time": "12:48"
+            },
+            {
+              "name": "Beuvry la Forêt - Jean Cerisier",
+              "time": "12:50"
+            },
+            {
+              "name": "Beuvry la Forêt - Pavé du Roi",
+              "time": "12:52"
+            },
+            {
+              "name": "Landas - Delommez",
+              "time": "12:56"
+            },
+            {
+              "name": "Sameon - Rue des Mazures",
+              "time": "12:58"
+            },
+            {
+              "name": "Sameon - Rue Bias",
+              "time": "13:00"
+            },
+            {
+              "name": "Sameon - Mairie",
+              "time": "13:01"
+            },
+            {
+              "name": "Sameon - Rue de Lélie",
+              "time": "13:03"
+            },
+            {
+              "name": "Sameon - Chapelle",
+              "time": "13:05"
+            }
+          ]
+        },
+        {
+          "id": "course-320",
+          "number": "320",
+          "direction": "Orchies → Sameon",
+          "days": ["wednesday"],
+          "type": "school",
+          "description": "Course 320",
+          "stops": [
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "12:30"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "12:40"
+            },
+            {
+              "name": "Orchies - La Sècherie",
+              "time": "12:47"
+            },
+            {
+              "name": "Landas - Les Hauts Bois",
+              "time": "12:50"
+            },
+            {
+              "name": "Landas - Place Verte",
+              "time": "12:52"
+            },
+            {
+              "name": "Landas - Gare",
+              "time": "12:54"
+            },
+            {
+              "name": "Beuvry la Forêt - Rue de Saulzoir",
+              "time": "12:55"
+            },
+            {
+              "name": "Beuvry la Forêt - Jean Cerisier",
+              "time": "12:57"
+            },
+            {
+              "name": "Beuvry la Forêt - Cimetière",
+              "time": "12:58"
+            },
+            {
+              "name": "Beuvry la Forêt - Varlet",
+              "time": "13:01"
+            },
+            {
+              "name": "Beuvry la Forêt - Gare",
+              "time": "13:03"
+            },
+            {
+              "name": "Beuvry la Forêt - Paradis",
+              "time": "13:05"
+            }
+          ]
+        },
+        {
+          "id": "course-340",
+          "number": "340",
+          "direction": "Orchies → Sameon",
+          "days": ["monday", "tuesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 340",
+          "stops": [
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "17:05"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:15"
+            },
+            {
+              "name": "Orchies - La Sècherie",
+              "time": "17:18"
+            },
+            {
+              "name": "Landas - Les Hauts Bois",
+              "time": "17:21"
+            },
+            {
+              "name": "Landas - Place Verte",
+              "time": "17:23"
+            },
+            {
+              "name": "Landas - Gare",
+              "time": "17:25"
+            },
+            {
+              "name": "Beuvry la Forêt - Rue de Saulzoir",
+              "time": "17:26"
+            },
+            {
+              "name": "Beuvry la Forêt - Varlet",
+              "time": "17:31"
+            },
+            {
+              "name": "Beuvry la Forêt - Gare",
+              "time": "17:33"
+            },
+            {
+              "name": "Beuvry la Forêt - Paradis",
+              "time": "17:35"
+            },
+            {
+              "name": "Beuvry la Forêt - Les Trois Bouteilles",
+              "time": "17:37"
+            },
+            {
+              "name": "Marchiennes - Sec Marais",
+              "time": "17:38"
+            },
+            {
+              "name": "Marchiennes - Cosseterie",
+              "time": "17:39"
+            },
+            {
+              "name": "Marchiennes - Rue des Jardins",
+              "time": "17:40"
+            },
+            {
+              "name": "Marchiennes - Decours",
+              "time": "17:42"
+            },
+            {
+              "name": "Marchiennes - Place De Gaulle",
+              "time": "17:43"
+            }
+          ]
+        },
+        {
+          "id": "course-350",
+          "number": "350",
+          "direction": "Orchies → Sameon",
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 350",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:05"
+            },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "17:15"
+            },
+            {
+              "name": "Beuvry la Forêt - Cimetière",
+              "time": "17:22"
+            },
+            {
+              "name": "Beuvry la Forêt - Jean Cerisier",
+              "time": "17:24"
+            },
+            {
+              "name": "Beuvry la Forêt - Pavé du Roi",
+              "time": "17:26"
+            },
+            {
+              "name": "Landas - Delommez",
+              "time": "17:30"
+            },
+            {
+              "name": "Sameon - Rue des Mazures",
+              "time": "17:32"
+            },
+            {
+              "name": "Sameon - Rue Bias",
+              "time": "17:34"
+            },
+            {
+              "name": "Sameon - Mairie",
+              "time": "17:35"
+            },
+            {
+              "name": "Sameon - Rue de Lélie",
+              "time": "17:37"
+            },
+            {
+              "name": "Sameon - Chapelle",
+              "time": "17:39"
+            }
+          ]
+        },
+        {
+          "id": "course-330",
+          "number": "330",
+          "direction": "Orchies → Sameon",
+          "days": ["monday", "tuesday", "thursday"],
+          "type": "school",
+          "description": "Course 330",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:10"
+            },
+            {
+              "name": "Orchies - La Sècherie",
+              "time": "17:13"
+            },
+            {
+              "name": "Landas - Les Hauts Bois",
+              "time": "17:16"
+            },
+            {
+              "name": "Landas - Place Verte",
+              "time": "17:18"
+            },
+            {
+              "name": "Landas - Gare",
+              "time": "17:20"
+            },
+            {
+              "name": "Beuvry la Forêt - Rue de Saulzoir",
+              "time": "17:21"
+            }
+          ]
+        },
+        {
+          "id": "course-360",
+          "number": "360",
+          "direction": "Orchies → Sameon",
+          "days": ["monday", "tuesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 360",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:45"
+            },
+            {
+              "name": "Orchies - La Sècherie",
+              "time": "17:48"
+            },
+            {
+              "name": "Landas - Les Hauts Bois",
+              "time": "17:51"
+            },
+            {
+              "name": "Landas - Place Verte",
+              "time": "17:53"
+            },
+            {
+              "name": "Landas - Gare",
+              "time": "17:55"
+            },
+            {
+              "name": "Beuvry la Forêt - Rue de Saulzoir",
+              "time": "17:56"
+            },
+            {
+              "name": "Beuvry la Forêt - Cimetière",
+              "time": "17:58"
+            },
+            {
+              "name": "Beuvry la Forêt - Varlet",
+              "time": "18:01"
+            },
+            {
+              "name": "Beuvry la Forêt - Gare",
+              "time": "18:03"
+            },
+            {
+              "name": "Beuvry la Forêt - Paradis",
+              "time": "18:05"
+            }
+          ]
+        },
+        {
+          "id": "course-341",
+          "number": "341",
+          "direction": "Sameon → Orchies",
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 341",
+          "stops": [
+            {
+              "name": "Sameon - Mairie",
+              "time": "07:40"
+            },
+            {
+              "name": "Sameon - Rue Bias",
+              "time": "07:41"
+            },
+            {
+              "name": "Sameon - Rue des Mazures",
+              "time": "07:43"
+            },
+            {
+              "name": "Landas - Delommez",
+              "time": "07:45"
+            },
+            {
+              "name": "Beuvry la Forêt - Cimetière",
+              "time": "07:55"
+            },
+            {
+              "name": "Beuvry la Forêt - Varlet",
+              "time": "07:57"
+            },
+            {
+              "name": "Beuvry la Forêt - Gare",
+              "time": "07:59"
+            },
+            {
+              "name": "Beuvry la Forêt - Paradis",
+              "time": "08:01"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:11"
+            },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "08:18"
+            }
+          ]
+        },
+        {
+          "id": "course-331",
+          "number": "331",
+          "direction": "Sameon → Orchies",
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 331",
+          "stops": [
+            {
+              "name": "Aix en Pévèle - Mairie",
+              "time": "07:48"
+            },
+            {
+              "name": "Aix en Pévèle - Place",
+              "time": "07:50"
+            },
+            {
+              "name": "Landas - Place Verte",
+              "time": "07:55"
+            },
+            {
+              "name": "Landas - Gare",
+              "time": "07:58"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:18"
+            },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "08:25"
+            }
+          ]
+        },
+        {
+          "id": "course-321",
+          "number": "321",
+          "direction": "Sameon → Orchies",
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 321",
+          "stops": [
+            {
+              "name": "Orchies - La Sècherie",
+              "time": "07:50"
+            },
+            {
+              "name": "Landas - Les Hauts Bois",
+              "time": "07:53"
+            },
+            {
+              "name": "Landas - Place Verte",
+              "time": "07:56"
+            },
+            {
+              "name": "Landas - Gare",
+              "time": "07:59"
+            },
+            {
+              "name": "Orchies - Gendarmerie",
+              "time": "08:10"
+            },
+            {
+              "name": "Orchies - Stade",
+              "time": "08:11"
+            },
+            {
+              "name": "Orchies - Claude Jean",
+              "time": "08:13"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:18"
+            },
+            {
+              "name": "Orchies - Collège du Pévèle",
+              "time": "08:25"
             }
           ]
         }

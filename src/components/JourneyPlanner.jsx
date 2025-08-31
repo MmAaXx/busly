@@ -214,27 +214,29 @@ const JourneyPlanner = ({
       });
     });
 
-    // Filtrer les trajets passés et trier le reste
+    // Filtrer les trajets passés et ceux qui ne circulent pas
     return results
       .filter((result) => {
         const tripDay = getTripDay(result.route, result.departureStop.time);
-        // Exclure les trajets passés (aujourd'hui ou date personnalisée)
+        // Exclure les trajets passés et ceux qui ne circulent pas
         return (
-          tripDay.day !== "today-passed" && tripDay.day !== "custom-date-passed"
+          tripDay.day !== "today-passed" &&
+          tripDay.day !== "custom-date-passed" &&
+          tripDay.day !== "other" &&
+          tripDay.day !== "no-circulation" &&
+          tripDay.circulates === true
         );
       })
       .sort((a, b) => {
-        // Obtenir le statut de chaque trajet (aujourd'hui/demain/autre)
+        // Obtenir le statut de chaque trajet (aujourd'hui/demain/custom-date)
         const aTripDay = getTripDay(a.route, a.departureStop.time);
         const bTripDay = getTripDay(b.route, b.departureStop.time);
 
-        // Priorité de tri : aujourd'hui > demain/custom-date > autre
+        // Priorité de tri : aujourd'hui > demain/custom-date
         const priorityOrder = {
           today: 1,
           tomorrow: 2,
           "custom-date": 2, // Même priorité que demain
-          "custom-date-passed": 4, // Après "other" (ne devrait pas apparaître grâce au filtre)
-          other: 3,
         };
 
         const aPriority = priorityOrder[aTripDay.day] || 3;
@@ -295,28 +297,32 @@ const JourneyPlanner = ({
       });
     });
 
-    // Filtrer les trajets passés et trier le reste
+    // Filtrer les trajets passés et ceux qui ne circulent pas
     return alternatives
       .filter((alternative) => {
         const tripDay = getTripDay(
           alternative.route,
           alternative.departureStop.time
         );
-        // Exclure les trajets passés aujourd'hui
-        return tripDay.day !== "today-passed";
+        // Exclure les trajets passés et ceux qui ne circulent pas
+        return (
+          tripDay.day !== "today-passed" &&
+          tripDay.day !== "custom-date-passed" &&
+          tripDay.day !== "other" &&
+          tripDay.day !== "no-circulation" &&
+          tripDay.circulates === true
+        );
       })
       .sort((a, b) => {
-        // Obtenir le statut de chaque trajet (aujourd'hui/demain/autre)
+        // Obtenir le statut de chaque trajet (aujourd'hui/demain/custom-date)
         const aTripDay = getTripDay(a.route, a.departureStop.time);
         const bTripDay = getTripDay(b.route, b.departureStop.time);
 
-        // Priorité de tri : aujourd'hui > demain/custom-date > autre
+        // Priorité de tri : aujourd'hui > demain/custom-date
         const priorityOrder = {
           today: 1,
           tomorrow: 2,
           "custom-date": 2, // Même priorité que demain
-          "custom-date-passed": 4, // Après "other" (ne devrait pas apparaître grâce au filtre)
-          other: 3,
         };
 
         const aPriority = priorityOrder[aTripDay.day] || 3;
@@ -550,8 +556,12 @@ const JourneyPlanner = ({
       };
     }
 
-    // Si le bus ne circule ni aujourd'hui ni demain
-    return { day: "other", label: "⚪ Pas de circulation", circulates: false };
+    // Si le bus ne circule ni aujourd'hui ni demain, ne pas l'afficher du tout
+    return {
+      day: "no-circulation",
+      label: "⚪ Pas de circulation",
+      circulates: false,
+    };
   };
 
   return (

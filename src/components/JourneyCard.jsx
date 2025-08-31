@@ -17,6 +17,57 @@ const JourneyCard = ({
 }) => {
   const tripDay = getTripDay(result.route, result.departureStop.time);
 
+  // Fonction pour créer les chips des jours de circulation
+  const renderCirculationDays = () => {
+    const daysMapping = {
+      monday: { label: "L", color: "primary" },
+      tuesday: { label: "Ma", color: "secondary" },
+      wednesday: { label: "Me", color: "success" },
+      thursday: { label: "J", color: "warning" },
+      friday: { label: "V", color: "info" },
+      saturday: { label: "S", color: "error" },
+      sunday: { label: "D", color: "default" },
+    };
+
+    const weekDays = [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday",
+    ];
+
+    return (
+      <Box display="flex" gap={0.5} justifyContent="center" mb={1}>
+        {weekDays.map((day) => {
+          const isActive = result.route.days.includes(day);
+          const dayInfo = daysMapping[day];
+
+          return (
+            <Chip
+              key={day}
+              label={dayInfo.label}
+              size="small"
+              variant={isActive ? "filled" : "outlined"}
+              color={isActive ? dayInfo.color : "default"}
+              sx={{
+                minWidth: "28px",
+                height: "24px",
+                fontSize: "0.75rem",
+                fontWeight: isActive ? "bold" : "normal",
+                backgroundColor: isActive ? undefined : "grey.100",
+                borderColor: isActive ? undefined : "grey.300",
+                color: isActive ? "white" : "grey.500",
+              }}
+            />
+          );
+        })}
+      </Box>
+    );
+  };
+
   // Styling pour les cartes principales (routes directes)
   const getMainCardStyle = () => ({
     borderColor:
@@ -100,6 +151,17 @@ const JourneyCard = ({
                 {tripDay.label}
               </Typography>
             </Grid>
+            <Grid item size={12} textAlign="center">
+              <Divider sx={{ my: 1 }} />
+            </Grid>
+            <Grid item size={12} textAlign="center">
+              <Typography variant="body2" color="text.secondary">
+                Jours de circulation
+              </Typography>
+            </Grid>
+            <Grid item size={12} textAlign="center">
+              {renderCirculationDays()}
+            </Grid>
           </Grid>
         </Box>
 
@@ -130,6 +192,7 @@ const JourneyCard = ({
         </Box>
 
         <Divider sx={{ my: 1 }} />
+
         <Typography variant="body2" color="text.secondary">
           {result.stops.length} arrêts • Direction: {result.route.direction}
         </Typography>

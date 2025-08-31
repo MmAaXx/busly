@@ -10879,6 +10879,1449 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ligne-874S",
+      "name": "Ligne 874S",
+      "color": "#FF9800",
+      "operator": "Arc-en-Ciel",
+      "description": "Établissements scolaires - Genech ↔ Douai",
+      "routes": [
+        {
+          "id": "course-520",
+          "number": "520",
+          "direction": "Genech → Douai",
+          "days": ["friday"],
+          "type": "school",
+          "description": "Course 520",
+          "stops": [
+            {
+              "name": "Genech - Lycée Perriand",
+              "time": "16:05"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "16:10"
+            },
+            {
+              "name": "Cobrieux - Grand Place",
+              "time": "16:17"
+            },
+            {
+              "name": "Cobrieux - Rue du Mazet",
+              "time": "16:19"
+            },
+            {
+              "name": "Bourghelles - La Posterie",
+              "time": "16:21"
+            },
+            {
+              "name": "Bachy - Poste",
+              "time": "16:22"
+            },
+            {
+              "name": "Bachy - Eglise",
+              "time": "16:24"
+            },
+            {
+              "name": "Bachy - Petit Canard",
+              "time": "16:28"
+            },
+            {
+              "name": "Bachy - Hôtel",
+              "time": "16:29"
+            },
+            {
+              "name": "Bachy - Gare",
+              "time": "16:31"
+            },
+            {
+              "name": "Mouchin - Pharmacie",
+              "time": "16:33"
+            },
+            {
+              "name": "Mouchin - Place",
+              "time": "16:35"
+            }
+          ]
+        },
+        {
+          "id": "course-530",
+          "number": "530",
+          "direction": "Genech → Douai",
+          "days": ["friday"],
+          "type": "school",
+          "description": "Course 530",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "16:10"
+            },
+            {
+              "name": "Mouchin - Pharmacie",
+              "time": "16:20"
+            },
+            {
+              "name": "Mouchin - Place",
+              "time": "16:22"
+            },
+            {
+              "name": "Mouchin - Planard",
+              "time": "16:25"
+            },
+            {
+              "name": "Mouchin - Ponchau",
+              "time": "16:26"
+            },
+            {
+              "name": "Aix en Pévèle - Caserne des Douanes",
+              "time": "16:27"
+            },
+            {
+              "name": "Aix en Pévèle - Bas Hameau",
+              "time": "16:29"
+            },
+            {
+              "name": "Aix en Pévèle - Haut Hameau",
+              "time": "16:31"
+            },
+            {
+              "name": "Aix en Pévèle - Paul Allegot",
+              "time": "16:32"
+            },
+            {
+              "name": "Aix en Pévèle - Mairie",
+              "time": "16:34"
+            },
+            {
+              "name": "Aix en Pévèle - Place",
+              "time": "16:35"
+            },
+            {
+              "name": "Landas - Place Verte",
+              "time": "16:40"
+            },
+            {
+              "name": "Landas - Delommez",
+              "time": "16:42"
+            },
+            {
+              "name": "Sameon - Rue des Mazures",
+              "time": "16:44"
+            },
+            {
+              "name": "Sameon - Mairie",
+              "time": "16:47"
+            },
+            {
+              "name": "Sameon - Chapelle",
+              "time": "16:50"
+            }
+          ]
+        },
+        {
+          "id": "course-550",
+          "number": "550",
+          "direction": "Genech → Douai",
+          "days": ["friday"],
+          "type": "school",
+          "description": "Course 550",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "16:10"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "16:30"
+            }
+          ]
+        },
+        {
+          "id": "course-560",
+          "number": "560",
+          "direction": "Genech → Douai",
+          "days": ["friday"],
+          "type": "school",
+          "description": "Course 560",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "16:10"
+            },
+            {
+              "name": "Genech - La Ferme",
+              "time": "16:18"
+            },
+            {
+              "name": "Nomain - Saint Martin",
+              "time": "16:25"
+            },
+            {
+              "name": "Nomain - Deffrenne",
+              "time": "16:26"
+            },
+            {
+              "name": "Nomain - Louis Guislain",
+              "time": "16:27"
+            },
+            {
+              "name": "Orchies - Route de Tournai",
+              "time": "16:29"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "16:30"
+            }
+          ]
+        },
+        {
+          "id": "course-570",
+          "number": "570",
+          "direction": "Genech → Douai",
+          "days": ["friday"],
+          "type": "school",
+          "description": "Course 570",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "16:10"
+            },
+            {
+              "name": "Cappelle en Pévèle - Huquinville",
+              "time": "16:21"
+            },
+            {
+              "name": "Auchy lez Orchies - La Froidure",
+              "time": "16:28"
+            },
+            {
+              "name": "Auchy lez Orchies - Le Pont",
+              "time": "16:29"
+            },
+            {
+              "name": "Auchy lez Orchies - Rue de Derégnaucourt",
+              "time": "16:34"
+            },
+            {
+              "name": "Auchy lez Orchies - Rue du Hem",
+              "time": "16:37"
+            },
+            {
+              "name": "Auchy lez Orchies - Place",
+              "time": "16:39"
+            },
+            {
+              "name": "Orchies - Gendarmerie",
+              "time": "16:52"
+            },
+            {
+              "name": "Beuvry la Forêt - Cimetière",
+              "time": "16:54"
+            },
+            {
+              "name": "Beuvry la Forêt - Jean Cerisier",
+              "time": "16:56"
+            },
+            {
+              "name": "Sars et Rosières - R.N",
+              "time": "16:59"
+            },
+            {
+              "name": "Rosult - Alène d'Or",
+              "time": "17:02"
+            },
+            {
+              "name": "Rosult - Nouveau Jeu",
+              "time": "17:04"
+            },
+            {
+              "name": "Saint Amand les Eaux - Moulin Blanc (arrêt Transvilles)",
+              "time": "17:07"
+            },
+            {
+              "name": "Saint Amand les Eaux - Dunant",
+              "time": "17:14"
+            },
+            {
+              "name": "Saint Amand les Eaux - Eglise",
+              "time": "17:15"
+            },
+            {
+              "name": "Saint Amand les Eaux - Lycée Couteaux",
+              "time": "17:19"
+            }
+          ]
+        },
+        {
+          "id": "course-580",
+          "number": "580",
+          "direction": "Genech → Douai",
+          "days": ["friday"],
+          "type": "school",
+          "description": "Course 580",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "16:10"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "16:47"
+            },
+            {
+              "name": "Flines lez Raches - Madeleine",
+              "time": "16:51"
+            },
+            {
+              "name": "Raches - Mairie",
+              "time": "16:59"
+            },
+            {
+              "name": "Douai - Gare",
+              "time": "17:10"
+            }
+          ]
+        },
+        {
+          "id": "course-540",
+          "number": "540",
+          "direction": "Genech → Douai",
+          "days": ["friday"],
+          "type": "school",
+          "description": "Course 540",
+          "stops": [
+            {
+              "name": "Mouchin - Place",
+              "time": "16:30"
+            },
+            {
+              "name": "Rumegies - Belzannois",
+              "time": "16:36"
+            },
+            {
+              "name": "Rumegies - Aux 4 Vents",
+              "time": "16:37"
+            },
+            {
+              "name": "Rumegies - Brasserie",
+              "time": "16:38"
+            },
+            {
+              "name": "Rumegies - Place",
+              "time": "16:39"
+            },
+            {
+              "name": "Rumegies - La Bascule",
+              "time": "16:40"
+            },
+            {
+              "name": "Lecelles - Robreux",
+              "time": "16:44"
+            },
+            {
+              "name": "Lecelles - Eglise",
+              "time": "16:45"
+            }
+          ]
+        },
+        {
+          "id": "course-590",
+          "number": "590",
+          "direction": "Genech → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday"],
+          "type": "school",
+          "description": "Course 590",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "16:45"
+            },
+            {
+              "name": "Mouchin - Château Vert",
+              "time": "16:49"
+            },
+            {
+              "name": "Nomain - Saint Martin",
+              "time": "16:55"
+            },
+            {
+              "name": "Nomain - Deffrenne",
+              "time": "16:56"
+            },
+            {
+              "name": "Orchies - Route de Tournai",
+              "time": "16:59"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "17:00"
+            }
+          ]
+        },
+        {
+          "id": "course-640",
+          "number": "640",
+          "direction": "Genech → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday"],
+          "type": "school",
+          "description": "Course 640",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "17:45"
+            },
+            {
+              "name": "Genech - La Ferme",
+              "time": "17:53"
+            },
+            {
+              "name": "Nomain - Saint Martin",
+              "time": "18:00"
+            },
+            {
+              "name": "Nomain - Deffrenne",
+              "time": "18:01"
+            },
+            {
+              "name": "Nomain - Louis Guislain",
+              "time": "18:02"
+            },
+            {
+              "name": "Orchies - Route de Tournai",
+              "time": "18:04"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "18:05"
+            }
+          ]
+        },
+        {
+          "id": "course-650",
+          "number": "650",
+          "direction": "Genech → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday"],
+          "type": "school",
+          "description": "Course 650",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "17:45"
+            },
+            {
+              "name": "Auchy lez Orchies - La Froidure",
+              "time": "18:03"
+            },
+            {
+              "name": "Auchy lez Orchies - Le Pont",
+              "time": "18:04"
+            },
+            {
+              "name": "Auchy lez Orchies - Rue de Derégnaucourt",
+              "time": "18:09"
+            },
+            {
+              "name": "Auchy lez Orchies - Rue du Hem",
+              "time": "18:12"
+            },
+            {
+              "name": "Auchy lez Orchies - Place",
+              "time": "18:14"
+            },
+            {
+              "name": "Orchies - Gendarmerie",
+              "time": "18:24"
+            },
+            {
+              "name": "Beuvry la Forêt - Cimetière",
+              "time": "18:26"
+            },
+            {
+              "name": "Beuvry la Forêt - Jean Cerisier",
+              "time": "18:28"
+            },
+            {
+              "name": "Sars et Rosières - R.N",
+              "time": "18:31"
+            },
+            {
+              "name": "Rosult - Alène d'Or",
+              "time": "18:34"
+            },
+            {
+              "name": "Rosult - Nouveau Jeu",
+              "time": "18:36"
+            },
+            {
+              "name": "Saint Amand les Eaux - Moulin Blanc (arrêt Transvilles)",
+              "time": "18:39"
+            },
+            {
+              "name": "Saint Amand les Eaux - Dunant",
+              "time": "18:46"
+            },
+            {
+              "name": "Saint Amand les Eaux - Eglise",
+              "time": "18:47"
+            },
+            {
+              "name": "Saint Amand les Eaux - Lycée Couteaux",
+              "time": "18:51"
+            }
+          ]
+        },
+        {
+          "id": "course-610",
+          "number": "610",
+          "direction": "Genech → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday"],
+          "type": "school",
+          "description": "Course 610",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "17:50"
+            },
+            {
+              "name": "Genech - Lycée Perriand",
+              "time": "18:05"
+            },
+            {
+              "name": "Cobrieux - Grand Place",
+              "time": "18:10"
+            },
+            {
+              "name": "Cobrieux - Rue du Mazet",
+              "time": "18:12"
+            },
+            {
+              "name": "Bourghelles - La Posterie",
+              "time": "18:14"
+            },
+            {
+              "name": "Bachy - Poste",
+              "time": "18:15"
+            },
+            {
+              "name": "Bachy - Eglise",
+              "time": "18:17"
+            },
+            {
+              "name": "Cysoing - Cimetière",
+              "time": "18:25"
+            },
+            {
+              "name": "Cysoing - Demesmay",
+              "time": "18:26"
+            }
+          ]
+        },
+        {
+          "id": "course-600",
+          "number": "600",
+          "direction": "Genech → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday"],
+          "type": "school",
+          "description": "Course 600",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "17:55"
+            },
+            {
+              "name": "Genech - Lycée Perriand",
+              "time": "18:05"
+            },
+            {
+              "name": "Nomain - Ouvignies",
+              "time": "18:10"
+            },
+            {
+              "name": "Nomain - Carré",
+              "time": "18:11"
+            },
+            {
+              "name": "Nomain - Delzenne",
+              "time": "18:12"
+            },
+            {
+              "name": "Nomain - Visterie",
+              "time": "18:16"
+            },
+            {
+              "name": "Nomain - Elmez",
+              "time": "18:18"
+            },
+            {
+              "name": "Nomain - La Coquerie",
+              "time": "18:20"
+            },
+            {
+              "name": "Nomain - L'Obeau",
+              "time": "18:23"
+            },
+            {
+              "name": "Cappelle en Pévèle - Huquinville",
+              "time": "18:32"
+            },
+            {
+              "name": "Templeuve - La Caillière",
+              "time": "18:35"
+            },
+            {
+              "name": "Templeuve - Maresquel",
+              "time": "18:38"
+            }
+          ]
+        },
+        {
+          "id": "course-620",
+          "number": "620",
+          "direction": "Genech → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday"],
+          "type": "school",
+          "description": "Course 620",
+          "stops": [
+            {
+              "name": "Genech - Institut",
+              "time": "17:55"
+            },
+            {
+              "name": "Genech - Lycée Perriand",
+              "time": "18:05"
+            },
+            {
+              "name": "Bachy - Petit Canard",
+              "time": "18:20"
+            },
+            {
+              "name": "Bachy - Hôtel",
+              "time": "18:21"
+            },
+            {
+              "name": "Bachy - Gare",
+              "time": "18:22"
+            },
+            {
+              "name": "Mouchin - Pharmacie",
+              "time": "18:24"
+            },
+            {
+              "name": "Mouchin - Place",
+              "time": "18:26"
+            },
+            {
+              "name": "Mouchin - Planard",
+              "time": "18:29"
+            },
+            {
+              "name": "Mouchin - Ponchau",
+              "time": "18:30"
+            },
+            {
+              "name": "Aix en Pévèle - Caserne des Douanes",
+              "time": "18:31"
+            },
+            {
+              "name": "Aix en Pévèle - Bas Hameau",
+              "time": "18:33"
+            },
+            {
+              "name": "Aix en Pévèle - Haut Hameau",
+              "time": "18:35"
+            },
+            {
+              "name": "Aix en Pévèle - Paul Allegot",
+              "time": "18:36"
+            },
+            {
+              "name": "Aix en Pévèle - Mairie",
+              "time": "18:38"
+            },
+            {
+              "name": "Aix en Pévèle - Place",
+              "time": "18:39"
+            },
+            {
+              "name": "Landas - Place Verte",
+              "time": "18:44"
+            },
+            {
+              "name": "Landas - Delommez",
+              "time": "18:46"
+            },
+            {
+              "name": "Sameon - Rue des Mazures",
+              "time": "18:48"
+            },
+            {
+              "name": "Sameon - Mairie",
+              "time": "18:51"
+            },
+            {
+              "name": "Sameon - Chapelle",
+              "time": "18:54"
+            }
+          ]
+        },
+        {
+          "id": "course-630",
+          "number": "630",
+          "direction": "Genech → Douai",
+          "days": ["monday", "tuesday", "wednesday", "thursday"],
+          "type": "school",
+          "description": "Course 630",
+          "stops": [
+            {
+              "name": "Mouchin - Place",
+              "time": "18:35"
+            },
+            {
+              "name": "Rumegies - Belzannois",
+              "time": "18:41"
+            },
+            {
+              "name": "Rumegies - Aux 4 Vents",
+              "time": "18:42"
+            },
+            {
+              "name": "Rumegies - Brasserie",
+              "time": "18:43"
+            },
+            {
+              "name": "Rumegies - Place",
+              "time": "18:44"
+            },
+            {
+              "name": "Rumegies - La Bascule",
+              "time": "18:45"
+            },
+            {
+              "name": "Lecelles - Robreux",
+              "time": "18:49"
+            },
+            {
+              "name": "Lecelles - Eglise",
+              "time": "18:50"
+            }
+          ]
+        },
+        {
+          "id": "course-511",
+          "number": "511",
+          "direction": "Douai → Genech",
+          "days": ["tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 511",
+          "stops": [
+            {
+              "name": "Sameon - Chapelle",
+              "time": "07:00"
+            },
+            {
+              "name": "Sameon - Mairie",
+              "time": "07:03"
+            },
+            {
+              "name": "Sameon - Rue des Mazures",
+              "time": "07:05"
+            },
+            {
+              "name": "Landas - Delommez",
+              "time": "07:07"
+            },
+            {
+              "name": "Landas - Place Verte",
+              "time": "07:10"
+            },
+            {
+              "name": "Aix en Pévèle - Place",
+              "time": "07:14"
+            },
+            {
+              "name": "Aix en Pévèle - Mairie",
+              "time": "07:16"
+            },
+            {
+              "name": "Aix en Pévèle - Paul Allegot",
+              "time": "07:18"
+            },
+            {
+              "name": "Aix en Pévèle - Haut Hameau",
+              "time": "07:19"
+            },
+            {
+              "name": "Aix en Pévèle - Bas Hameau",
+              "time": "07:20"
+            },
+            {
+              "name": "Aix en Pévèle - Caserne des Douanes",
+              "time": "07:23"
+            },
+            {
+              "name": "Mouchin - Ponchau",
+              "time": "07:24"
+            },
+            {
+              "name": "Mouchin - Planard",
+              "time": "07:25"
+            },
+            {
+              "name": "Bachy - Gare",
+              "time": "07:31"
+            },
+            {
+              "name": "Bachy - Hôtel",
+              "time": "07:34"
+            },
+            {
+              "name": "Bachy - Petit Canard",
+              "time": "07:35"
+            },
+            {
+              "name": "Bachy - Poste",
+              "time": "07:36"
+            },
+            {
+              "name": "Bachy - Eglise",
+              "time": "07:38"
+            },
+            {
+              "name": "Bourghelles - La Posterie",
+              "time": "07:43"
+            },
+            {
+              "name": "Cobrieux - Rue du Mazet",
+              "time": "07:45"
+            },
+            {
+              "name": "Cobrieux - Grand Place",
+              "time": "07:47"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "07:57"
+            }
+          ]
+        },
+        {
+          "id": "course-521",
+          "number": "521",
+          "direction": "Douai → Genech",
+          "days": ["tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 521",
+          "stops": [
+            {
+              "name": "Saint Amand les Eaux - Lycée Couteaux",
+              "time": "07:10"
+            },
+            {
+              "name": "Saint Amand les Eaux - Eglise",
+              "time": "07:14"
+            },
+            {
+              "name": "Saint Amand les Eaux - Dunant",
+              "time": "07:15"
+            },
+            {
+              "name": "Saint Amand les Eaux - Moulin Blanc (arrêt Transvilles)",
+              "time": "07:20"
+            },
+            {
+              "name": "Rosult - Nouveau Jeu",
+              "time": "07:23"
+            },
+            {
+              "name": "Rosult - Alène d'Or",
+              "time": "07:25"
+            },
+            {
+              "name": "Sars et Rosières - R.N",
+              "time": "07:28"
+            },
+            {
+              "name": "Beuvry la Forêt - Jean Cerisier",
+              "time": "07:31"
+            },
+            {
+              "name": "Beuvry la Forêt - Cimetière",
+              "time": "07:33"
+            },
+            {
+              "name": "Orchies - Gendarmerie",
+              "time": "07:35"
+            },
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "07:40"
+            },
+            {
+              "name": "Nomain - Louis Guislain",
+              "time": "07:45"
+            },
+            {
+              "name": "Nomain - Deffrenne",
+              "time": "07:46"
+            },
+            {
+              "name": "Nomain - Saint Martin",
+              "time": "07:47"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "08:00"
+            }
+          ]
+        },
+        {
+          "id": "course-531",
+          "number": "531",
+          "direction": "Douai → Genech",
+          "days": ["tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 531",
+          "stops": [
+            {
+              "name": "Cappelle en Pévèle - Mairie",
+              "time": "07:10"
+            },
+            {
+              "name": "Auchy lez Orchies - La Froidure",
+              "time": "07:13"
+            },
+            {
+              "name": "Auchy lez Orchies - Le Pont",
+              "time": "07:14"
+            },
+            {
+              "name": "Auchy lez Orchies - Rue de Derégnaucourt",
+              "time": "07:19"
+            },
+            {
+              "name": "Auchy lez Orchies - Rue du Hem",
+              "time": "07:22"
+            },
+            {
+              "name": "Auchy lez Orchies - Place",
+              "time": "07:24"
+            },
+            {
+              "name": "Nomain - L'Obeau",
+              "time": "07:29"
+            },
+            {
+              "name": "Nomain - La Coquerie",
+              "time": "07:31"
+            },
+            {
+              "name": "Nomain - Elmez",
+              "time": "07:33"
+            },
+            {
+              "name": "Nomain - Visterie",
+              "time": "07:36"
+            },
+            {
+              "name": "Nomain - Delzenne",
+              "time": "07:39"
+            },
+            {
+              "name": "Nomain - Carré",
+              "time": "07:41"
+            },
+            {
+              "name": "Nomain - Ouvignies",
+              "time": "07:42"
+            },
+            {
+              "name": "Cappelle en Pévèle - Huquinville",
+              "time": "07:46"
+            },
+            {
+              "name": "Templeuve - Maresquel",
+              "time": "07:50"
+            },
+            {
+              "name": "Templeuve - Grande Campagne",
+              "time": "07:51"
+            },
+            {
+              "name": "Templeuve - Le Riez",
+              "time": "07:53"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "07:57"
+            }
+          ]
+        },
+        {
+          "id": "course-541",
+          "number": "541",
+          "direction": "Douai → Genech",
+          "days": ["tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 541",
+          "stops": [
+            {
+              "name": "Lecelles - Eglise",
+              "time": "07:40"
+            },
+            {
+              "name": "Lecelles - Robreux",
+              "time": "07:41"
+            },
+            {
+              "name": "Rumegies - La Bascule",
+              "time": "07:45"
+            },
+            {
+              "name": "Rumegies - Place",
+              "time": "07:46"
+            },
+            {
+              "name": "Rumegies - Brasserie",
+              "time": "07:47"
+            },
+            {
+              "name": "Rumegies - Aux 4 Vents",
+              "time": "07:48"
+            },
+            {
+              "name": "Rumegies - Belzannois",
+              "time": "07:49"
+            },
+            {
+              "name": "Mouchin - Place",
+              "time": "07:55"
+            },
+            {
+              "name": "Mouchin - Pharmacie",
+              "time": "07:57"
+            },
+            {
+              "name": "Genech - La Ferme",
+              "time": "08:00"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "08:05"
+            }
+          ]
+        },
+        {
+          "id": "course-551",
+          "number": "551",
+          "direction": "Douai → Genech",
+          "days": ["tuesday", "wednesday", "thursday", "friday"],
+          "type": "school",
+          "description": "Course 551",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "07:50"
+            },
+            {
+              "name": "Orchies - Route de Tournai",
+              "time": "07:52"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "08:09"
+            }
+          ]
+        },
+        {
+          "id": "course-571",
+          "number": "571",
+          "direction": "Douai → Genech",
+          "days": ["monday"],
+          "type": "school",
+          "description": "Course 571",
+          "stops": [
+            {
+              "name": "Sameon - Chapelle",
+              "time": "08:00"
+            },
+            {
+              "name": "Sameon - Mairie",
+              "time": "08:03"
+            },
+            {
+              "name": "Sameon - Rue des Mazures",
+              "time": "08:05"
+            },
+            {
+              "name": "Landas - Delommez",
+              "time": "08:07"
+            },
+            {
+              "name": "Landas - Place Verte",
+              "time": "08:10"
+            },
+            {
+              "name": "Aix en Pévèle - Place",
+              "time": "08:14"
+            },
+            {
+              "name": "Aix en Pévèle - Mairie",
+              "time": "08:16"
+            },
+            {
+              "name": "Aix en Pévèle - Paul Allegot",
+              "time": "08:18"
+            },
+            {
+              "name": "Aix en Pévèle - Haut Hameau",
+              "time": "08:19"
+            },
+            {
+              "name": "Aix en Pévèle - Bas Hameau",
+              "time": "08:20"
+            },
+            {
+              "name": "Aix en Pévèle - Caserne des Douanes",
+              "time": "08:23"
+            },
+            {
+              "name": "Mouchin - Ponchau",
+              "time": "08:24"
+            },
+            {
+              "name": "Mouchin - Planard",
+              "time": "08:25"
+            },
+            {
+              "name": "Bachy - Gare",
+              "time": "08:31"
+            },
+            {
+              "name": "Bachy - Hôtel",
+              "time": "08:34"
+            },
+            {
+              "name": "Bachy - Petit Canard",
+              "time": "08:35"
+            },
+            {
+              "name": "Bachy - Poste",
+              "time": "08:36"
+            },
+            {
+              "name": "Bachy - Eglise",
+              "time": "08:38"
+            },
+            {
+              "name": "Bourghelles - La Posterie",
+              "time": "08:43"
+            },
+            {
+              "name": "Cobrieux - Rue du Mazet",
+              "time": "08:45"
+            },
+            {
+              "name": "Cobrieux - Grand Place",
+              "time": "08:47"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "08:57"
+            }
+          ]
+        },
+        {
+          "id": "course-591",
+          "number": "591",
+          "direction": "Douai → Genech",
+          "days": ["monday"],
+          "type": "school",
+          "description": "Course 591",
+          "stops": [
+            {
+              "name": "Cappelle en Pévèle - Mairie",
+              "time": "08:10"
+            },
+            {
+              "name": "Auchy lez Orchies - La Froidure",
+              "time": "08:13"
+            },
+            {
+              "name": "Auchy lez Orchies - Le Pont",
+              "time": "08:14"
+            },
+            {
+              "name": "Auchy lez Orchies - Rue de Derégnaucourt",
+              "time": "08:19"
+            },
+            {
+              "name": "Auchy lez Orchies - Rue du Hem",
+              "time": "08:22"
+            },
+            {
+              "name": "Auchy lez Orchies - Place",
+              "time": "08:24"
+            },
+            {
+              "name": "Nomain - L'Obeau",
+              "time": "08:29"
+            },
+            {
+              "name": "Nomain - La Coquerie",
+              "time": "08:31"
+            },
+            {
+              "name": "Nomain - Elmez",
+              "time": "08:33"
+            },
+            {
+              "name": "Nomain - Visterie",
+              "time": "08:36"
+            },
+            {
+              "name": "Nomain - Delzenne",
+              "time": "08:39"
+            },
+            {
+              "name": "Nomain - Carré",
+              "time": "08:41"
+            },
+            {
+              "name": "Nomain - Ouvignies",
+              "time": "08:42"
+            },
+            {
+              "name": "Cappelle en Pévèle - Huquinville",
+              "time": "08:46"
+            },
+            {
+              "name": "Templeuve - Maresquel",
+              "time": "08:50"
+            },
+            {
+              "name": "Templeuve - Grande Campagne",
+              "time": "08:52"
+            },
+            {
+              "name": "Templeuve - Le Riez",
+              "time": "08:54"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "08:58"
+            }
+          ]
+        },
+        {
+          "id": "course-581",
+          "number": "581",
+          "direction": "Douai → Genech",
+          "days": ["monday"],
+          "type": "school",
+          "description": "Course 581",
+          "stops": [
+            {
+              "name": "Saint Amand les Eaux - Lycée Couteaux",
+              "time": "08:20"
+            },
+            {
+              "name": "Saint Amand les Eaux - Eglise",
+              "time": "08:24"
+            },
+            {
+              "name": "Saint Amand les Eaux - Dunant",
+              "time": "08:25"
+            },
+            {
+              "name": "Saint Amand les Eaux - Moulin Blanc (arrêt Transvilles)",
+              "time": "08:30"
+            },
+            {
+              "name": "Rosult - Nouveau Jeu",
+              "time": "08:33"
+            },
+            {
+              "name": "Rosult - Alène d'Or",
+              "time": "08:35"
+            },
+            {
+              "name": "Sars et Rosières - R.N",
+              "time": "08:38"
+            },
+            {
+              "name": "Beuvry la Forêt - Jean Cerisier",
+              "time": "08:41"
+            },
+            {
+              "name": "Beuvry la Forêt - Cimetière",
+              "time": "08:43"
+            },
+            {
+              "name": "Orchies - Gendarmerie",
+              "time": "08:45"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "09:05"
+            }
+          ]
+        },
+        {
+          "id": "course-601",
+          "number": "601",
+          "direction": "Douai → Genech",
+          "days": ["monday"],
+          "type": "school",
+          "description": "Course 601",
+          "stops": [
+            {
+              "name": "Douai - Parking de la Gare SNCF",
+              "time": "08:30"
+            },
+            {
+              "name": "Raches - Mairie",
+              "time": "08:38"
+            },
+            {
+              "name": "Flines lez Raches - Madeleine",
+              "time": "08:45"
+            },
+            {
+              "name": "Coutiches - Place",
+              "time": "08:49"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "09:15"
+            }
+          ]
+        },
+        {
+          "id": "course-611",
+          "number": "611",
+          "direction": "Douai → Genech",
+          "days": ["monday"],
+          "type": "school",
+          "description": "Course 611",
+          "stops": [
+            {
+              "name": "Lecelles - Eglise",
+              "time": "08:35"
+            },
+            {
+              "name": "Lecelles - Robreux",
+              "time": "08:36"
+            },
+            {
+              "name": "Rumegies - La Bascule",
+              "time": "08:40"
+            },
+            {
+              "name": "Rumegies - Place",
+              "time": "08:41"
+            },
+            {
+              "name": "Rumegies - Brasserie",
+              "time": "08:42"
+            },
+            {
+              "name": "Rumegies - Aux 4 Vents",
+              "time": "08:43"
+            },
+            {
+              "name": "Rumegies - Belzannois",
+              "time": "08:44"
+            },
+            {
+              "name": "Mouchin - Place",
+              "time": "08:50"
+            },
+            {
+              "name": "Mouchin - Pharmacie",
+              "time": "08:52"
+            },
+            {
+              "name": "Genech - La Ferme",
+              "time": "08:55"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "09:00"
+            }
+          ]
+        },
+        {
+          "id": "course-631",
+          "number": "631",
+          "direction": "Douai → Genech",
+          "days": ["monday"],
+          "type": "school",
+          "description": "Course 631",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:45"
+            },
+            {
+              "name": "Orchies - Route de Tournai",
+              "time": "08:47"
+            },
+            {
+              "name": "Nomain - Louis Guislain",
+              "time": "08:50"
+            },
+            {
+              "name": "Nomain - Deffrenne",
+              "time": "08:51"
+            },
+            {
+              "name": "Nomain - Saint Martin",
+              "time": "08:52"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "09:05"
+            }
+          ]
+        },
+        {
+          "id": "course-621",
+          "number": "621",
+          "direction": "Douai → Genech",
+          "days": ["monday"],
+          "type": "school",
+          "description": "Course 621",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "08:50"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "09:05"
+            }
+          ]
+        },
+        {
+          "id": "course-641",
+          "number": "641",
+          "direction": "Douai → Genech",
+          "days": ["monday"],
+          "type": "school",
+          "description": "Course 641",
+          "stops": [
+            {
+              "name": "Orchies - Gare SNCF (collège N.D Providence)",
+              "time": "09:00"
+            },
+            {
+              "name": "Genech - Institut",
+              "time": "09:15"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

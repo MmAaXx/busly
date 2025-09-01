@@ -6,8 +6,11 @@ import {
   Chip,
   Divider,
   Grid,
+  IconButton,
+  Collapse,
 } from "@mui/material";
-import { DirectionsBus } from "@mui/icons-material";
+import { DirectionsBus, ExpandMore, ExpandLess } from "@mui/icons-material";
+import { useState, useEffect } from "react";
 
 const JourneyCard = ({
   result,
@@ -15,7 +18,18 @@ const JourneyCard = ({
   getTripDay,
   formatDuration,
 }) => {
+  const [showStopsDetail, setShowStopsDetail] = useState(false);
   const tripDay = getTripDay(result.route, result.departureStop.time);
+
+  // Réinitialiser l'état d'ouverture quand les props changent (nouvelle recherche)
+  useEffect(() => {
+    setShowStopsDetail(false);
+  }, [
+    result.line.name,
+    result.route.number,
+    result.departureStop.name,
+    result.arrivalStop.name,
+  ]);
 
   // Fonction pour créer les chips des jours de circulation
   const renderCirculationDays = () => {
@@ -124,7 +138,7 @@ const JourneyCard = ({
   // Format complet pour les cartes principales (routes directes)
   return (
     <Card variant="outlined" sx={getMainCardStyle()}>
-      <CardContent>
+      <CardContent sx={{ pb: "12px!important" }}>
         <Box mb={1}>
           <Grid
             container
@@ -193,9 +207,84 @@ const JourneyCard = ({
 
         <Divider sx={{ my: 1 }} />
 
-        <Typography variant="body2" color="text.secondary">
-          {result.stops.length} arrêts • Direction: {result.route.direction}
-        </Typography>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          sx={{ cursor: "pointer" }}
+          onClick={() => setShowStopsDetail(!showStopsDetail)}
+        >
+          <Typography variant="body2" color="text.secondary">
+            {result.stops.length} arrêts • Direction: {result.route.direction}
+          </Typography>
+          <IconButton
+            size="small"
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowStopsDetail(!showStopsDetail);
+            }}
+            sx={{
+              transform: showStopsDetail ? "rotate(180deg)" : "rotate(0deg)",
+              transition: "transform 0.2s ease-in-out",
+            }}
+          >
+            <ExpandMore />
+          </IconButton>
+        </Box>
+
+        <Collapse in={showStopsDetail}>
+          <Box sx={{ mt: 2 }}>
+            <Typography variant="body2" color="text.secondary" gutterBottom>
+              Détail des arrêts :
+            </Typography>
+            <Box sx={{ maxHeight: "200px", overflowY: "auto" }}>
+              {result.stops.map((stop, index) => (
+                <Box
+                  key={index}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    py: 0.5,
+                    px: 1,
+                    backgroundColor:
+                      stop.name === result.departureStop.name ||
+                      stop.name === result.arrivalStop.name
+                        ? "primary.50"
+                        : "transparent",
+                    borderRadius: 1,
+                    mb: 0.5,
+                  }}
+                >
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontWeight:
+                        stop.name === result.departureStop.name ||
+                        stop.name === result.arrivalStop.name
+                          ? "bold"
+                          : "normal",
+                      color:
+                        stop.name === result.departureStop.name ||
+                        stop.name === result.arrivalStop.name
+                          ? "primary.main"
+                          : "text.secondary",
+                    }}
+                  >
+                    {stop.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ ml: 2 }}
+                  >
+                    {stop.time}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        </Collapse>
       </CardContent>
     </Card>
   );

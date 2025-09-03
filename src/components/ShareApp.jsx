@@ -40,30 +40,6 @@ const ShareApp = () => {
     }
   };
 
-  const handleDownloadQR = () => {
-    // Créer un canvas pour télécharger le QR code
-    const canvas = document.createElement("canvas");
-    const svg = document.querySelector("#qr-code-svg");
-    const svgData = new XMLSerializer().serializeToString(svg);
-    const img = new Image();
-
-    img.onload = () => {
-      canvas.width = img.width;
-      canvas.height = img.height;
-      const ctx = canvas.getContext("2d");
-      ctx.fillStyle = "white";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(img, 0, 0);
-
-      const link = document.createElement("a");
-      link.download = "busly-qr-code.png";
-      link.href = canvas.toDataURL();
-      link.click();
-    };
-
-    img.src = "data:image/svg+xml;base64," + btoa(svgData);
-  };
-
   return (
     <Paper
       elevation={3}
@@ -221,14 +197,6 @@ const ShareApp = () => {
             flexWrap="wrap"
             sx={{ mt: 3 }}
           >
-            <Button
-              variant="outlined"
-              startIcon={<Download />}
-              onClick={handleDownloadQR}
-              size="small"
-            >
-              Télécharger QR
-            </Button>
             <Button
               variant="outlined"
               startIcon={<ContentCopy />}

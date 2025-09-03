@@ -68,6 +68,7 @@ const ShareApp = () => {
           startIcon={<QrCode />}
           onClick={() => setOpen(true)}
           sx={{
+            m: "0 auto",
             borderColor: "primary.main",
             color: "primary.main",
             "&:hover": {

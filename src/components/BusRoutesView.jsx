@@ -11,6 +11,7 @@ import {
 import { DirectionsBus, Schedule } from "@mui/icons-material";
 import QuickAccess from "./QuickAccess";
 import UserGuide from "./UserGuide";
+import ShareApp from "./ShareApp";
 import JourneyPlanner from "./JourneyPlanner";
 import AllBusLines from "./AllBusLines";
 import useUserPreferences from "../hooks/useUserPreferences";
@@ -138,6 +139,9 @@ const BusRoutesView = () => {
             />
 
             <UserGuide />
+
+            {/* Section Partage */}
+            <ShareApp />
           </Box>
         )}
 

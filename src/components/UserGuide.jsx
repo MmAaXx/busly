@@ -34,7 +34,7 @@ const UserGuide = () => {
     <Paper
       elevation={2}
       sx={{
-        mb: 3,
+        mb: 2,
         overflow: "hidden",
         background: "rgba(255, 255, 255, 0.95)",
         backdropFilter: "blur(10px)",

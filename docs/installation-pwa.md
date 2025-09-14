@@ -19,7 +19,7 @@ Busly peut être installée comme une application native sur votre smartphone po
 3. ➕ Sélectionnez **"Sur l'écran d'accueil"**
 4. ✏️ Modifiez le nom si nécessaire (ex: "Busly")
 5. ✅ Tapez **"Ajouter"**
-6. 🎉 L'app est maintenant sur votre écran d'a
+6. 🎉 L'app est maintenant sur votre écran d'accueil !
 
 ## ✨ Avantages de l'installation PWA :
 
